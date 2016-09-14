@@ -574,7 +574,7 @@ Know start completing all the relevant fields below before proceeding with your 
                                                     Annexure - G - Property leased to third party</label>
                                             </div>
                                             <div class="MemberAreaContentheadingsItems" style="padding-left: 20px;">
-                                                <asp:CheckBox ID="CheckBox18" runat="server" />&nbsp;&nbsp;&nbsp;<a href="https://mcvdberg.blob.core.windows.net/contractsgeneral/English/Annexure_H_%20Resolution.pdf" target="_blank"><i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;</a><label class="MemberAreaContractsContentheadingsItemsSingle" style="width: 400px !important">
+                                                <asp:CheckBox ID="CheckBox18" runat="server" />&nbsp;&nbsp;&nbsp;<a href="https://mcvdberg.blob.core.windows.net/contractsgeneral/English/Annexure_H_Resolution.pdf" target="_blank"><i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;</a><label class="MemberAreaContractsContentheadingsItemsSingle" style="width: 400px !important">
                                                     Annexure - H - Resolution</label>
                                             </div>
                                             <div class="MemberAreaContentheadingsItems" style="padding-left: 20px;">
@@ -687,7 +687,7 @@ Know start completing all the relevant fields below before proceeding with your 
                                                 Annexure - G - Property leased to third party</label>
                                         </div>
                                         <div class="MemberAreaContentheadingsItems" style="padding-left: 20px;">
-                                            <asp:CheckBox ID="CheckBox31" runat="server" />&nbsp;&nbsp;&nbsp;<a href="https://mcvdberg.blob.core.windows.net/contractsgeneral/EnglishAnnexure_H_%20Resolution.pdf.pdf" target="_blank"><i class="fa fa-print fa-lg" aria-hidden="true"></i></a>&nbsp;&nbsp;<label class="MemberAreaContractsContentheadingsItemsSingle" style="width: 400px !important">
+                                            <asp:CheckBox ID="CheckBox31" runat="server" />&nbsp;&nbsp;&nbsp;<a href="https://mcvdberg.blob.core.windows.net/contractsgeneral/English/Annexure_H_Resolution.pdf" target="_blank"><i class="fa fa-print fa-lg" aria-hidden="true"></i></a>&nbsp;&nbsp;<label class="MemberAreaContractsContentheadingsItemsSingle" style="width: 400px !important">
                                                 Annexure - H - Resolution</label>
                                         </div>
                                         <div class="MemberAreaContentheadingsItems" style="padding-left: 20px;">
