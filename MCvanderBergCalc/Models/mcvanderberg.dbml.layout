@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 19.375" name="mcvanderberg">
+  <DataContextMoniker Name="/mcvanderbergDataContext" />
+  <nestedChildShapes>
+    <classShape Id="bf9f3c97-3107-491e-9e2a-82b85f497dcd" absoluteBounds="0.5, 0.5, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/mcvanderbergDataContext/Agency" />
+      <nestedChildShapes>
+        <elementListCompartment Id="951e2037-7861-4d4f-bdd3-45823e69fdae" absoluteBounds="0.515, 0.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8fdcce24-ca96-4143-96a8-3acaff26e813" absoluteBounds="0.5, 2, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/mcvanderbergDataContext/Diet" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1b77337c-8467-4453-8b26-1cb95378c473" absoluteBounds="0.515, 2.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="48874715-b119-4587-9809-7336bae3742d" absoluteBounds="0.5, 3.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/mcvanderbergDataContext/EmailHistory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="94ed82ab-4e62-4ced-b997-d663e0f925ac" absoluteBounds="0.515, 3.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="16f6dfcf-629d-44ec-9341-6128988aa893" absoluteBounds="0.5, 5.375, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/mcvanderbergDataContext/Language" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a4ece408-2e30-4b1d-804c-6e21185ff7c9" absoluteBounds="0.515, 5.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="46f5fce1-81ee-43c6-a7cd-ca045222bbdc" absoluteBounds="0.5, 6.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/mcvanderbergDataContext/LastEdited" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7407910e-a2b1-4831-a898-53380548247b" absoluteBounds="0.515, 7.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ca15b255-da32-43ec-bfdd-a5ea8769b796" absoluteBounds="2.75, 0.5, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/mcvanderbergDataContext/LoyaltyIndicator" />
+      <nestedChildShapes>
+        <elementListCompartment Id="27d55e54-8503-4c9d-b851-e7bfeb66a470" absoluteBounds="2.765, 0.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0c0b2d8d-9d28-42ab-8b82-f00dfc6ea013" absoluteBounds="2.75, 2.125, 2, 3.1170068359375">
+      <DataClassMoniker Name="/mcvanderbergDataContext/MailCampaign" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6796844f-c1eb-4e9e-bc4b-157fe537d561" absoluteBounds="2.765, 2.585, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="230b57e6-b6c0-412b-8ed2-9b3a9eb5ff98" absoluteBounds="2.75, 5.5, 2, 1.3862939453125">
+      <DataClassMoniker Name="/mcvanderbergDataContext/MailCampaignUser" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1b1c9b9c-3042-4a27-b46f-d6e72e677cea" absoluteBounds="2.765, 5.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b8171c25-5ef2-40fb-97dc-5ec6aff02d81" absoluteBounds="2.75, 7.125, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/mcvanderbergDataContext/MailType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0803f4dc-7029-41f6-8b0d-4a739e7d3126" absoluteBounds="2.765, 7.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="029cf33d-8d0a-4e4b-a66b-6c73d823a387" absoluteBounds="5.125, 0.5, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/mcvanderbergDataContext/Relation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ade90680-29ac-467a-b97f-0c30813a0c31" absoluteBounds="5.14, 0.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d9eb9bfd-88a4-46d0-9c9e-200d661a64ab" absoluteBounds="5.125, 2, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/mcvanderbergDataContext/Role" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bdf1cc3a-c1fa-4f9b-aa10-b5d64062334f" absoluteBounds="5.14, 2.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bf8ba913-cea0-4637-8ba6-6211e54afa8a" absoluteBounds="5.125, 3.375, 2, 1.3862939453125">
+      <DataClassMoniker Name="/mcvanderbergDataContext/Template" />
+      <nestedChildShapes>
+        <elementListCompartment Id="613c9635-4b38-416c-947a-5b5a5e18acf6" absoluteBounds="5.14, 3.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="76be3f3f-878c-4df7-858d-07d470374048" absoluteBounds="5.25, 5.125, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/mcvanderbergDataContext/Title" />
+      <nestedChildShapes>
+        <elementListCompartment Id="451b3888-63ac-415e-a842-3ad2647efab4" absoluteBounds="5.265, 5.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b43d28b5-7e7b-452c-83ed-9e909721ae26" absoluteBounds="5.25, 6.625, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/mcvanderbergDataContext/TrainingGroup1" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3fba81c7-5b8e-4573-81f5-c4c529395e0a" absoluteBounds="5.265, 7.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7dd39236-0a32-4d04-8b23-9a9db7745a57" absoluteBounds="5.25, 8.125, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/mcvanderbergDataContext/TrainingGroup2" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cce68980-58c4-4847-bff8-942c0e630c45" absoluteBounds="5.265, 8.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="22de10f1-0009-4860-b9b4-3a5c1cf21b16" absoluteBounds="5.375, 9.625, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/mcvanderbergDataContext/TrainingGroup3" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3ff5217b-7117-4578-8bdb-9cb6326d1d05" absoluteBounds="5.39, 10.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d7a3d462-92d9-431d-887b-3b22e70f7f02" absoluteBounds="5.375, 11.125, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/mcvanderbergDataContext/TrainingGroup4" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f048e5f4-779e-4f56-81a6-d6eecbd4a0bf" absoluteBounds="5.39, 11.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6a19c4e0-4b78-4e65-b1a2-d121200ae086" absoluteBounds="5.375, 12.625, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/mcvanderbergDataContext/TrainingGroup5" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7edd73f9-a774-4f0b-aede-dbd24cb80934" absoluteBounds="5.39, 13.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ad4afe70-6aae-49d4-bd0a-0b8f35308ad4" absoluteBounds="2.875, 8.625, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/mcvanderbergDataContext/TypistsBond" />
+      <nestedChildShapes>
+        <elementListCompartment Id="03f721d9-433c-4c14-a736-ea836b839292" absoluteBounds="2.89, 9.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a5a38ae9-975b-4a1d-bd5e-1325a7014ade" absoluteBounds="2.875, 12, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/mcvanderbergDataContext/TypistsTransfer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7b13a48a-f191-4b07-adfe-c2646f6922fe" absoluteBounds="2.89, 12.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="776f533a-145e-4690-a9d4-4ee1f8f01379" absoluteBounds="3, 14.375, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/mcvanderbergDataContext/WorkAddressCity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="24a33a74-a1db-4bbc-9d0c-32e501219bce" absoluteBounds="3.015, 14.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fd134367-162b-48d3-89f1-4a6194a0e5f5" absoluteBounds="0.5, 8.875, 2, 10.232159830729165">
+      <DataClassMoniker Name="/mcvanderbergDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="85f4d204-936a-4d53-b054-805a21b2e155" absoluteBounds="0.515, 9.335, 1.9700000000000002, 9.6721598307291661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

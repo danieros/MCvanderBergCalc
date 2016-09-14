@@ -1,0 +1,11 @@
+﻿									<tr>
+                                        <td style="background-color: #CCDBC8;">
+                                            <table>
+                                                <tr>
+                                                    <td colspan=2 style="text-align: center; padding-top: 20px; padding-bottom: 10px; width: 615px;">
+                                                        <a href="#LINK3#" target="blank"><img src="#IMAGE3#" width="200" /></a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>

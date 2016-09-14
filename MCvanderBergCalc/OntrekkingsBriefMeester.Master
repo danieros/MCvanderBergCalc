@@ -1,0 +1,97 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="OntrekkingsBriefMeester.master.cs" Inherits="MCvanderBergCalc.OntrekkingsBriefMeester" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+     <link href='http://fonts.googleapis.com/css?family=Kreon:light,regular' rel='stylesheet' type='text/css' />
+    <link href="Content/style.css" rel="stylesheet" type="text/css" media="screen" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+    <link id='droid_sans' href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css' />
+    <link href="Content/font-awesome-4.6.1/css/font-awesome.min.css" rel="stylesheet" />
+
+    <style type='text/css'>
+        body {
+            font-family: 'Droid Sans', Arial, sans-serif !important;
+        }
+
+        .mysidebar {
+            font-family: 'Droid Sans', Arial, sans-serif !important;
+        }
+
+        .widget {
+            font-family: 'Droid Sans', Arial, sans-serif !important;
+        }
+        .container{
+            width: 900px !important;
+        }
+        /*ol, ul {
+    list-style: inherit !important;
+}*/
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div id="content-area">
+                <div id="content-top-light">
+                    <div class="container">
+                        <div id="logo-area">
+                            <a href="home.aspx">
+                                <img src="https://mcvdberg.blob.core.windows.net/generalimages/MC_van_der_Berg_Logo_Afrikaans.png" alt="M.C. van der Berg Incorporated" id="logo" />
+                            </a>
+                            <p id="slogan"></p>
+                        </div>
+                        <!-- end #logo-area -->
+                        <div id="content">
+                            <div id="inner-border">
+                                <div id="content-shadow">
+                                    <div id="content-top-shadow">
+                                        <div id="content-bottom-shadow">
+                                            <div id="second-menu" class="clearfix">
+                                                <ul id="secondary-menu" class="nav">
+                                                    <li id="menu-item-4459" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4459"><a href="tuis.aspx">WebTuiste</a>
+                                                    </li>
+                                                    <li id="menu-item-4460" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4460"><a href="javascript:window.print()">Druk</a>
+                                                    </li>
+                                                    <li id="menu-item-4461" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4460"><a href="mailto:#">Epos aan</a>
+                                                    </li>
+                                                    <%--													<li id="menu-item-84" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-84"><a href="Mcademy.aspx">MCademy</a></li>--%>
+                                                </ul>
+                                            </div>
+                                            <!-- end #second-menu -->
+                                            <div id="main-content" class="clearfix">
+                                                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                                </asp:ContentPlaceHolder>
+                                                <div class="bottomextraction">
+                                                    <div><a style="color: #000 !important; font-weight: bold;" href="ContactsUs" target="_blank">Kontak ons</a></div>
+
+                                                </div>
+
+
+                                                <!-- end #sidebar -->
+                                                <div id="index-top-shadow"></div>
+                                            </div>
+                                            <!-- end #main-content -->
+                                        </div>
+                                        <!-- end #content-bottom-shadow -->
+                                    </div>
+                                    <!-- end #content-top-shadow -->
+                                </div>
+                                <!-- end #content-shadow -->
+                            </div>
+                            <!-- end #inner-border -->
+                        </div>
+                        <!-- end #content -->
+                    </div>
+                    <!-- end .container -->
+                </div>
+                <!-- end #content-top-light -->
+            </div>
+            <!-- end #content-area -->
+        </div>
+    </form>
+</body>
+</html>

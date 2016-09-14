@@ -1,0 +1,411 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="EnglishSite.master.cs" Inherits="MCvanderBergCalc.EnglishSite" %>
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <link href='http://fonts.googleapis.com/css?family=Kreon:light,regular' rel='stylesheet' type='text/css' />
+
+    <link href="Content/style.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+
+    <link href="Content/formidablepro.css" rel="stylesheet" media='all' />
+
+    <link rel='stylesheet' href='/Content/shortcodes-tablet.css' type='text/css' media='screen and (min-width: 768px) and (max-width: 959px)' />
+    <link rel='stylesheet' href='/Content/shortcodes-mobile.css' type='text/css' media='screen and (max-width: 767px)' />
+    <link rel='stylesheet' href='/Content/frontend-forms.css' type='text/css' media='all' />
+    <link href="Content/jquery-ui-1.9.1.custom.css" rel="stylesheet" />
+    <link rel='stylesheet' href='/Content/responsive.css' type='text/css' media='all' />
+    <link href="Content/shortcodes.css" rel="stylesheet" />
+    <link href="Content/shortcodes_responsive.css" rel="stylesheet" />
+
+    <link href="Content/masterslider.main.css" rel="stylesheet" />
+<%--    <link href="Content/jquery.fancybox-1.3.4.css" rel="stylesheet" />--%>
+    <link href="Content/page_templates.css" rel="stylesheet" />
+    <link href="Content/page_templates.css" rel="stylesheet" />
+    <link id='droid_sans' href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css' />
+    <link href="Content/font-awesome-4.6.1/css/font-awesome.min.css" rel="stylesheet" />
+
+
+    <script src="http://mcvanderbergtools.azurewebsites.net/Scripts/jquery-2.2.2.min.js"></script>
+    <script src="http://mcvanderbergtools.azurewebsites.net/Scripts/jquery.mousewheel-3.0.6.pack.js"></script>
+    <script src="http://mcvanderbergtools.azurewebsites.net/Scripts/icheck.js"></script>
+
+    <link href="Content/jquery.fancybox.css" rel="stylesheet" />
+    <script src="../../Scripts/jquery.fancybox.js"></script>
+
+    <link href="Content/jquery.dataTables.css" rel="stylesheet" />
+    <script src="http://mcvanderbergtools.azurewebsites.net/Scripts/jquery.dataTables.js"></script>
+
+
+<%--    <link href="http://mcvanderbergtools.azurewebsites.net/Content/jquery.fancybox.css" rel="stylesheet" />--%>
+<%--    <script src="http://mcvanderbergtools.azurewebsites.net/Scripts/jquery.fancybox.pack.js"></script>--%>
+
+    <script type="text/javascript" language="javascript">
+
+        function cat1Click() {
+            $('#divcat0_div').fadeIn('slow');
+            window.location = ("" + window.location).replace(/#[A-Za-z0-9_]*$/, '') + "#anchor0"
+            alert("Personal information successfully updated");
+        }
+
+        function cat2Click() {
+            $('#divcat2_div').fadeIn('slow');
+            window.location = ("" + window.location).replace(/#[A-Za-z0-9_]*$/, '') + "#anchor2"
+        }
+
+        function cat3Click() {
+            $('#divcat3_div').fadeIn('slow');
+            window.location = ("" + window.location).replace(/#[A-Za-z0-9_]*$/, '') + "#anchor3"
+        }
+
+        function cat4Click() {
+            $('#divcat4_div').fadeIn('slow');
+            window.location = ("" + window.location).replace(/#[A-Za-z0-9_]*$/, '') + "#anchor4"
+        }
+
+        function cat5Click() {
+            $('#divcat5_div').fadeIn('slow');
+            window.location = ("" + window.location).replace(/#[A-Za-z0-9_]*$/, '') + "#anchor5"
+        }
+
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $('#table_id').DataTable();
+
+            $("#iframe1").fancybox({
+                openEffect: 'none',
+                closeEffect: 'none',
+                iframe: {
+                    preload: false
+                }
+            });
+
+            $('#divcat0').click(function () {
+                closeall();
+                $('#divcat0_div').fadeIn('slow');
+            });
+
+            $('#divcat1').click(function () {
+                closeall();
+                $('#divcat1_div').fadeIn('slow');
+            });
+
+            $('#divcat2').click(function () {
+                closeall();
+                $('#divcat2_div').fadeIn('slow');
+            });
+
+            $('#divcat3').click(function () {
+                closeall();
+                $('#divcat3_div').fadeIn('slow');
+            });
+
+            $('#divcat4').click(function () {
+                closeall();
+                $('#divcat4_div').fadeIn('slow');
+            });
+
+            $('#divcat5').click(function () {
+                closeall();
+                $('#divcat5_div').fadeIn('slow');
+            });
+
+
+            $('#divcat0hide').click(function () {
+                closeall();
+                $('#divcat0_div').fadeOut('20000');
+            });
+
+            $('#divcat1hide').click(function () {
+                closeall();
+                $('#divcat1_div').fadeOut('20000');
+            });
+
+            $('#divcat2hide1').click(function () {
+                closeall();
+                $('#divcat2_div').fadeOut('20000');
+            });
+
+            $('#divcat2hide2').click(function () {
+                closeall();
+                $('#divcat2_div').fadeOut('20000');
+            });
+
+            $('#divcat3hide').click(function () {
+                closeall();
+                $('#divcat3_div').fadeOut('20000');
+            });
+
+            $('#divcat4hide').click(function () {
+                closeall();
+                $('#divcat4_div').fadeOut('20000');
+            });
+
+            $('#divcat5hide').click(function () {
+                closeall();
+                $('#divcat5_div').fadeOut('20000');
+            });
+
+
+            function closeall() {
+                $('#divcat0_div').hide();
+                $('#divcat1_div').hide();
+                $('#divcat2_div').hide();
+                $('#divcat3_div').hide();
+                $('#divcat4_div').hide();
+                $('#divcat5_div').hide();
+            };
+
+        });
+    </script>
+
+
+    <style type='text/css'>
+        body {
+            font-family: 'Droid Sans', Arial, sans-serif !important;
+        }
+
+        .mysidebar {
+            font-family: 'Droid Sans', Arial, sans-serif !important;
+        }
+
+        .widget {
+            font-family: 'Droid Sans', Arial, sans-serif !important;
+        }
+    </style>
+</head>
+<body class="page page-id-258 page-template-default custom-background _masterslider _ms_version_2.2.1 gecko et_includes_sidebar">
+    <form id="form1" runat="server">
+        <div>
+            <div id="top-header">
+                <div id="top-shadow"></div>
+                <div id="bottom-shadow"></div>
+                <div class="container clearfix">
+                    <a href="#" class="mobile_nav closed">Pages Navigation Menu<span></span></a>
+                    <ul id="top-menu" class="nav">
+                        <li id="menu-item-252" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-252">
+                            <asp:HyperLink ID="hyper1" runat="server" NavigateUrl="/language/en/Login.aspx">
+                                <asp:Label ID="lblLoginText" runat="server" Text="Member Login"></asp:Label></asp:HyperLink>
+                            <%--                             <a href="Login.aspx"><asp:Label ID="lblLoginText" runat="server" Text="Member Login"></asp:Label></a>--%>
+
+                        </li>
+                        <li id="menu-item-314-af" class="lang-item lang-item-16 lang-item-af menu-item menu-item-type-custom menu-item-object-custom menu-item-314-af"><a href="../af/tuis.aspx" hreflang="af">Change to Afrikaans</a></li>
+                        <%--						<li id="menu-item-4518" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4518"><a href="#">Quick Links</a>
+							<ul class="sub-menu">
+								<li id="menu-item-4519" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4519"><a href="mCostCalculator.aspx">MCostCalculator</a></li>
+								<li id="menu-item-4520" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4520"><a href="MCSellersGuide.aspx">MCSellersGuide</a></li>
+								<li id="menu-item-4521" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4521"><a href="MCPurchasersGuide.aspx">MCPurchasersGuide</a></li>
+								<li id="menu-item-4522" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4522"><a href="MCQuickGuide.aspx">MCQuickGuide</a></li>
+								<li id="menu-item-4523" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4523"><a href="MCBondGuide.aspx">MCBondGuide</a></li>
+								<li id="menu-item-4524" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4524"><a href="MCPromotionalVideo.aspx">MCPromotionalVideo</a></li>
+								<li id="menu-item-4525" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4525"><a href="MCSellersVideo.aspx">MCSellersVideo</a></li>
+								<li id="menu-item-4526" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4526"><a href="MCPurchasersVideo.aspx">MCPurchasersVideo</a></li>
+								<li id="menu-item-4528" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4528"><a href="MC2Agent.aspx">MC2Agent</a></li>
+								<li id="menu-item-4609" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4609"><a href="MCMonthly.aspx">MCMonthly</a></li>
+								<li id="menu-item-4530" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4530"><a href="LectureDates.aspx">Lecture Dates</a></li>
+								<li id="menu-item-4531" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4531"><a href="Addendums.aspx">Addendums</a></li>
+								<li id="menu-item-4533" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4533"><a href="Clauses.aspx">Clauses</a></li>
+								<li id="menu-item-4534" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4534"><a href="McFeeSheet.aspx">MCFeeSheets</a></li>
+								<li id="menu-item-4535" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4535"><a href="RateUs.aspx">Rate Us</a></li>
+							</ul>
+						</li>--%>
+                    </ul>
+                    <div id="search-form">
+                        <input type="text" value="search this site..." name="s" id="searchinput" />
+                        <input type="image" src="http://www.mcvdberg.co.za/images/search_btn.png" id="searchsubmit" />
+                    </div>
+                    <!-- end #search-form -->
+                </div>
+                <!-- end .container -->
+            </div>
+            <div id="content-area">
+                <div id="content-top-light">
+                    <div id="top-stitch"></div>
+                    <div class="container">
+                        <div id="logo-area">
+                            <a href="home.aspx">
+                                <img src="https://mcvdberg.blob.core.windows.net/generalimages/MC_van_der_Berg_Logo_English.png" style="width: 600px;" alt="M.C. van der Berg Incorporated" id="logo" />
+                            </a>
+                            <p id="slogan"></p>
+                        </div>
+                        <!-- end #logo-area -->
+                        <div id="content">
+                            <div id="inner-border">
+                                <div id="content-shadow">
+                                    <div id="content-top-shadow">
+                                        <div id="content-bottom-shadow">
+                                            <div id="second-menu" class="clearfix">
+                                                <a href="#" class="mobile_nav closed">Categories Navigation Menu<span></span></a>
+                                                <ul id="secondary-menu" class="nav">
+                                                    <li id="menu-item-88" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-62 current_page_item menu-item-88"><a href="home.aspx"><span class="dojodigital_toggle_title">Home</span></a></li>
+                                                    <li id="menu-item-4459" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4459"><a href="#">About us</a>
+                                                        <ul class="sub-menu">
+                                                            <li id="menu-item-83" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-83"><a href="AboutUs.aspx">Why Us</a></li>
+                                                            <li id="menu-item-316" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-316"><a href="MeetOurDynamicTeam.aspx">Meet our Dynamic Team</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li id="menu-item-4460" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4460"><a href="#">Our Services</a>
+                                                        <ul class="sub-menu">
+                                                            <li id="menu-item-102" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-102"><a href="OurServices.aspx">Our Services</a></li>
+                                                            <li id="menu-item-319" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-319"><a href="CaneAssist.aspx">Can we assist?</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li id="menu-item-103" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-103"><a href="MCares.aspx">MCares</a></li>
+                                                    <li id="menu-item-104" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-104"><a href="FAQ.aspx">FAQ&#8217;s</a></li>
+                                                    <li id="menu-item-105" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-105"><a href="ContactsUs.aspx">Contact Us</a></li>
+                                                    <li id="menu-item-106" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-106"><a href="FlowChart.aspx">Flowchart</a></li>
+                                                    <%--													<li id="menu-item-84" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-84"><a href="Mcademy.aspx">MCademy</a></li>--%>
+                                                    <li id="menu-item-2081" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2081"><a href="McFeeSheet.aspx">MCFeeSheet</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!-- end #second-menu -->
+                                            <div id="main-content" class="clearfix">
+                                                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                                </asp:ContentPlaceHolder>
+                                                <div id="sidebar">
+                                                    <h4 class="main-title widget-title">Quicklinks</h4>
+                                                    <div class="widget">
+                                                        <div class="menu-quicklinks-container">
+                                                            <ul id="menu-quicklinks" class="menu">
+                                                                <li id="menu-item-296" class="buttonContainer menu-item menu-item-type-post_type menu-item-object-page menu-item-296"><a href="mCostCalculator.aspx">MCostCalculator</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <!-- end .widget -->
+                                                    <h4 class="main-title widget-title">Guides</h4>
+                                                    <div class="widget">
+                                                        <div class="menu-guides-eng-container">
+                                                            <ul id="menu-guides-eng" class="menu">
+                                                                <li id="menu-item-191" class="buttonContainer menu-item menu-item-type-post_type menu-item-object-page menu-item-191"><a href="MCSellersGuide.aspx">MCSellersGuide</a></li>
+                                                                <li id="menu-item-192" class="buttonContainer menu-item menu-item-type-post_type menu-item-object-page menu-item-192"><a href="MCPurchasersGuide.aspx">MCPurchasersGuide</a></li>
+                                                                <li id="menu-item-194" class="buttonContainer menu-item menu-item-type-post_type menu-item-object-page menu-item-194"><a href="MCQuickGuide.aspx">MCQuickGuide</a></li>
+                                                                <li id="menu-item-195" class="buttonContainer menu-item menu-item-type-post_type menu-item-object-page menu-item-195"><a href="MCBondGuide.aspx">MCBondGuide</a></li>
+                                                                <li id="menu-item-196" class="buttonContainer menu-item menu-item-type-post_type menu-item-object-page menu-item-195"><a href="DevelopersGuide.aspx">MCDevelopersGuide</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <!-- end .widget -->
+                                                    <h4 class="main-title widget-title">Videos</h4>
+                                                    <div class="widget">
+                                                        <div class="menu-videos-container">
+                                                            <ul id="menu-videos" class="menu">
+                                                                <li id="menu-item-216" class="buttonContainer menu-item menu-item-type-post_type menu-item-object-page menu-item-216"><a href="MCPromotionalVideo.aspx">MCPromotionalVideo</a></li>
+                                                                <li id="menu-item-217" class="buttonContainer menu-item menu-item-type-post_type menu-item-object-page menu-item-217"><a href="MCSellersVideo.aspx">MCSellersVideo</a></li>
+                                                                <li id="menu-item-218" class="buttonContainer menu-item menu-item-type-post_type menu-item-object-page menu-item-218"><a href="MCPurchasersVideo.aspx">MCPurchasersVideo</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <!-- end .widget -->
+                                                    <h4 class="main-title widget-title">MCLibrary</h4>
+                                                    <div class="widget">
+                                                        <div class="menu-mc-library-container">
+                                                            <ul id="menu-mc-library" class="menu">
+                                                                <li id="menu-item-219" class="buttonContainer menu-item menu-item-type-post_type menu-item-object-page menu-item-219"><a href="MCMonthly.aspx">MCMonthly Newsletter</a></li>
+                                                                <li id="menu-item-220" class="buttonContainer menu-item menu-item-type-post_type menu-item-object-page menu-item-220"><a href="MC2Agent.aspx">MC2Agent</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <!-- end .widget -->
+                                                    <h4 class="main-title widget-title">MCademy</h4>
+                                                    <div class="widget">
+                                                        <div class="menu-mcademy-container">
+                                                            <ul id="menu-mcademy" class="menu">
+                                                                <li id="menu-item-222" class="buttonContainer menu-item menu-item-type-post_type menu-item-object-page menu-item-222"><a href="LectureDates.aspx">Lecture Dates</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <!-- end .widget -->
+                                                    <!-- end .widget -->
+                                                    <%--                                                    <h4 class="main-title widget-title">Other</h4>
+                                                    <div class="widget">
+                                                        <div class="menu-other-container">
+                                                            <ul id="menu-other" class="menu">
+                                                                <li id="menu-item-225" class="buttonContainer menu-item menu-item-type-post_type menu-item-object-page menu-item-225"><a href="RateUs.aspx">Rate Us</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>--%>
+                                                    <!-- end .widget -->
+                                                </div>
+                                                <!-- end #sidebar -->
+                                                <div id="index-top-shadow"></div>
+                                            </div>
+                                            <!-- end #main-content -->
+                                        </div>
+                                        <!-- end #content-bottom-shadow -->
+                                    </div>
+                                    <!-- end #content-top-shadow -->
+                                </div>
+                                <!-- end #content-shadow -->
+                            </div>
+                            <!-- end #inner-border -->
+                        </div>
+                        <!-- end #content -->
+                    </div>
+                    <!-- end .container -->
+                </div>
+                <!-- end #content-top-light -->
+                <div id="bottom-stitch"></div>
+            </div>
+            <!-- end #content-area -->
+            <div id="footer">
+                <div id="footer-top-shadow" class="clearfix">
+                    <div class="container">
+                        <div id="footer-widgets" class="clearfix">
+                        </div>
+                        <!-- end #footer-widgets -->
+                        <a href="https://www.facebook.com/McVanDerBergInc" target="_blank">
+                            <img src="/Images/facebook.png" style="padding-bottom: 2px !important; height: 32px;" />
+                        </a>&nbsp; 
+						<a href="https://twitter.com/mcvanderberg" target="_blank">
+                            <img src="/Images/Twitter.png" style="padding-top: 15px !important; height: 32px;" />
+                        </a>
+                        <p id="copyright">© Copyright 2016 M.C. Van Der Berg. All Rights Reserved.</p>
+                    </div>
+                    <!-- end .container -->
+                </div>
+                <!-- end #footer-top-shadow -->
+                <div id="footer-bottom-shadow"></div>
+                <div id="footer-bottom">
+                    <div class="container clearfix">
+                        <ul id="bottom-nav" class="bottom-nav">
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-62 current_page_item menu-item-88"><a href="home.aspx"><span class="dojodigital_toggle_title">Home</span></a></li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4459"><a href="AboutUs.aspx">About us</a></li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4460"><a href="OurServices.aspx">Our Services</a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-103"><a href="MCares.aspx">MCares</a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-104"><a href="FAQ.aspx">FAQ&#8217;s</a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-105"><a href="ContactsUs.aspx">Contact Us</a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-106"><a href="FlowChart.aspx">Flowchart</a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-84"><a href="Mcademy.aspx">MCademy</a></li>
+                        </ul>
+                    </div>
+                    <!-- end .container -->
+                </div>
+                <!-- end #footer-bottom -->
+            </div>
+            <!-- end #footer -->
+        </div>
+
+
+
+
+    </form>
+</body>
+</html>
