@@ -2,12 +2,6 @@
 <ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 19.375" name="mcvanderberg">
   <DataContextMoniker Name="/mcvanderbergDataContext" />
   <nestedChildShapes>
-    <classShape Id="bf9f3c97-3107-491e-9e2a-82b85f497dcd" absoluteBounds="0.5, 0.5, 2, 1.1939925130208333">
-      <DataClassMoniker Name="/mcvanderbergDataContext/Agency" />
-      <nestedChildShapes>
-        <elementListCompartment Id="951e2037-7861-4d4f-bdd3-45823e69fdae" absoluteBounds="0.515, 0.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
     <classShape Id="8fdcce24-ca96-4143-96a8-3acaff26e813" absoluteBounds="0.5, 2, 2, 1.1939925130208333">
       <DataClassMoniker Name="/mcvanderbergDataContext/Diet" />
       <nestedChildShapes>
@@ -132,6 +126,12 @@
       <DataClassMoniker Name="/mcvanderbergDataContext/User" />
       <nestedChildShapes>
         <elementListCompartment Id="85f4d204-936a-4d53-b054-805a21b2e155" absoluteBounds="0.515, 9.335, 1.9700000000000002, 9.6721598307291661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f4bd505a-c961-41cd-8466-578cf4347365" absoluteBounds="0.5, 0.5, 2, 1.3862939453125">
+      <DataClassMoniker Name="/mcvanderbergDataContext/Agency" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cc18a62c-f204-4ed5-b83e-42e77a8fe6c8" absoluteBounds="0.515, 0.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

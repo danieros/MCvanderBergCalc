@@ -10,9 +10,9 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <asp:ListView ID="ListView1" runat="server" DataKeyNames="AgencyID" DataSourceID="LinqDataSource1" InsertItemPosition="LastItem">
+        <asp:ListView ID="ListView1" runat="server" DataKeyNames="AgencyID" DataSourceID="LinqDataSource1" InsertItemPosition="LastItem" style="margin-right: 46px">
             <AlternatingItemTemplate>
-                <tr style="background-color:#FAFAD2; color: #284775;">
+                <tr style="">
                     <td>
                         <asp:Button ID="DeleteButton" runat="server" CommandName="Delete" Text="Delete" />
                         <asp:Button ID="EditButton" runat="server" CommandName="Edit" Text="Edit" />
@@ -23,10 +23,13 @@
                     <td>
                         <asp:Label ID="Agency1Label" runat="server" Text='<%# Eval("Agency1") %>' />
                     </td>
+                    <td>
+                        <asp:Label ID="AgencyFCCLabel" runat="server" Text='<%# Eval("AgencyFCC") %>' />
+                    </td>
                 </tr>
             </AlternatingItemTemplate>
             <EditItemTemplate>
-                <tr style="background-color:#FFCC66; color: #000080;">
+                <tr style="">
                     <td>
                         <asp:Button ID="UpdateButton" runat="server" CommandName="Update" Text="Update" />
                         <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Cancel" />
@@ -37,10 +40,13 @@
                     <td>
                         <asp:TextBox ID="Agency1TextBox" runat="server" Text='<%# Bind("Agency1") %>' />
                     </td>
+                    <td>
+                        <asp:TextBox ID="AgencyFCCTextBox" runat="server" Text='<%# Bind("AgencyFCC") %>' />
+                    </td>
                 </tr>
             </EditItemTemplate>
             <EmptyDataTemplate>
-                <table runat="server" style="background-color: #FFFFFF;border-collapse: collapse;border-color: #999999;border-style:none;border-width:1px;">
+                <table runat="server" style="">
                     <tr>
                         <td>No data was returned.</td>
                     </tr>
@@ -52,14 +58,18 @@
                         <asp:Button ID="InsertButton" runat="server" CommandName="Insert" Text="Insert" />
                         <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Clear" />
                     </td>
-                    <td>&nbsp;</td>
+                    <td>
+                        &nbsp;</td>
                     <td>
                         <asp:TextBox ID="Agency1TextBox" runat="server" Text='<%# Bind("Agency1") %>' />
+                    </td>
+                    <td>
+                        <asp:TextBox ID="AgencyFCCTextBox" runat="server" Text='<%# Bind("AgencyFCC") %>' />
                     </td>
                 </tr>
             </InsertItemTemplate>
             <ItemTemplate>
-                <tr style="background-color:#FFFBD6; color: #333333;">
+                <tr style="">
                     <td>
                         <asp:Button ID="DeleteButton" runat="server" CommandName="Delete" Text="Delete" />
                         <asp:Button ID="EditButton" runat="server" CommandName="Edit" Text="Edit" />
@@ -69,6 +79,9 @@
                     </td>
                     <td>
                         <asp:Label ID="Agency1Label" runat="server" Text='<%# Eval("Agency1") %>' />
+                    </td>
+                    <td>
+                        <asp:Label ID="AgencyFCCLabel" runat="server" Text='<%# Eval("AgencyFCC") %>' />
                     </td>
                 </tr>
             </ItemTemplate>
@@ -76,24 +89,25 @@
                 <table runat="server">
                     <tr runat="server">
                         <td runat="server">
-                            <table id="itemPlaceholderContainer" runat="server" border="1" style="background-color: #FFFFFF;border-collapse: collapse;border-color: #999999;border-style:none;border-width:1px;font-family: Verdana, Arial, Helvetica, sans-serif;">
-                                <tr runat="server" style="background-color:#FFFBD6; color: #333333;">
+                            <table id="itemPlaceholderContainer" runat="server" border="0" style="">
+                                <tr runat="server" style="">
                                     <th runat="server"></th>
                                     <th runat="server">AgencyID</th>
                                     <th runat="server">Agency1</th>
+                                    <th runat="server">AgencyFCC</th>
                                 </tr>
-                                <tr id="itemPlaceholder" runat="server">
+                                <tr runat="server" id="itemPlaceholder">
                                 </tr>
                             </table>
                         </td>
                     </tr>
                     <tr runat="server">
-                        <td runat="server" style="text-align: center;background-color: #FFCC66; font-family: Verdana, Arial, Helvetica, sans-serif;color: #333333;"></td>
+                        <td runat="server" style=""></td>
                     </tr>
                 </table>
             </LayoutTemplate>
             <SelectedItemTemplate>
-                <tr style="background-color:#FFCC66; font-weight: bold;color: #000080;">
+                <tr style="">
                     <td>
                         <asp:Button ID="DeleteButton" runat="server" CommandName="Delete" Text="Delete" />
                         <asp:Button ID="EditButton" runat="server" CommandName="Edit" Text="Edit" />
@@ -103,6 +117,9 @@
                     </td>
                     <td>
                         <asp:Label ID="Agency1Label" runat="server" Text='<%# Eval("Agency1") %>' />
+                    </td>
+                    <td>
+                        <asp:Label ID="AgencyFCCLabel" runat="server" Text='<%# Eval("AgencyFCC") %>' />
                     </td>
                 </tr>
             </SelectedItemTemplate>

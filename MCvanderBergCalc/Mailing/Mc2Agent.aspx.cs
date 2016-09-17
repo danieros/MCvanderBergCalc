@@ -33,7 +33,7 @@ namespace MCvanderBergCalc.Mailing
         {
             mcvanderbergDataContext db = new mcvanderbergDataContext();
             DateTime value = new DateTime(2015, 1, 18);
-            var linqagent = db.sp_InsertMc2Agent(139, 2, 1, value, "info@mcvdberg.co.za", "Tiaan (M.C.) van der Berg Inc.", "MC2Agent-123", txtEnglishSubject.Text, txtCKEditor1.Text, txtAfrikaansSubject.Text, txtCKEditor2.Text);
+            var linqagent = db.sp_InsertMc2Agent(140, 2, 1, value, "info@mcvdberg.co.za", "Tiaan (M.C.) van der Berg Inc.", "MC2Agent-123", txtEnglishSubject.Text, txtCKEditor1.Text, txtAfrikaansSubject.Text, txtCKEditor2.Text);
         }
 
         protected void Button3_Click(object sender, EventArgs e)
@@ -45,7 +45,7 @@ namespace MCvanderBergCalc.Mailing
             string mailcontent = "";
 
             mcvanderbergDataContext db = new mcvanderbergDataContext();
-            var linqcontents = db.spGetMC2Agentcontent(139, 1);
+            var linqcontents = db.spGetMC2Agentcontent(140, 1);
             foreach(var linqcontent in linqcontents)
             {
                 toaddress = eMail.Text;
@@ -61,7 +61,7 @@ namespace MCvanderBergCalc.Mailing
             }
 
             SendMail mysendmail = new SendMail();
-            mysendmail.SendGeneralmail(toaddress, "info@mcvdberg.co.za", fromaddress, mailalias, subject, mailcontent);
+            mysendmail.SendGeneralmail(toaddress, "noreturn@mcvdberg.co.za", fromaddress, mailalias, subject, mailcontent);
         }
 
         
@@ -76,7 +76,7 @@ namespace MCvanderBergCalc.Mailing
             string mailcontent = "";
 
             mcvanderbergDataContext db = new mcvanderbergDataContext();
-            var linqcontents = db.spGetMC2Agentcontent(139, 1);
+            var linqcontents = db.spGetMC2Agentcontent(140, 1);
             foreach (var linqcontent in linqcontents)
             {
                 toaddress = eMail.Text;
@@ -97,7 +97,7 @@ namespace MCvanderBergCalc.Mailing
             foreach (var linqUser in linqUsers)
             {
                 SendMail mysendmail = new SendMail();
-                mysendmail.SendGeneralmail(linqUser.EmailPrimary, "info@mcvdberg.co.za", fromaddress, mailalias, subject, mailcontent);
+                mysendmail.SendGeneralmail(linqUser.EmailPrimary, "noreturn@mcvdberg.co.za", fromaddress, mailalias, subject, mailcontent);
                 var linqUpdateMail = db.sp_UpdateMailHistory(linqUser.UserID, 1);
             }
 

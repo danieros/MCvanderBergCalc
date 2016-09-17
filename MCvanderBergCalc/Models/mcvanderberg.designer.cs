@@ -30,9 +30,6 @@ namespace MCvanderBergCalc.Models
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
-    partial void InsertAgency(Agency instance);
-    partial void UpdateAgency(Agency instance);
-    partial void DeleteAgency(Agency instance);
     partial void InsertDiet(Diet instance);
     partial void UpdateDiet(Diet instance);
     partial void DeleteDiet(Diet instance);
@@ -96,6 +93,9 @@ namespace MCvanderBergCalc.Models
     partial void InsertUser(User instance);
     partial void UpdateUser(User instance);
     partial void DeleteUser(User instance);
+    partial void InsertAgency(Agency instance);
+    partial void UpdateAgency(Agency instance);
+    partial void DeleteAgency(Agency instance);
     #endregion
 		
 		public mcvanderbergDataContext() : 
@@ -126,14 +126,6 @@ namespace MCvanderBergCalc.Models
 				base(connection, mappingSource)
 		{
 			OnCreated();
-		}
-		
-		public System.Data.Linq.Table<Agency> Agencies
-		{
-			get
-			{
-				return this.GetTable<Agency>();
-			}
 		}
 		
 		public System.Data.Linq.Table<Diet> Diets
@@ -301,6 +293,14 @@ namespace MCvanderBergCalc.Models
 			get
 			{
 				return this.GetTable<User>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Agency> Agencies
+		{
+			get
+			{
+				return this.GetTable<Agency>();
 			}
 		}
 		
@@ -613,92 +613,6 @@ namespace MCvanderBergCalc.Models
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), userid, firstname, lastname, cellphone, email, officenumber, dietid, workcityid, agencyid, roleid, relationshipid, loyaltyid, titleid, languageid, typistid, cRM_FullAccess, cRM_ViewAcccessOnly, category2_Afr, category2_Eng, category3_Afr, category3_Eng, category4_Afr, category4_Eng, category5_Afr, category5_Eng, category6_Eng, category6_Afr, category7_Eng, category7_Afr, trainingGroup1ID, trainingGroup2ID, trainingGroup3ID, trainingGroup4ID, trainingGroup5ID, monthlyUnsubscribe, mC2AgentUnsubscribe, customMailsUnsubscribe, dayDOB, monthDOB, bondTypistID, active, username, password, logoName, afrikaansVoorblad, englishVoorblad, nickname, birthdayApplicable, firstTimeUserMail, fFC, website);
 			return ((int)(result.ReturnValue));
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Agencies")]
-	public partial class Agency : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _AgencyID;
-		
-		private string _Agency1;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnAgencyIDChanging(int value);
-    partial void OnAgencyIDChanged();
-    partial void OnAgency1Changing(string value);
-    partial void OnAgency1Changed();
-    #endregion
-		
-		public Agency()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AgencyID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int AgencyID
-		{
-			get
-			{
-				return this._AgencyID;
-			}
-			set
-			{
-				if ((this._AgencyID != value))
-				{
-					this.OnAgencyIDChanging(value);
-					this.SendPropertyChanging();
-					this._AgencyID = value;
-					this.SendPropertyChanged("AgencyID");
-					this.OnAgencyIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="Agency", Storage="_Agency1", DbType="VarChar(512)")]
-		public string Agency1
-		{
-			get
-			{
-				return this._Agency1;
-			}
-			set
-			{
-				if ((this._Agency1 != value))
-				{
-					this.OnAgency1Changing(value);
-					this.SendPropertyChanging();
-					this._Agency1 = value;
-					this.SendPropertyChanged("Agency1");
-					this.OnAgency1Changed();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
 		}
 	}
 	
@@ -3995,6 +3909,116 @@ namespace MCvanderBergCalc.Models
 					this._BirthdayApplicable = value;
 					this.SendPropertyChanged("BirthdayApplicable");
 					this.OnBirthdayApplicableChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Agencies")]
+	public partial class Agency : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _AgencyID;
+		
+		private string _Agency1;
+		
+		private string _AgencyFCC;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnAgencyIDChanging(int value);
+    partial void OnAgencyIDChanged();
+    partial void OnAgency1Changing(string value);
+    partial void OnAgency1Changed();
+    partial void OnAgencyFCCChanging(string value);
+    partial void OnAgencyFCCChanged();
+    #endregion
+		
+		public Agency()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AgencyID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int AgencyID
+		{
+			get
+			{
+				return this._AgencyID;
+			}
+			set
+			{
+				if ((this._AgencyID != value))
+				{
+					this.OnAgencyIDChanging(value);
+					this.SendPropertyChanging();
+					this._AgencyID = value;
+					this.SendPropertyChanged("AgencyID");
+					this.OnAgencyIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="Agency", Storage="_Agency1", DbType="VarChar(512)")]
+		public string Agency1
+		{
+			get
+			{
+				return this._Agency1;
+			}
+			set
+			{
+				if ((this._Agency1 != value))
+				{
+					this.OnAgency1Changing(value);
+					this.SendPropertyChanging();
+					this._Agency1 = value;
+					this.SendPropertyChanged("Agency1");
+					this.OnAgency1Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AgencyFCC", DbType="VarChar(200)")]
+		public string AgencyFCC
+		{
+			get
+			{
+				return this._AgencyFCC;
+			}
+			set
+			{
+				if ((this._AgencyFCC != value))
+				{
+					this.OnAgencyFCCChanging(value);
+					this.SendPropertyChanging();
+					this._AgencyFCC = value;
+					this.SendPropertyChanged("AgencyFCC");
+					this.OnAgencyFCCChanged();
 				}
 			}
 		}

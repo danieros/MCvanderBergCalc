@@ -12,7 +12,7 @@
     <div>
         <asp:ListView ID="ListView1" runat="server" DataKeyNames="RoleID" DataSourceID="LinqDataSource1" InsertItemPosition="LastItem">
             <AlternatingItemTemplate>
-                <tr style="background-color:#FAFAD2; color: #284775;">
+                <tr style="">
                     <td>
                         <asp:Button ID="DeleteButton" runat="server" CommandName="Delete" Text="Delete" />
                         <asp:Button ID="EditButton" runat="server" CommandName="Edit" Text="Edit" />
@@ -26,7 +26,7 @@
                 </tr>
             </AlternatingItemTemplate>
             <EditItemTemplate>
-                <tr style="background-color:#FFCC66; color: #000080;">
+                <tr style="">
                     <td>
                         <asp:Button ID="UpdateButton" runat="server" CommandName="Update" Text="Update" />
                         <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Cancel" />
@@ -40,7 +40,7 @@
                 </tr>
             </EditItemTemplate>
             <EmptyDataTemplate>
-                <table runat="server" style="background-color: #FFFFFF;border-collapse: collapse;border-color: #999999;border-style:none;border-width:1px;">
+                <table runat="server" style="">
                     <tr>
                         <td>No data was returned.</td>
                     </tr>
@@ -59,7 +59,7 @@
                 </tr>
             </InsertItemTemplate>
             <ItemTemplate>
-                <tr style="background-color:#FFFBD6; color: #333333;">
+                <tr style="">
                     <td>
                         <asp:Button ID="DeleteButton" runat="server" CommandName="Delete" Text="Delete" />
                         <asp:Button ID="EditButton" runat="server" CommandName="Edit" Text="Edit" />
@@ -76,8 +76,8 @@
                 <table runat="server">
                     <tr runat="server">
                         <td runat="server">
-                            <table id="itemPlaceholderContainer" runat="server" border="1" style="background-color: #FFFFFF;border-collapse: collapse;border-color: #999999;border-style:none;border-width:1px;font-family: Verdana, Arial, Helvetica, sans-serif;">
-                                <tr runat="server" style="background-color:#FFFBD6; color: #333333;">
+                            <table id="itemPlaceholderContainer" runat="server" border="0" style="">
+                                <tr runat="server" style="">
                                     <th runat="server"></th>
                                     <th runat="server">RoleID</th>
                                     <th runat="server">Role1</th>
@@ -88,12 +88,12 @@
                         </td>
                     </tr>
                     <tr runat="server">
-                        <td runat="server" style="text-align: center;background-color: #FFCC66; font-family: Verdana, Arial, Helvetica, sans-serif;color: #333333;"></td>
+                        <td runat="server" style=""></td>
                     </tr>
                 </table>
             </LayoutTemplate>
             <SelectedItemTemplate>
-                <tr style="background-color:#FFCC66; font-weight: bold;color: #000080;">
+                <tr style="">
                     <td>
                         <asp:Button ID="DeleteButton" runat="server" CommandName="Delete" Text="Delete" />
                         <asp:Button ID="EditButton" runat="server" CommandName="Edit" Text="Edit" />

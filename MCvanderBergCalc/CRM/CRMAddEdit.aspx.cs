@@ -13,6 +13,8 @@ namespace MCvanderBergCalc.CRM
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Page.Server.ScriptTimeout = 7200;
+
             if (!IsPostBack)
             {
 

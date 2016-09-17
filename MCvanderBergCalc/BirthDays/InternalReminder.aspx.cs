@@ -116,7 +116,7 @@ namespace MCvanderBergCalc.BirthDays
 
             foreach (var linqUser in linqUsers)
             {
-                mymail.SendGeneralmail(linqUser.EmailPrimary, "info@mcvdberg.co.za", "info@mcvdberg.co.za", "M.C.vanderBerg", "Birthdays for next three days", mailcontent);
+                mymail.SendGeneralmail(linqUser.EmailPrimary, "noreturn@mcvdberg.co.za", "info@mcvdberg.co.za", "M.C.vanderBerg", "Birthdays for next three days", mailcontent);
             }
 
             

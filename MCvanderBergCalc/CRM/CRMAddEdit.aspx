@@ -219,7 +219,7 @@
 
                 <div class="row">
                     <div class="col-sm-6">
-                        <label>FFC number:</label>
+                        <label>Agent FFC number:</label>
                         <asp:TextBox ID="txtFFC" runat="server" ForeColor="#009933"></asp:TextBox>
                     </div>
                 </div>

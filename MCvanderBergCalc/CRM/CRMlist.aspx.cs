@@ -30,6 +30,8 @@ namespace MCvanderBergCalc.CRM
         DataTable dt1 = new DataTable("Users");
         protected void Page_Load(object sender, EventArgs e)
         {
+            Page.Server.ScriptTimeout = 7200;
+
             Session["Goto"] = "../../CRM/CRMlist";
 
             int userid = 0;

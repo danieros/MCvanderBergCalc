@@ -523,10 +523,13 @@ namespace MCvanderBergCalc
         }
 
         protected void Button3_Click(object sender, EventArgs e)
-        {
-            double test = Convert.ToDouble(Session["PurchasePrice"]);
-            SendTransferCost mysend = new SendTransferCost();
-            mysend.sendmail(txtemail.Text);
+        { 
+            double test  = Convert.ToDouble(Session["PurchasePrice"]);
+            if (test > 0)
+            {
+                SendTransferCost mysend = new SendTransferCost();
+                mysend.sendmail(txtemail.Text);
+            }
         }
     }
 }
