@@ -111,7 +111,7 @@
                             <div>
                                 <fieldset>
 
-                                    <a name="anchor1"></a><legend>To learn more about a complimentary slip entails and how to send one <a href="#anchor1" id="divcat1">click here</a>.</legend>
+                                    <a name="anchor1"></a><legend>To learn more about a complimentary slip and how to send one <a href="#anchor1" id="divcat1">click here</a>.</legend>
 
                                     <div id="divcat1_div" class="memberareablock">
 

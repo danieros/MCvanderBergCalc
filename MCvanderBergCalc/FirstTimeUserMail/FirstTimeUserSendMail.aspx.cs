@@ -35,7 +35,7 @@ namespace MCvanderBergCalc.FirstTimeUserMail
                 }
                 str3 = str3.Replace("#USERNAME#", spGetFirstTimeUsersMailResult.Username);
                 str3 = str3.Replace("#PASSWORD#", spGetFirstTimeUsersMailResult.Password);
-                sendMail.SendGeneralmail(spGetFirstTimeUsersMailResult.EmailPrimary, "info@mcvdberg.co.za", "info@mcvdberg.co.za", "M.C.vanderBerg", str2, str3);
+                sendMail.SendGeneralmail(spGetFirstTimeUsersMailResult.EmailPrimary, "noresult@mcvdberg.co.za", "info@mcvdberg.co.za", "M.C.vanderBerg", str2, str3);
                 _mcvanderbergDataContext.sp_UpdateFirstTimeUsersMail(new int?(spGetFirstTimeUsersMailResult.UserID));
             }
         }
