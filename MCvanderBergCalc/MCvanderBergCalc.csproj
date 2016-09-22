@@ -1416,6 +1416,7 @@
     <Content Include="PDF\ContractEnglish\MContract Engels.pdf" />
     <Content Include="PDF\ContractEnglish\Annexure_F_Defects.pdf" />
     <Content Include="OntrekkingsBriefMeester.Master" />
+    <Content Include="PDF\June 2016.pdf" />
     <None Include="Properties\PublishProfiles\mcvanderbergtools - Web Deploy.pubxml" />
     <Content Include="Images\header.png" />
     <Content Include="language\af\Aanhangsels.aspx" />

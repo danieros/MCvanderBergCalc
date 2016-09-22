@@ -379,7 +379,7 @@
 
 
 
-<%--
+                                <%--
                                 <div class="omsc-toggle">
                                     <div class="omsc-toggle-title">2015 Nuusbruiwe</div>
                                     <div class="omsc-toggle-inner">
@@ -470,123 +470,124 @@
 
 
 
-<div class="omsc-toggle">
-                                <div class="omsc-toggle-title">2016 Nuusbrief</div>
-                                <div class="omsc-toggle-inner">
+                                <div class="omsc-toggle">
+                                    <div class="omsc-toggle-title">2016 Nuusbrief</div>
+                                    <div class="omsc-toggle-inner">
 
-                                    <p>Klik op hierdie skakel om die PDF dokument oop te maak</p>
+                                        <p>Klik op hierdie skakel om die PDF dokument oop te maak</p>
 
-                                    <div class="add_posts">
-                                        <ul>
-                                            <li><a style="color: #000!important;" href="../../PDF/Feb%202016.pdf" target="_blank">Feb 2016</a></li>
-                                           <li><a style="color: #000!important;" href="../../PDF/April%202016.pdf" target="_blank">April 2016</a></li>
+                                        <div class="add_posts">
+                                            <ul>
+                                                <li><a style="color: #000!important;" href="../../PDF/Feb%202016.pdf" target="_blank">Feb 2016</a></li>
+                                                <li><a style="color: #000!important;" href="../../PDF/April%202016.pdf" target="_blank">April 2016</a></li>
+                                                <li><a style="color: #000!important;" href="../../PDF/June%202016.pdf" target="_blank">Junie 2016</a></li>
 
-                                        </ul>
-                                    </div>
-                                    <div style="clear: both;"></div>
-
-
-                                </div>
-                            </div>
-                            <br />
-
-<div class="omsc-toggle">
-                                <div class="omsc-toggle-title">2015 Nuusbrief</div>
-                                <div class="omsc-toggle-inner">
-
-                                    <p>Klik op hierdie skakel om die PDF dokument oop te maak</p>
-
-                                    <div class="add_posts">
-                                        <ul>
-                                            <li><a style="color: #000!important;" href="../../PDF/Feb%202015.pdf" target="_blank">Feb 2015</a></li>
-                                            <li><a style="color: #000!important;" href="../../PDF/March%202015.pdf" target="_blank">Maart 2015</a></li>
-                                            <li><a style="color: #000!important;" href="../../PDF/May%202015.pdf" target="_blank">Mei 2015</a></li>
-                                            <li><a style="color: #000!important;" href="../../PDF/July%202015.pdf" target="_blank">Julie 2015</a></li>
-                                            <li><a style="color: #000!important;" href="../../PDF/Sept%202015.pdf" target="_blank">Sept 2015</a></li>
-                                            <li><a style="color: #000!important;" href="../../PDF/Dec%202015.pdf" target="_blank">Des 2015</a></li>
-                                        </ul>
-                                    </div>
-                                    <div style="clear: both;"></div>
+                                            </ul>
+                                        </div>
+                                        <div style="clear: both;"></div>
 
 
-                                </div>
-                            </div>
-                            <br />
-                            <div class="omsc-toggle">
-                                <div class="omsc-toggle-title">2014 Nuusbrief</div>
-                                <div class="omsc-toggle-inner">
-                                    <p>Klik op hierdie skakel om die PDF dokument oop te maak</p>
-                                    <div id="ui-accordion-1-panel-1" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active">
-                                        <ul class="check-list">
-                                            <li><a style="color: #000!important;" href="../../PDF/Jan%202014.pdf" target="_blank">Jan 2014</a></li>
-                                            <li><a style="color: #000!important;" href="../../PDF/March%202014.pdf" target="_blank">Maart 2014</a></li>
-                                            <li><a style="color: #000!important;" href="../../PDF/May%202014.pdf" target="_blank">Mei 2014</a></li>
-                                            <li><a style="color: #000!important;" href="../../PDF/July%202014.pdf" target="_blank">Julie 2014</a></li>
-                                            <li><a style="color: #000!important;" href="../../PDF/Aug%202014.pdf" target="_blank">Aug 2014</a></li>
-                                            <li><a style="color: #000!important;" href="../../PDF/Sept%202014.pdf" target="_blank">Sept 2014</a></li>
-                                            <li><a style="color: #000!important;" href="../../PDF/Oct%202014.pdf" target="_blank">Okt 2014</a></li>
-                                            <li><a style="color: #000!important;" href="../../PDF/Nov%202014.pdf" target="_blank">Nov 2014</a></li>
-
-                                        </ul>
                                     </div>
                                 </div>
-                            </div>
-                            <br />
-                            <div class="omsc-toggle">
-                                <div class="omsc-toggle-title">2013 Nuusbrief</div>
-                                <div class="omsc-toggle-inner">
-                                    <p>Klik op hierdie skakel om die PDF dokument oop te maak</p>
-                                    <div id="ui-accordion-1-panel-2" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active">
-                                        <ul class="check-list">
-                                            <li><a style="color: #000!important;" href="../../PDF/Jan%202013.pdf" target="_blank">Jan 2013</a></li>
-                                            <li><a style="color: #000!important;" href="../../PDF/Feb%202013.pdf" target="_blank">Feb 2013</a></li>
-                                            <li><a style="color: #000!important;" href="../../PDF/March%202013.pdf" target="_blank">Maart 2013</a></li>
-                                            <li><a style="color: #000!important;" href="../../PDF/April%202013.pdf" target="_blank">April 2013</a></li>
-                                            <li><a style="color: #000!important;" href="../../PDF/May%202013.pdf" target="_blank">Mei 2013</a></li>
-                                            <li><a style="color: #000!important;" href="../../PDF/Aug%202013.pdf" target="_blank">Aug 2013</a></li>
-                                            <li><a style="color: #000!important;" href="../../PDF/Sept%202013.pdf" target="_blank">Sept 2013</a></li>
-                                            <li><a style="color: #000!important;" href="../../PDF/Nov%202013.pdf" target="_blank">Nov 2013</a></li>
-                                        </ul>
+                                <br />
+
+                                <div class="omsc-toggle">
+                                    <div class="omsc-toggle-title">2015 Nuusbrief</div>
+                                    <div class="omsc-toggle-inner">
+
+                                        <p>Klik op hierdie skakel om die PDF dokument oop te maak</p>
+
+                                        <div class="add_posts">
+                                            <ul>
+                                                <li><a style="color: #000!important;" href="../../PDF/Feb%202015.pdf" target="_blank">Feb 2015</a></li>
+                                                <li><a style="color: #000!important;" href="../../PDF/March%202015.pdf" target="_blank">Maart 2015</a></li>
+                                                <li><a style="color: #000!important;" href="../../PDF/May%202015.pdf" target="_blank">Mei 2015</a></li>
+                                                <li><a style="color: #000!important;" href="../../PDF/July%202015.pdf" target="_blank">Julie 2015</a></li>
+                                                <li><a style="color: #000!important;" href="../../PDF/Sept%202015.pdf" target="_blank">Sept 2015</a></li>
+                                                <li><a style="color: #000!important;" href="../../PDF/Dec%202015.pdf" target="_blank">Des 2015</a></li>
+                                            </ul>
+                                        </div>
+                                        <div style="clear: both;"></div>
+
+
                                     </div>
                                 </div>
-                            </div>
-                            <br />
-                            <div class="omsc-toggle">
-                                <div class="omsc-toggle-title">2012 Nuusbrief</div>
-                                <div class="omsc-toggle-inner">
-                                    <p>Klik op hierdie skakel om die PDF dokument oop te maak</p>
-                                    <div id="ui-accordion-1-panel-3" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active">
-                                        <ul class="check-list">
-                                            <li><a style="color: #000!important;" href="../../PDF/March%202012.pdf" target="_blank">Maart 2012</a></li>
-                                            <li><a style="color: #000!important;" href="../../PDF/May%202012.pdf" target="_blank">Mei 2012</a></li>
-                                            <li><a style="color: #000!important;" href="../../PDF/June%202012.pdf" target="_blank">Junie 2012</a></li>
-                                            <li><a style="color: #000!important;" href="../../PDF/July%202012.pdf" target="_blank">Julie 2012</a></li>
-                                            <li><a style="color: #000!important;" href="../../PDF/Aug%202012.pdf" target="_blank">Aug 2012</a></li>
-                                            <li><a style="color: #000!important;" href="../../PDF/Sept%202012.pdf" target="_blank">Sept 2012</a></li>
-                                            <li><a style="color: #000!important;" href="../../PDF/Oct%202012.pdf" target="_blank">Okt 2012</a></li>
-                                            <li><a style="color: #000!important;" href="../../PDF/Nov%202012.pdf" target="_blank">Nov 2012</a></li>
-                                        </ul>
+                                <br />
+                                <div class="omsc-toggle">
+                                    <div class="omsc-toggle-title">2014 Nuusbrief</div>
+                                    <div class="omsc-toggle-inner">
+                                        <p>Klik op hierdie skakel om die PDF dokument oop te maak</p>
+                                        <div id="ui-accordion-1-panel-1" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active">
+                                            <ul class="check-list">
+                                                <li><a style="color: #000!important;" href="../../PDF/Jan%202014.pdf" target="_blank">Jan 2014</a></li>
+                                                <li><a style="color: #000!important;" href="../../PDF/March%202014.pdf" target="_blank">Maart 2014</a></li>
+                                                <li><a style="color: #000!important;" href="../../PDF/May%202014.pdf" target="_blank">Mei 2014</a></li>
+                                                <li><a style="color: #000!important;" href="../../PDF/July%202014.pdf" target="_blank">Julie 2014</a></li>
+                                                <li><a style="color: #000!important;" href="../../PDF/Aug%202014.pdf" target="_blank">Aug 2014</a></li>
+                                                <li><a style="color: #000!important;" href="../../PDF/Sept%202014.pdf" target="_blank">Sept 2014</a></li>
+                                                <li><a style="color: #000!important;" href="../../PDF/Oct%202014.pdf" target="_blank">Okt 2014</a></li>
+                                                <li><a style="color: #000!important;" href="../../PDF/Nov%202014.pdf" target="_blank">Nov 2014</a></li>
+
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
+                                <br />
+                                <div class="omsc-toggle">
+                                    <div class="omsc-toggle-title">2013 Nuusbrief</div>
+                                    <div class="omsc-toggle-inner">
+                                        <p>Klik op hierdie skakel om die PDF dokument oop te maak</p>
+                                        <div id="ui-accordion-1-panel-2" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active">
+                                            <ul class="check-list">
+                                                <li><a style="color: #000!important;" href="../../PDF/Jan%202013.pdf" target="_blank">Jan 2013</a></li>
+                                                <li><a style="color: #000!important;" href="../../PDF/Feb%202013.pdf" target="_blank">Feb 2013</a></li>
+                                                <li><a style="color: #000!important;" href="../../PDF/March%202013.pdf" target="_blank">Maart 2013</a></li>
+                                                <li><a style="color: #000!important;" href="../../PDF/April%202013.pdf" target="_blank">April 2013</a></li>
+                                                <li><a style="color: #000!important;" href="../../PDF/May%202013.pdf" target="_blank">Mei 2013</a></li>
+                                                <li><a style="color: #000!important;" href="../../PDF/Aug%202013.pdf" target="_blank">Aug 2013</a></li>
+                                                <li><a style="color: #000!important;" href="../../PDF/Sept%202013.pdf" target="_blank">Sept 2013</a></li>
+                                                <li><a style="color: #000!important;" href="../../PDF/Nov%202013.pdf" target="_blank">Nov 2013</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br />
+                                <div class="omsc-toggle">
+                                    <div class="omsc-toggle-title">2012 Nuusbrief</div>
+                                    <div class="omsc-toggle-inner">
+                                        <p>Klik op hierdie skakel om die PDF dokument oop te maak</p>
+                                        <div id="ui-accordion-1-panel-3" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active">
+                                            <ul class="check-list">
+                                                <li><a style="color: #000!important;" href="../../PDF/March%202012.pdf" target="_blank">Maart 2012</a></li>
+                                                <li><a style="color: #000!important;" href="../../PDF/May%202012.pdf" target="_blank">Mei 2012</a></li>
+                                                <li><a style="color: #000!important;" href="../../PDF/June%202012.pdf" target="_blank">Junie 2012</a></li>
+                                                <li><a style="color: #000!important;" href="../../PDF/July%202012.pdf" target="_blank">Julie 2012</a></li>
+                                                <li><a style="color: #000!important;" href="../../PDF/Aug%202012.pdf" target="_blank">Aug 2012</a></li>
+                                                <li><a style="color: #000!important;" href="../../PDF/Sept%202012.pdf" target="_blank">Sept 2012</a></li>
+                                                <li><a style="color: #000!important;" href="../../PDF/Oct%202012.pdf" target="_blank">Okt 2012</a></li>
+                                                <li><a style="color: #000!important;" href="../../PDF/Nov%202012.pdf" target="_blank">Nov 2012</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+
+
                             </div>
-
-
-
-
+                    </div>
+                </div>
+                <!-- end .entry -->
 
 
             </div>
+            <!-- end #entries -->
         </div>
-        </div>
-										<!-- end .entry -->
+        <!-- end #left-area -->
 
-
-        </div>
-									<!-- end #entries -->
-        </div>
-								<!-- end #left-area -->
-
-           <script src="../../Scripts/superfish.js"></script>
+        <script src="../../Scripts/superfish.js"></script>
         <script type="text/javascript">jQuery(function () { omShortcodes.init(["buttons", "tooltips", "toggle", "tabs", "responsivebox", "counter"]); });</script>
         <script src="../../Scripts/custom.js"></script>
 

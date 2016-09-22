@@ -377,7 +377,7 @@
                         </p>
                         <div class="omsc-accordion">
                             <br />
-                           <%-- <div class="omsc-toggle">
+                            <%-- <div class="omsc-toggle">
                                 <div class="omsc-toggle-title">2015 Newsletters</div>
                                 <div class="omsc-toggle-inner">
 
@@ -469,7 +469,8 @@
                                     <div class="add_posts">
                                         <ul>
                                             <li><a style="color: #000!important;" href="../../PDF/Feb%202016.pdf" target="_blank">Feb 2016</a></li>
-                                           <li><a style="color: #000!important;" href="../../PDF/April%202016.pdf" target="_blank">April 2016</a></li>
+                                            <li><a style="color: #000!important;" href="../../PDF/April%202016.pdf" target="_blank">April 2016</a></li>
+                                            <li><a style="color: #000!important;" href="../../PDF/June%202016.pdf" target="_blank">June 2016</a></li>
 
                                         </ul>
                                     </div>
@@ -480,7 +481,7 @@
                             </div>
                             <br />
 
-<div class="omsc-toggle">
+                            <div class="omsc-toggle">
                                 <div class="omsc-toggle-title">2015 Newsletters</div>
                                 <div class="omsc-toggle-inner">
 
@@ -572,15 +573,15 @@
 
                         </div>
                     </div>
-        </div>
-        <!-- end .entry -->
+                </div>
+                <!-- end .entry -->
 
 
+            </div>
+            <!-- end #entries -->
         </div>
-										<!-- end #entries -->
-        </div>
-									<!-- end #left-area -->
-           <script src="../../Scripts/superfish.js"></script>
+        <!-- end #left-area -->
+        <script src="../../Scripts/superfish.js"></script>
         <script type="text/javascript">jQuery(function () { omShortcodes.init(["buttons", "tooltips", "toggle", "tabs", "responsivebox", "counter"]); });</script>
         <script src="../../Scripts/custom.js"></script>
 
