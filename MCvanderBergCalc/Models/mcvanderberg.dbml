@@ -384,60 +384,6 @@
       <Column Name="Active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.sp_GetMemberAreaPersonal" Method="sp_GetMemberAreaPersonal">
-    <Parameter Name="userid" Type="System.Int32" DbType="Int" />
-    <ElementType Name="sp_GetMemberAreaPersonalResult">
-      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="RelationID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="AgencyID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="WorkAddressCityID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="TitleID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="First_name" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
-      <Column Name="Last_name" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
-      <Column Name="RoleID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="EmailPrimary" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
-      <Column Name="[Cell Phone]" Member="Cell_Phone" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
-      <Column Name="OfficeNo" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
-      <Column Name="LanguageID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="DOB" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="LoyaltyIndicatorID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="TypistTransfertID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="DietID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="CRM_FullAccess" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="CRM_ViewAcccessOnly" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="Contract_Branded_Afr" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="Contract_Branded_Eng" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="Contract_Editable_Branded_Afr" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="Contract_Editable_Branded_Eng" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="Contract_Not_branded_Afr" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="Contract_Not_branded_Eng" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="Contract_Editable_Not_Branded_Afr" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="Contract_Editable_Not_Branded_Eng" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="Videos_Compliment_Slip_Afr" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="Videos_Compliment_Slip_Eng" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="Guides_Compliment_Slip_Afr" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="Guides_Compliment_Slip_Eng" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="CostCalc_Compliment_Slip" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="TrainingGroup1ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="TrainingGroup2ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="TrainingGroup3ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="TrainingGroup4ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="TrainingGroup5ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="MonthlyUnsubscribe" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="MC2AgentUnsubscribe" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="CustomMailsUnsubscribe" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="TypistBondID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Username" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
-      <Column Name="Password" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
-      <Column Name="logoName" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
-      <Column Name="AfrikaansVoorblad" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
-      <Column Name="EnglishVoorblad" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
-      <Column Name="PersonPhoto" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
-      <Column Name="NickName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
-      <Column Name="BirthdayApplicable" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
   <Function Name="dbo.sp_UpdateMemberAreaPersonal" Method="sp_UpdateMemberAreaPersonal">
     <Parameter Name="userid" Type="System.Int32" DbType="Int" />
     <Parameter Name="firstname" Type="System.String" DbType="VarChar(200)" />
@@ -637,6 +583,115 @@
       <Column Name="EmailAddress" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.sp_InsertUserInfo" Method="sp_InsertUserInfo">
+    <Parameter Name="firstname" Type="System.String" DbType="VarChar(500)" />
+    <Parameter Name="lastname" Type="System.String" DbType="VarChar(500)" />
+    <Parameter Name="cellphone" Type="System.String" DbType="VarChar(500)" />
+    <Parameter Name="email" Type="System.String" DbType="VarChar(500)" />
+    <Parameter Name="officenumber" Type="System.String" DbType="VarChar(500)" />
+    <Parameter Name="dietid" Type="System.Int32" DbType="Int" />
+    <Parameter Name="workcityid" Type="System.Int32" DbType="Int" />
+    <Parameter Name="agencyid" Type="System.Int32" DbType="Int" />
+    <Parameter Name="roleid" Type="System.Int32" DbType="Int" />
+    <Parameter Name="relationshipid" Type="System.Int32" DbType="Int" />
+    <Parameter Name="loyaltyid" Type="System.Int32" DbType="Int" />
+    <Parameter Name="titleid" Type="System.Int32" DbType="Int" />
+    <Parameter Name="languageid" Type="System.Int32" DbType="Int" />
+    <Parameter Name="typistid" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CRM_FullAccess" Parameter="cRM_FullAccess" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="CRM_ViewAcccessOnly" Parameter="cRM_ViewAcccessOnly" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Category2_Afr" Parameter="category2_Afr" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Category2_Eng" Parameter="category2_Eng" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Category3_Afr" Parameter="category3_Afr" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Category3_Eng" Parameter="category3_Eng" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Category4_Afr" Parameter="category4_Afr" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Category4_Eng" Parameter="category4_Eng" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Category5_Afr" Parameter="category5_Afr" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Category5_Eng" Parameter="category5_Eng" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Category6_Eng" Parameter="category6_Eng" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Category6_Afr" Parameter="category6_Afr" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Category7_Eng" Parameter="category7_Eng" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Category7_Afr" Parameter="category7_Afr" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="TrainingGroup1ID" Parameter="trainingGroup1ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TrainingGroup2ID" Parameter="trainingGroup2ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TrainingGroup3ID" Parameter="trainingGroup3ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TrainingGroup4ID" Parameter="trainingGroup4ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TrainingGroup5ID" Parameter="trainingGroup5ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MonthlyUnsubscribe" Parameter="monthlyUnsubscribe" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="MC2AgentUnsubscribe" Parameter="mC2AgentUnsubscribe" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="CustomMailsUnsubscribe" Parameter="customMailsUnsubscribe" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="dayDOB" Type="System.Int32" DbType="Int" />
+    <Parameter Name="monthDOB" Type="System.Int32" DbType="Int" />
+    <Parameter Name="bondTypistID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="active" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="logoName" Type="System.String" DbType="VarChar(500)" />
+    <Parameter Name="AfrikaansVoorblad" Parameter="afrikaansVoorblad" Type="System.String" DbType="VarChar(500)" />
+    <Parameter Name="EnglishVoorblad" Parameter="englishVoorblad" Type="System.String" DbType="VarChar(500)" />
+    <Parameter Name="nickname" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="BirthdayApplicable" Parameter="birthdayApplicable" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="FirstTimeUserMail" Parameter="firstTimeUserMail" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FFC" Parameter="fFC" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="website" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Priceton" Parameter="priceton" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_UpdateUserInfo" Method="sp_UpdateUserInfo">
+    <Parameter Name="userid" Type="System.Int32" DbType="Int" />
+    <Parameter Name="firstname" Type="System.String" DbType="VarChar(500)" />
+    <Parameter Name="lastname" Type="System.String" DbType="VarChar(500)" />
+    <Parameter Name="cellphone" Type="System.String" DbType="VarChar(500)" />
+    <Parameter Name="email" Type="System.String" DbType="VarChar(500)" />
+    <Parameter Name="officenumber" Type="System.String" DbType="VarChar(500)" />
+    <Parameter Name="dietid" Type="System.Int32" DbType="Int" />
+    <Parameter Name="workcityid" Type="System.Int32" DbType="Int" />
+    <Parameter Name="agencyid" Type="System.Int32" DbType="Int" />
+    <Parameter Name="roleid" Type="System.Int32" DbType="Int" />
+    <Parameter Name="relationshipid" Type="System.Int32" DbType="Int" />
+    <Parameter Name="loyaltyid" Type="System.Int32" DbType="Int" />
+    <Parameter Name="titleid" Type="System.Int32" DbType="Int" />
+    <Parameter Name="languageid" Type="System.Int32" DbType="Int" />
+    <Parameter Name="typistid" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CRM_FullAccess" Parameter="cRM_FullAccess" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="CRM_ViewAcccessOnly" Parameter="cRM_ViewAcccessOnly" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Category2_Afr" Parameter="category2_Afr" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Category2_Eng" Parameter="category2_Eng" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Category3_Afr" Parameter="category3_Afr" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Category3_Eng" Parameter="category3_Eng" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Category4_Afr" Parameter="category4_Afr" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Category4_Eng" Parameter="category4_Eng" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Category5_Afr" Parameter="category5_Afr" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Category5_Eng" Parameter="category5_Eng" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Category6_Eng" Parameter="category6_Eng" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Category6_Afr" Parameter="category6_Afr" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Category7_Eng" Parameter="category7_Eng" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Category7_Afr" Parameter="category7_Afr" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="TrainingGroup1ID" Parameter="trainingGroup1ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TrainingGroup2ID" Parameter="trainingGroup2ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TrainingGroup3ID" Parameter="trainingGroup3ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TrainingGroup4ID" Parameter="trainingGroup4ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TrainingGroup5ID" Parameter="trainingGroup5ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MonthlyUnsubscribe" Parameter="monthlyUnsubscribe" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="MC2AgentUnsubscribe" Parameter="mC2AgentUnsubscribe" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="CustomMailsUnsubscribe" Parameter="customMailsUnsubscribe" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="dayDOB" Type="System.Int32" DbType="Int" />
+    <Parameter Name="monthDOB" Type="System.Int32" DbType="Int" />
+    <Parameter Name="bondTypistID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="active" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="logoName" Type="System.String" DbType="VarChar(500)" />
+    <Parameter Name="AfrikaansVoorblad" Parameter="afrikaansVoorblad" Type="System.String" DbType="VarChar(500)" />
+    <Parameter Name="EnglishVoorblad" Parameter="englishVoorblad" Type="System.String" DbType="VarChar(500)" />
+    <Parameter Name="nickname" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="BirthdayApplicable" Parameter="birthdayApplicable" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="FirstTimeUserMail" Parameter="firstTimeUserMail" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FFC" Parameter="fFC" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="website" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Priceton" Parameter="priceton" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
   <Function Name="dbo.sp_GetUserInfo" Method="sp_GetUserInfo">
     <Parameter Name="userid" Type="System.Int32" DbType="Int" />
     <ElementType Name="sp_GetUserInfoResult">
@@ -704,113 +759,77 @@
       <Column Name="Category7_Afr" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Column Name="FFC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="WebsiteAddress" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="PricetonParkDevelopment" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
-  <Function Name="dbo.sp_InsertUserInfo" Method="sp_InsertUserInfo">
-    <Parameter Name="firstname" Type="System.String" DbType="VarChar(500)" />
-    <Parameter Name="lastname" Type="System.String" DbType="VarChar(500)" />
-    <Parameter Name="cellphone" Type="System.String" DbType="VarChar(500)" />
-    <Parameter Name="email" Type="System.String" DbType="VarChar(500)" />
-    <Parameter Name="officenumber" Type="System.String" DbType="VarChar(500)" />
-    <Parameter Name="dietid" Type="System.Int32" DbType="Int" />
-    <Parameter Name="workcityid" Type="System.Int32" DbType="Int" />
-    <Parameter Name="agencyid" Type="System.Int32" DbType="Int" />
-    <Parameter Name="roleid" Type="System.Int32" DbType="Int" />
-    <Parameter Name="relationshipid" Type="System.Int32" DbType="Int" />
-    <Parameter Name="loyaltyid" Type="System.Int32" DbType="Int" />
-    <Parameter Name="titleid" Type="System.Int32" DbType="Int" />
-    <Parameter Name="languageid" Type="System.Int32" DbType="Int" />
-    <Parameter Name="typistid" Type="System.Int32" DbType="Int" />
-    <Parameter Name="CRM_FullAccess" Parameter="cRM_FullAccess" Type="System.Boolean" DbType="Bit" />
-    <Parameter Name="CRM_ViewAcccessOnly" Parameter="cRM_ViewAcccessOnly" Type="System.Boolean" DbType="Bit" />
-    <Parameter Name="Category2_Afr" Parameter="category2_Afr" Type="System.Boolean" DbType="Bit" />
-    <Parameter Name="Category2_Eng" Parameter="category2_Eng" Type="System.Boolean" DbType="Bit" />
-    <Parameter Name="Category3_Afr" Parameter="category3_Afr" Type="System.Boolean" DbType="Bit" />
-    <Parameter Name="Category3_Eng" Parameter="category3_Eng" Type="System.Boolean" DbType="Bit" />
-    <Parameter Name="Category4_Afr" Parameter="category4_Afr" Type="System.Boolean" DbType="Bit" />
-    <Parameter Name="Category4_Eng" Parameter="category4_Eng" Type="System.Boolean" DbType="Bit" />
-    <Parameter Name="Category5_Afr" Parameter="category5_Afr" Type="System.Boolean" DbType="Bit" />
-    <Parameter Name="Category5_Eng" Parameter="category5_Eng" Type="System.Boolean" DbType="Bit" />
-    <Parameter Name="Category6_Eng" Parameter="category6_Eng" Type="System.Boolean" DbType="Bit" />
-    <Parameter Name="Category6_Afr" Parameter="category6_Afr" Type="System.Boolean" DbType="Bit" />
-    <Parameter Name="Category7_Eng" Parameter="category7_Eng" Type="System.Boolean" DbType="Bit" />
-    <Parameter Name="Category7_Afr" Parameter="category7_Afr" Type="System.Boolean" DbType="Bit" />
-    <Parameter Name="TrainingGroup1ID" Parameter="trainingGroup1ID" Type="System.Int32" DbType="Int" />
-    <Parameter Name="TrainingGroup2ID" Parameter="trainingGroup2ID" Type="System.Int32" DbType="Int" />
-    <Parameter Name="TrainingGroup3ID" Parameter="trainingGroup3ID" Type="System.Int32" DbType="Int" />
-    <Parameter Name="TrainingGroup4ID" Parameter="trainingGroup4ID" Type="System.Int32" DbType="Int" />
-    <Parameter Name="TrainingGroup5ID" Parameter="trainingGroup5ID" Type="System.Int32" DbType="Int" />
-    <Parameter Name="MonthlyUnsubscribe" Parameter="monthlyUnsubscribe" Type="System.Boolean" DbType="Bit" />
-    <Parameter Name="MC2AgentUnsubscribe" Parameter="mC2AgentUnsubscribe" Type="System.Boolean" DbType="Bit" />
-    <Parameter Name="CustomMailsUnsubscribe" Parameter="customMailsUnsubscribe" Type="System.Boolean" DbType="Bit" />
-    <Parameter Name="dayDOB" Type="System.Int32" DbType="Int" />
-    <Parameter Name="monthDOB" Type="System.Int32" DbType="Int" />
-    <Parameter Name="bondTypistID" Type="System.Int32" DbType="Int" />
-    <Parameter Name="active" Type="System.Boolean" DbType="Bit" />
-    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="VarChar(200)" />
-    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="VarChar(200)" />
-    <Parameter Name="logoName" Type="System.String" DbType="VarChar(500)" />
-    <Parameter Name="AfrikaansVoorblad" Parameter="afrikaansVoorblad" Type="System.String" DbType="VarChar(500)" />
-    <Parameter Name="EnglishVoorblad" Parameter="englishVoorblad" Type="System.String" DbType="VarChar(500)" />
-    <Parameter Name="nickname" Type="System.String" DbType="VarChar(200)" />
-    <Parameter Name="BirthdayApplicable" Parameter="birthdayApplicable" Type="System.Boolean" DbType="Bit" />
-    <Parameter Name="FirstTimeUserMail" Parameter="firstTimeUserMail" Type="System.Int32" DbType="Int" />
-    <Parameter Name="FFC" Parameter="fFC" Type="System.String" DbType="VarChar(200)" />
-    <Parameter Name="website" Type="System.String" DbType="VarChar(200)" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.sp_UpdateUserInfo" Method="sp_UpdateUserInfo">
+  <Function Name="dbo.sp_GetMemberAreaPersonal" Method="sp_GetMemberAreaPersonal">
     <Parameter Name="userid" Type="System.Int32" DbType="Int" />
-    <Parameter Name="firstname" Type="System.String" DbType="VarChar(500)" />
-    <Parameter Name="lastname" Type="System.String" DbType="VarChar(500)" />
-    <Parameter Name="cellphone" Type="System.String" DbType="VarChar(500)" />
-    <Parameter Name="email" Type="System.String" DbType="VarChar(500)" />
-    <Parameter Name="officenumber" Type="System.String" DbType="VarChar(500)" />
-    <Parameter Name="dietid" Type="System.Int32" DbType="Int" />
-    <Parameter Name="workcityid" Type="System.Int32" DbType="Int" />
-    <Parameter Name="agencyid" Type="System.Int32" DbType="Int" />
-    <Parameter Name="roleid" Type="System.Int32" DbType="Int" />
-    <Parameter Name="relationshipid" Type="System.Int32" DbType="Int" />
-    <Parameter Name="loyaltyid" Type="System.Int32" DbType="Int" />
-    <Parameter Name="titleid" Type="System.Int32" DbType="Int" />
-    <Parameter Name="languageid" Type="System.Int32" DbType="Int" />
-    <Parameter Name="typistid" Type="System.Int32" DbType="Int" />
-    <Parameter Name="CRM_FullAccess" Parameter="cRM_FullAccess" Type="System.Boolean" DbType="Bit" />
-    <Parameter Name="CRM_ViewAcccessOnly" Parameter="cRM_ViewAcccessOnly" Type="System.Boolean" DbType="Bit" />
-    <Parameter Name="Category2_Afr" Parameter="category2_Afr" Type="System.Boolean" DbType="Bit" />
-    <Parameter Name="Category2_Eng" Parameter="category2_Eng" Type="System.Boolean" DbType="Bit" />
-    <Parameter Name="Category3_Afr" Parameter="category3_Afr" Type="System.Boolean" DbType="Bit" />
-    <Parameter Name="Category3_Eng" Parameter="category3_Eng" Type="System.Boolean" DbType="Bit" />
-    <Parameter Name="Category4_Afr" Parameter="category4_Afr" Type="System.Boolean" DbType="Bit" />
-    <Parameter Name="Category4_Eng" Parameter="category4_Eng" Type="System.Boolean" DbType="Bit" />
-    <Parameter Name="Category5_Afr" Parameter="category5_Afr" Type="System.Boolean" DbType="Bit" />
-    <Parameter Name="Category5_Eng" Parameter="category5_Eng" Type="System.Boolean" DbType="Bit" />
-    <Parameter Name="Category6_Eng" Parameter="category6_Eng" Type="System.Boolean" DbType="Bit" />
-    <Parameter Name="Category6_Afr" Parameter="category6_Afr" Type="System.Boolean" DbType="Bit" />
-    <Parameter Name="Category7_Eng" Parameter="category7_Eng" Type="System.Boolean" DbType="Bit" />
-    <Parameter Name="Category7_Afr" Parameter="category7_Afr" Type="System.Boolean" DbType="Bit" />
-    <Parameter Name="TrainingGroup1ID" Parameter="trainingGroup1ID" Type="System.Int32" DbType="Int" />
-    <Parameter Name="TrainingGroup2ID" Parameter="trainingGroup2ID" Type="System.Int32" DbType="Int" />
-    <Parameter Name="TrainingGroup3ID" Parameter="trainingGroup3ID" Type="System.Int32" DbType="Int" />
-    <Parameter Name="TrainingGroup4ID" Parameter="trainingGroup4ID" Type="System.Int32" DbType="Int" />
-    <Parameter Name="TrainingGroup5ID" Parameter="trainingGroup5ID" Type="System.Int32" DbType="Int" />
-    <Parameter Name="MonthlyUnsubscribe" Parameter="monthlyUnsubscribe" Type="System.Boolean" DbType="Bit" />
-    <Parameter Name="MC2AgentUnsubscribe" Parameter="mC2AgentUnsubscribe" Type="System.Boolean" DbType="Bit" />
-    <Parameter Name="CustomMailsUnsubscribe" Parameter="customMailsUnsubscribe" Type="System.Boolean" DbType="Bit" />
-    <Parameter Name="dayDOB" Type="System.Int32" DbType="Int" />
-    <Parameter Name="monthDOB" Type="System.Int32" DbType="Int" />
-    <Parameter Name="bondTypistID" Type="System.Int32" DbType="Int" />
-    <Parameter Name="active" Type="System.Boolean" DbType="Bit" />
-    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="VarChar(200)" />
-    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="VarChar(200)" />
-    <Parameter Name="logoName" Type="System.String" DbType="VarChar(500)" />
-    <Parameter Name="AfrikaansVoorblad" Parameter="afrikaansVoorblad" Type="System.String" DbType="VarChar(500)" />
-    <Parameter Name="EnglishVoorblad" Parameter="englishVoorblad" Type="System.String" DbType="VarChar(500)" />
-    <Parameter Name="nickname" Type="System.String" DbType="VarChar(200)" />
-    <Parameter Name="BirthdayApplicable" Parameter="birthdayApplicable" Type="System.Boolean" DbType="Bit" />
-    <Parameter Name="FirstTimeUserMail" Parameter="firstTimeUserMail" Type="System.Int32" DbType="Int" />
-    <Parameter Name="FFC" Parameter="fFC" Type="System.String" DbType="VarChar(200)" />
-    <Parameter Name="website" Type="System.String" DbType="VarChar(200)" />
-    <Return Type="System.Int32" />
+    <ElementType Name="sp_GetMemberAreaPersonalResult">
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RelationID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AgencyID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="WorkAddressCityID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TitleID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="First_name" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
+      <Column Name="Last_name" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
+      <Column Name="RoleID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EmailPrimary" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
+      <Column Name="[Cell Phone]" Member="Cell_Phone" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
+      <Column Name="OfficeNo" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
+      <Column Name="LanguageID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DOB" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LoyaltyIndicatorID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TypistTransfertID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DietID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CRM_FullAccess" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CRM_ViewAcccessOnly" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Contract_Branded_Afr" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Contract_Branded_Eng" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Contract_Editable_Branded_Afr" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Contract_Editable_Branded_Eng" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Contract_Not_branded_Afr" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Contract_Not_branded_Eng" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Contract_Editable_Not_Branded_Afr" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Contract_Editable_Not_Branded_Eng" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Videos_Compliment_Slip_Afr" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Videos_Compliment_Slip_Eng" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Guides_Compliment_Slip_Afr" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Guides_Compliment_Slip_Eng" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CostCalc_Compliment_Slip" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TrainingGroup1ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TrainingGroup2ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TrainingGroup3ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TrainingGroup4ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TrainingGroup5ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MonthlyUnsubscribe" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="MC2AgentUnsubscribe" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CustomMailsUnsubscribe" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="TypistBondID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="logoName" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="AfrikaansVoorblad" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="EnglishVoorblad" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="PersonPhoto" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="NickName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="BirthdayApplicable" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SendFirstTimeUser" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Category2_Afr" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Category2_Eng" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Category3_Afr" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Category3_Eng" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Category4_Afr" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Category4_Eng" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Category5_Afr" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Category5_Eng" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Category6_Eng" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Category6_Afr" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Category7_Eng" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Category7_Afr" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FFC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="WebsiteAddress" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="PricetonParkDevelopment" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
   </Function>
 </Database>

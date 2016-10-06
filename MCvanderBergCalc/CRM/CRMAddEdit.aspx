@@ -296,8 +296,6 @@
                     </div>
                 </div>
 
-
-
                 <div class="row">
                     <div class="col-sm-6">
                         <label style="width: 350px !important;">
@@ -309,6 +307,13 @@
                     <div class="col-sm-6">
                         <label style="width: 350px !important;">
                             <asp:CheckBox ID="chkCat3Eng" runat="server" />&nbsp;MCTools English (Cat 3)</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6" style="margin-left: 20px">
+                        <label style="width: 350px !important;">
+                            <asp:CheckBox ID="chkPrinceton" runat="server" />&nbsp;Priceton Park Development</label>
                     </div>
                 </div>
 
@@ -343,14 +348,14 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <label style="width: 350px !important;">
-                            <asp:CheckBox ID="chkCat6Afr" runat="server" />&nbsp;Contract Branded and Editable Afrikaans  (Cat 6)</label>
+                            <asp:CheckBox ID="chkCat6Afr" runat="server" />&nbsp;Contract Branded and Editable Afrikaans (Cat 6)</label>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-sm-6">
                         <label style="width: 350px !important;">
-                            <asp:CheckBox ID="chkCat6Eng" runat="server" />&nbsp;Contract Branded and Editable English  (Cat 6)</label>
+                            <asp:CheckBox ID="chkCat6Eng" runat="server" />&nbsp;Contract Branded and Editable English (Cat 6)</label>
                     </div>
                 </div>
 
@@ -359,14 +364,14 @@
 
                 <div class="row">
                     <div class="col-sm-6">
-                        <label style="width: 350px !important;">
+                        <label style="width: 370px !important;">
                             <asp:CheckBox ID="chkCat7Afr" runat="server" />&nbsp;Contract Not Branded and Editable Afrikaans (Cat 7)</label>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-sm-6">
-                        <label style="width: 350px !important;">
+                        <label style="width: 370px !important;">
                             <asp:CheckBox ID="chkCat7Eng" runat="server" />&nbsp;Contract Not Branded and Editable English (Cat 7)</label>
                     </div>
                 </div>

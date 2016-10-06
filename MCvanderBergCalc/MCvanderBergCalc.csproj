@@ -1326,7 +1326,9 @@
     <Content Include="language\en\MemberArea.aspx" />
     <Content Include="language\en\MemberAreaHistory.aspx" />
     <Content Include="language\en\PreviewComplimentSlip.aspx" />
+    <Content Include="language\en\PrincetonParkVideo.aspx" />
     <Content Include="language\en\RateUs.aspx" />
+    <Content Include="language\en\Test.html" />
     <Content Include="language\en\TestPage.aspx" />
     <Content Include="Mailing\BirthdayReminder.html" />
     <Content Include="Mailing\Mc2Agent.aspx" />
@@ -2714,6 +2716,13 @@
     </Compile>
     <Compile Include="language\en\PreviewComplimentSlip.aspx.designer.cs">
       <DependentUpon>PreviewComplimentSlip.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="language\en\PrincetonParkVideo.aspx.cs">
+      <DependentUpon>PrincetonParkVideo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="language\en\PrincetonParkVideo.aspx.designer.cs">
+      <DependentUpon>PrincetonParkVideo.aspx</DependentUpon>
     </Compile>
     <Compile Include="language\en\RateUs.aspx.cs">
       <DependentUpon>RateUs.aspx</DependentUpon>

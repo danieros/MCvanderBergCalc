@@ -11,7 +11,9 @@
 					<h1 class="title">MCSellersVideo</h1>
 
 	
-	<div class="pf-content"><p style="text-align: justify;"><iframe src="//www.youtube.com/embed/7qH2MqvkgHQ" width="560" height="315" frameborder="0"></iframe></p>
+	<div class="pf-content"><p style="text-align: justify;">
+        
+        <iframe src="//www.youtube.com/embed/7qH2MqvkgHQ" width="560" height="315" frameborder="0"></iframe></p>
 </div>					</div> <!-- end .entry -->
 
 			

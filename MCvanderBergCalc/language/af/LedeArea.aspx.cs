@@ -60,6 +60,13 @@ namespace MCvanderBergCalc.language.af
 
                     mcvanderbergDataContext db = new mcvanderbergDataContext();
 
+                    panelCat2.Visible = spGetMemberAreaPersonalResult.Category2_Afr;
+                    panelCat3.Visible = spGetMemberAreaPersonalResult.Category3_Afr;
+                    panelCat4.Visible = spGetMemberAreaPersonalResult.Category4_Afr;
+                    panelCat5.Visible = spGetMemberAreaPersonalResult.Category5_Afr;
+                    panelCat6.Visible = spGetMemberAreaPersonalResult.Category6_Afr;
+                    panelCat7.Visible = spGetMemberAreaPersonalResult.Category7_Afr;
+
                     lblBirthName.Text = spGetMemberAreaPersonalResult.First_name;
                     lblNickName.Text = spGetMemberAreaPersonalResult.NickName;
                     lblSurname.Text = spGetMemberAreaPersonalResult.Last_name;
@@ -1359,7 +1366,7 @@ namespace MCvanderBergCalc.language.af
             if (sendmail == true)
             {
                 returncontent = mailcontent;
-                var linqStorePreview = db.sp_InsertComplimentSlip(myguid, Convert.ToInt32(Session["userid"]), previewmailcontent, txtMessage.Text, txtSubjecxt.Text, 2, txtEmail.Text);
+                var linqStorePreview = db.sp_InsertComplimentSlip(myguid, Convert.ToInt32(Session["userid"]), previewmailcontent, txtMessage.Text, txtSubjecxt.Text, 2, txtRecipientEmail.Text);
             }
             else
             {

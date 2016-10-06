@@ -62,6 +62,19 @@ namespace MCvanderBergCalc.language.en
                 {
                     mcvanderbergDataContext db = new mcvanderbergDataContext();
 
+                    panelCat2.Visible = spGetMemberAreaPersonalResult.Category2_Eng;
+                    panelCat3.Visible = spGetMemberAreaPersonalResult.Category3_Eng;
+                    panelCat4.Visible = spGetMemberAreaPersonalResult.Category4_Eng;
+                    panelCat5.Visible = spGetMemberAreaPersonalResult.Category5_Eng;
+                    panelCat6.Visible = spGetMemberAreaPersonalResult.Category6_Eng;
+                    panelCat7.Visible = spGetMemberAreaPersonalResult.Category7_Eng;
+
+                    pnlPP1.Visible = spGetMemberAreaPersonalResult.PricetonParkDevelopment;
+                    pnlPP2.Visible = spGetMemberAreaPersonalResult.PricetonParkDevelopment;
+                    pnlPP3.Visible = spGetMemberAreaPersonalResult.PricetonParkDevelopment;
+                    pnlPP4.Visible = spGetMemberAreaPersonalResult.PricetonParkDevelopment;
+                    pnlPP5.Visible = spGetMemberAreaPersonalResult.PricetonParkDevelopment;
+
                     lblBirthName.Text = spGetMemberAreaPersonalResult.First_name;
                     lblNickName.Text = spGetMemberAreaPersonalResult.NickName;
                     lblSurname.Text = spGetMemberAreaPersonalResult.Last_name;
@@ -955,7 +968,7 @@ namespace MCvanderBergCalc.language.en
         protected void btnFeesClick1(int what)
         {
 
-            if (CheckBox4.Checked == false && CheckBox5.Checked == false && CheckBox6.Checked == false && CheckBox7.Checked == false && CheckBox8.Checked == false && CheckBox1.Checked == false && CheckBox2.Checked == false && CheckBox3.Checked == false && CheckBox35.Checked == false && CheckBox36.Checked == false && CheckBox37.Checked == false)
+            if (CheckBox4.Checked == false && CheckBox5.Checked == false && CheckBox6.Checked == false && CheckBox7.Checked == false && CheckBox8.Checked == false && CheckBox1.Checked == false && CheckBox2.Checked == false && CheckBox3.Checked == false && CheckBox35.Checked == false && CheckBox36.Checked == false && CheckBox37.Checked == false && CheckBox38.Checked == false && CheckBox39.Checked == false && CheckBox40.Checked == false && CheckBox41.Checked == false && CheckBox42.Checked == false)
             {
                 Label3.Visible = true;
             }
@@ -1054,6 +1067,36 @@ namespace MCvanderBergCalc.language.en
                     arraylinks[counter] = "https://mcvdberg.blob.core.windows.net/generalpdf/Captial%20Gains%20tax%20info%20sheet%20-%2004%20Aug%202016.pdf";
                     arrayimages[counter] = "https://mcvdberg.blob.core.windows.net/mailicons/Capital_Gains_Tax.png";
 
+                }
+                if (this.CheckBox38.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net:443/contractspecific/Princeton_Park_OTP_1.pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/PRINCETON_PARK_PROFORMA_1.png";
+                }
+                if (this.CheckBox39.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net:443/contractspecific/Princeton_Park_OTP_2.pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/PRINCETON_PARK_PROFORMA_2.png";
+                }
+                if (this.CheckBox40.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net:443/contractspecific/Princeton_Park_OTP_3.pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/PRINCETON_PARK_PROFORMA_3.png";
+                }
+                if (this.CheckBox41.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net:443/contractspecific/Princeton_Park_OTP_4.pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/PRINCETON_PARK_PROFORMA_4.png";
+                }
+                if (this.CheckBox42.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "http://www.mcvdberg.co.za/language/en/PrincetonParkVideo";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/PRINCETON_PARK_VIDEO.png";
                 }
 
 
@@ -1399,6 +1442,438 @@ namespace MCvanderBergCalc.language.en
                     content = content.Replace("#LINK3#", arraylinks[13]);
                     content = content.Replace("#IMAGE3#", arrayimages[13]);
                     break;
+                case 14:
+                    content += twoicons; ;
+                    content = content.Replace("#LINK1#", arraylinks[1]);
+                    content = content.Replace("#IMAGE1#", arrayimages[1]);
+                    content = content.Replace("#LINK2#", arraylinks[2]);
+                    content = content.Replace("#IMAGE2#", arrayimages[2]);
+
+                    content += twoicons; ;
+                    content = content.Replace("#LINK1#", arraylinks[3]);
+                    content = content.Replace("#IMAGE1#", arrayimages[3]);
+                    content = content.Replace("#LINK2#", arraylinks[4]);
+                    content = content.Replace("#IMAGE2#", arrayimages[4]);
+
+                    content += twoicons; ;
+                    content = content.Replace("#LINK1#", arraylinks[5]);
+                    content = content.Replace("#IMAGE1#", arrayimages[5]);
+                    content = content.Replace("#LINK2#", arraylinks[6]);
+                    content = content.Replace("#IMAGE2#", arrayimages[6]);
+
+                    content += twoicons; ;
+                    content = content.Replace("#LINK1#", arraylinks[7]);
+                    content = content.Replace("#IMAGE1#", arrayimages[7]);
+                    content = content.Replace("#LINK2#", arraylinks[8]);
+                    content = content.Replace("#IMAGE2#", arrayimages[8]);
+
+                    content += twoicons; ;
+                    content = content.Replace("#LINK1#", arraylinks[9]);
+                    content = content.Replace("#IMAGE1#", arrayimages[9]);
+                    content = content.Replace("#LINK2#", arraylinks[10]);
+                    content = content.Replace("#IMAGE2#", arrayimages[10]);
+
+                    content += twoicons; ;
+                    content = content.Replace("#LINK1#", arraylinks[11]);
+                    content = content.Replace("#IMAGE1#", arrayimages[11]);
+                    content = content.Replace("#LINK2#", arraylinks[12]);
+                    content = content.Replace("#IMAGE2#", arrayimages[12]);
+
+                    content += oneicon;
+                    content = content.Replace("#LINK1#", arraylinks[13]);
+                    content = content.Replace("#IMAGE1#", arrayimages[13]);
+                    content = content.Replace("#LINK2#", arraylinks[14]);
+                    content = content.Replace("#IMAGE2#", arrayimages[14]);
+                    break;
+                case 15:
+                    content += twoicons; ;
+                    content = content.Replace("#LINK1#", arraylinks[1]);
+                    content = content.Replace("#IMAGE1#", arrayimages[1]);
+                    content = content.Replace("#LINK2#", arraylinks[2]);
+                    content = content.Replace("#IMAGE2#", arrayimages[2]);
+
+                    content += twoicons; ;
+                    content = content.Replace("#LINK1#", arraylinks[3]);
+                    content = content.Replace("#IMAGE1#", arrayimages[3]);
+                    content = content.Replace("#LINK2#", arraylinks[4]);
+                    content = content.Replace("#IMAGE2#", arrayimages[4]);
+
+                    content += twoicons; ;
+                    content = content.Replace("#LINK1#", arraylinks[5]);
+                    content = content.Replace("#IMAGE1#", arrayimages[5]);
+                    content = content.Replace("#LINK2#", arraylinks[6]);
+                    content = content.Replace("#IMAGE2#", arrayimages[6]);
+
+                    content += twoicons; ;
+                    content = content.Replace("#LINK1#", arraylinks[7]);
+                    content = content.Replace("#IMAGE1#", arrayimages[7]);
+                    content = content.Replace("#LINK2#", arraylinks[8]);
+                    content = content.Replace("#IMAGE2#", arrayimages[8]);
+
+                    content += twoicons; ;
+                    content = content.Replace("#LINK1#", arraylinks[9]);
+                    content = content.Replace("#IMAGE1#", arrayimages[9]);
+                    content = content.Replace("#LINK2#", arraylinks[10]);
+                    content = content.Replace("#IMAGE2#", arrayimages[10]);
+
+                    content += twoicons; ;
+                    content = content.Replace("#LINK1#", arraylinks[11]);
+                    content = content.Replace("#IMAGE1#", arrayimages[11]);
+                    content = content.Replace("#LINK2#", arraylinks[12]);
+                    content = content.Replace("#IMAGE2#", arrayimages[12]);
+
+                    content += oneicon;
+                    content = content.Replace("#LINK1#", arraylinks[13]);
+                    content = content.Replace("#IMAGE1#", arrayimages[13]);
+                    content = content.Replace("#LINK2#", arraylinks[14]);
+                    content = content.Replace("#IMAGE2#", arrayimages[14]);
+
+                    content += oneicon;
+                    content = content.Replace("#LINK3#", arraylinks[15]);
+                    content = content.Replace("#IMAGE3#", arrayimages[15]);
+                    break;
+                case 16:
+                    content += twoicons; ;
+                    content = content.Replace("#LINK1#", arraylinks[1]);
+                    content = content.Replace("#IMAGE1#", arrayimages[1]);
+                    content = content.Replace("#LINK2#", arraylinks[2]);
+                    content = content.Replace("#IMAGE2#", arrayimages[2]);
+
+                    content += twoicons; ;
+                    content = content.Replace("#LINK1#", arraylinks[3]);
+                    content = content.Replace("#IMAGE1#", arrayimages[3]);
+                    content = content.Replace("#LINK2#", arraylinks[4]);
+                    content = content.Replace("#IMAGE2#", arrayimages[4]);
+
+                    content += twoicons; ;
+                    content = content.Replace("#LINK1#", arraylinks[5]);
+                    content = content.Replace("#IMAGE1#", arrayimages[5]);
+                    content = content.Replace("#LINK2#", arraylinks[6]);
+                    content = content.Replace("#IMAGE2#", arrayimages[6]);
+
+                    content += twoicons; ;
+                    content = content.Replace("#LINK1#", arraylinks[7]);
+                    content = content.Replace("#IMAGE1#", arrayimages[7]);
+                    content = content.Replace("#LINK2#", arraylinks[8]);
+                    content = content.Replace("#IMAGE2#", arrayimages[8]);
+
+                    content += twoicons; ;
+                    content = content.Replace("#LINK1#", arraylinks[9]);
+                    content = content.Replace("#IMAGE1#", arrayimages[9]);
+                    content = content.Replace("#LINK2#", arraylinks[10]);
+                    content = content.Replace("#IMAGE2#", arrayimages[10]);
+
+                    content += twoicons; ;
+                    content = content.Replace("#LINK1#", arraylinks[11]);
+                    content = content.Replace("#IMAGE1#", arrayimages[11]);
+                    content = content.Replace("#LINK2#", arraylinks[12]);
+                    content = content.Replace("#IMAGE2#", arrayimages[12]);
+
+                    content += oneicon;
+                    content = content.Replace("#LINK1#", arraylinks[13]);
+                    content = content.Replace("#IMAGE1#", arrayimages[13]);
+                    content = content.Replace("#LINK2#", arraylinks[14]);
+                    content = content.Replace("#IMAGE2#", arrayimages[14]);
+
+                    content += oneicon;
+                    content = content.Replace("#LINK1#", arraylinks[15]);
+                    content = content.Replace("#IMAGE1#", arrayimages[15]);
+                    content = content.Replace("#LINK2#", arraylinks[16]);
+                    content = content.Replace("#IMAGE2#", arrayimages[16]);
+                    break;
+                case 17:
+                    content += twoicons; ;
+                    content = content.Replace("#LINK1#", arraylinks[1]);
+                    content = content.Replace("#IMAGE1#", arrayimages[1]);
+                    content = content.Replace("#LINK2#", arraylinks[2]);
+                    content = content.Replace("#IMAGE2#", arrayimages[2]);
+
+                    content += twoicons; ;
+                    content = content.Replace("#LINK1#", arraylinks[3]);
+                    content = content.Replace("#IMAGE1#", arrayimages[3]);
+                    content = content.Replace("#LINK2#", arraylinks[4]);
+                    content = content.Replace("#IMAGE2#", arrayimages[4]);
+
+                    content += twoicons; ;
+                    content = content.Replace("#LINK1#", arraylinks[5]);
+                    content = content.Replace("#IMAGE1#", arrayimages[5]);
+                    content = content.Replace("#LINK2#", arraylinks[6]);
+                    content = content.Replace("#IMAGE2#", arrayimages[6]);
+
+                    content += twoicons; ;
+                    content = content.Replace("#LINK1#", arraylinks[7]);
+                    content = content.Replace("#IMAGE1#", arrayimages[7]);
+                    content = content.Replace("#LINK2#", arraylinks[8]);
+                    content = content.Replace("#IMAGE2#", arrayimages[8]);
+
+                    content += twoicons; ;
+                    content = content.Replace("#LINK1#", arraylinks[9]);
+                    content = content.Replace("#IMAGE1#", arrayimages[9]);
+                    content = content.Replace("#LINK2#", arraylinks[10]);
+                    content = content.Replace("#IMAGE2#", arrayimages[10]);
+
+                    content += twoicons; ;
+                    content = content.Replace("#LINK1#", arraylinks[11]);
+                    content = content.Replace("#IMAGE1#", arrayimages[11]);
+                    content = content.Replace("#LINK2#", arraylinks[12]);
+                    content = content.Replace("#IMAGE2#", arrayimages[12]);
+
+                    content += oneicon;
+                    content = content.Replace("#LINK1#", arraylinks[13]);
+                    content = content.Replace("#IMAGE1#", arrayimages[13]);
+                    content = content.Replace("#LINK2#", arraylinks[14]);
+                    content = content.Replace("#IMAGE2#", arrayimages[14]);
+
+                    content += oneicon;
+                    content = content.Replace("#LINK1#", arraylinks[15]);
+                    content = content.Replace("#IMAGE1#", arrayimages[15]);
+                    content = content.Replace("#LINK2#", arraylinks[16]);
+                    content = content.Replace("#IMAGE2#", arrayimages[16]);
+
+                    content += oneicon;
+                    content = content.Replace("#LINK3#", arraylinks[17]);
+                    content = content.Replace("#IMAGE3#", arrayimages[17]);
+                    break;
+                case 18:
+                    content += twoicons; ;
+                    content = content.Replace("#LINK1#", arraylinks[1]);
+                    content = content.Replace("#IMAGE1#", arrayimages[1]);
+                    content = content.Replace("#LINK2#", arraylinks[2]);
+                    content = content.Replace("#IMAGE2#", arrayimages[2]);
+
+                    content += twoicons; ;
+                    content = content.Replace("#LINK1#", arraylinks[3]);
+                    content = content.Replace("#IMAGE1#", arrayimages[3]);
+                    content = content.Replace("#LINK2#", arraylinks[4]);
+                    content = content.Replace("#IMAGE2#", arrayimages[4]);
+
+                    content += twoicons; ;
+                    content = content.Replace("#LINK1#", arraylinks[5]);
+                    content = content.Replace("#IMAGE1#", arrayimages[5]);
+                    content = content.Replace("#LINK2#", arraylinks[6]);
+                    content = content.Replace("#IMAGE2#", arrayimages[6]);
+
+                    content += twoicons; ;
+                    content = content.Replace("#LINK1#", arraylinks[7]);
+                    content = content.Replace("#IMAGE1#", arrayimages[7]);
+                    content = content.Replace("#LINK2#", arraylinks[8]);
+                    content = content.Replace("#IMAGE2#", arrayimages[8]);
+
+                    content += twoicons; ;
+                    content = content.Replace("#LINK1#", arraylinks[9]);
+                    content = content.Replace("#IMAGE1#", arrayimages[9]);
+                    content = content.Replace("#LINK2#", arraylinks[10]);
+                    content = content.Replace("#IMAGE2#", arrayimages[10]);
+
+                    content += twoicons; ;
+                    content = content.Replace("#LINK1#", arraylinks[11]);
+                    content = content.Replace("#IMAGE1#", arrayimages[11]);
+                    content = content.Replace("#LINK2#", arraylinks[12]);
+                    content = content.Replace("#IMAGE2#", arrayimages[12]);
+
+                    content += oneicon;
+                    content = content.Replace("#LINK1#", arraylinks[13]);
+                    content = content.Replace("#IMAGE1#", arrayimages[13]);
+                    content = content.Replace("#LINK2#", arraylinks[14]);
+                    content = content.Replace("#IMAGE2#", arrayimages[14]);
+
+                    content += oneicon;
+                    content = content.Replace("#LINK1#", arraylinks[15]);
+                    content = content.Replace("#IMAGE1#", arrayimages[15]);
+                    content = content.Replace("#LINK2#", arraylinks[16]);
+                    content = content.Replace("#IMAGE2#", arrayimages[16]);
+
+                    content += oneicon;
+                    content = content.Replace("#LINK1#", arraylinks[17]);
+                    content = content.Replace("#IMAGE1#", arrayimages[17]);
+                    content = content.Replace("#LINK2#", arraylinks[18]);
+                    content = content.Replace("#IMAGE2#", arrayimages[18]);
+                    break;
+                case 19:
+                    content += twoicons; ;
+                    content = content.Replace("#LINK1#", arraylinks[1]);
+                    content = content.Replace("#IMAGE1#", arrayimages[1]);
+                    content = content.Replace("#LINK2#", arraylinks[2]);
+                    content = content.Replace("#IMAGE2#", arrayimages[2]);
+
+                    content += twoicons; ;
+                    content = content.Replace("#LINK1#", arraylinks[3]);
+                    content = content.Replace("#IMAGE1#", arrayimages[3]);
+                    content = content.Replace("#LINK2#", arraylinks[4]);
+                    content = content.Replace("#IMAGE2#", arrayimages[4]);
+
+                    content += twoicons; ;
+                    content = content.Replace("#LINK1#", arraylinks[5]);
+                    content = content.Replace("#IMAGE1#", arrayimages[5]);
+                    content = content.Replace("#LINK2#", arraylinks[6]);
+                    content = content.Replace("#IMAGE2#", arrayimages[6]);
+
+                    content += twoicons; ;
+                    content = content.Replace("#LINK1#", arraylinks[7]);
+                    content = content.Replace("#IMAGE1#", arrayimages[7]);
+                    content = content.Replace("#LINK2#", arraylinks[8]);
+                    content = content.Replace("#IMAGE2#", arrayimages[8]);
+
+                    content += twoicons; ;
+                    content = content.Replace("#LINK1#", arraylinks[9]);
+                    content = content.Replace("#IMAGE1#", arrayimages[9]);
+                    content = content.Replace("#LINK2#", arraylinks[10]);
+                    content = content.Replace("#IMAGE2#", arrayimages[10]);
+
+                    content += twoicons; ;
+                    content = content.Replace("#LINK1#", arraylinks[11]);
+                    content = content.Replace("#IMAGE1#", arrayimages[11]);
+                    content = content.Replace("#LINK2#", arraylinks[12]);
+                    content = content.Replace("#IMAGE2#", arrayimages[12]);
+
+                    content += oneicon;
+                    content = content.Replace("#LINK1#", arraylinks[13]);
+                    content = content.Replace("#IMAGE1#", arrayimages[13]);
+                    content = content.Replace("#LINK2#", arraylinks[14]);
+                    content = content.Replace("#IMAGE2#", arrayimages[14]);
+
+                    content += oneicon;
+                    content = content.Replace("#LINK1#", arraylinks[15]);
+                    content = content.Replace("#IMAGE1#", arrayimages[15]);
+                    content = content.Replace("#LINK2#", arraylinks[16]);
+                    content = content.Replace("#IMAGE2#", arrayimages[16]);
+
+                    content += oneicon;
+                    content = content.Replace("#LINK1#", arraylinks[17]);
+                    content = content.Replace("#IMAGE1#", arrayimages[17]);
+                    content = content.Replace("#LINK2#", arraylinks[18]);
+                    content = content.Replace("#IMAGE2#", arrayimages[18]);
+
+                    content += oneicon;
+                    content = content.Replace("#LINK3#", arraylinks[19]);
+                    content = content.Replace("#IMAGE3#", arrayimages[19]);
+                    break;
+                case 20:
+                    content += twoicons; ;
+                    content = content.Replace("#LINK1#", arraylinks[1]);
+                    content = content.Replace("#IMAGE1#", arrayimages[1]);
+                    content = content.Replace("#LINK2#", arraylinks[2]);
+                    content = content.Replace("#IMAGE2#", arrayimages[2]);
+
+                    content += twoicons; ;
+                    content = content.Replace("#LINK1#", arraylinks[3]);
+                    content = content.Replace("#IMAGE1#", arrayimages[3]);
+                    content = content.Replace("#LINK2#", arraylinks[4]);
+                    content = content.Replace("#IMAGE2#", arrayimages[4]);
+
+                    content += twoicons; ;
+                    content = content.Replace("#LINK1#", arraylinks[5]);
+                    content = content.Replace("#IMAGE1#", arrayimages[5]);
+                    content = content.Replace("#LINK2#", arraylinks[6]);
+                    content = content.Replace("#IMAGE2#", arrayimages[6]);
+
+                    content += twoicons; ;
+                    content = content.Replace("#LINK1#", arraylinks[7]);
+                    content = content.Replace("#IMAGE1#", arrayimages[7]);
+                    content = content.Replace("#LINK2#", arraylinks[8]);
+                    content = content.Replace("#IMAGE2#", arrayimages[8]);
+
+                    content += twoicons; ;
+                    content = content.Replace("#LINK1#", arraylinks[9]);
+                    content = content.Replace("#IMAGE1#", arrayimages[9]);
+                    content = content.Replace("#LINK2#", arraylinks[10]);
+                    content = content.Replace("#IMAGE2#", arrayimages[10]);
+
+                    content += twoicons; ;
+                    content = content.Replace("#LINK1#", arraylinks[11]);
+                    content = content.Replace("#IMAGE1#", arrayimages[11]);
+                    content = content.Replace("#LINK2#", arraylinks[12]);
+                    content = content.Replace("#IMAGE2#", arrayimages[12]);
+
+                    content += oneicon;
+                    content = content.Replace("#LINK1#", arraylinks[13]);
+                    content = content.Replace("#IMAGE1#", arrayimages[13]);
+                    content = content.Replace("#LINK2#", arraylinks[14]);
+                    content = content.Replace("#IMAGE2#", arrayimages[14]);
+
+                    content += oneicon;
+                    content = content.Replace("#LINK1#", arraylinks[15]);
+                    content = content.Replace("#IMAGE1#", arrayimages[15]);
+                    content = content.Replace("#LINK2#", arraylinks[16]);
+                    content = content.Replace("#IMAGE2#", arrayimages[16]);
+
+                    content += oneicon;
+                    content = content.Replace("#LINK1#", arraylinks[17]);
+                    content = content.Replace("#IMAGE1#", arrayimages[17]);
+                    content = content.Replace("#LINK2#", arraylinks[18]);
+                    content = content.Replace("#IMAGE2#", arrayimages[18]);
+
+                    content += oneicon;
+                    content = content.Replace("#LINK1#", arraylinks[19]);
+                    content = content.Replace("#IMAGE1#", arrayimages[19]);
+                    content = content.Replace("#LINK2#", arraylinks[20]);
+                    content = content.Replace("#IMAGE2#", arrayimages[20]);
+                    break;
+                case 21:
+                    content += twoicons; ;
+                    content = content.Replace("#LINK1#", arraylinks[1]);
+                    content = content.Replace("#IMAGE1#", arrayimages[1]);
+                    content = content.Replace("#LINK2#", arraylinks[2]);
+                    content = content.Replace("#IMAGE2#", arrayimages[2]);
+
+                    content += twoicons; ;
+                    content = content.Replace("#LINK1#", arraylinks[3]);
+                    content = content.Replace("#IMAGE1#", arrayimages[3]);
+                    content = content.Replace("#LINK2#", arraylinks[4]);
+                    content = content.Replace("#IMAGE2#", arrayimages[4]);
+
+                    content += twoicons; ;
+                    content = content.Replace("#LINK1#", arraylinks[5]);
+                    content = content.Replace("#IMAGE1#", arrayimages[5]);
+                    content = content.Replace("#LINK2#", arraylinks[6]);
+                    content = content.Replace("#IMAGE2#", arrayimages[6]);
+
+                    content += twoicons; ;
+                    content = content.Replace("#LINK1#", arraylinks[7]);
+                    content = content.Replace("#IMAGE1#", arrayimages[7]);
+                    content = content.Replace("#LINK2#", arraylinks[8]);
+                    content = content.Replace("#IMAGE2#", arrayimages[8]);
+
+                    content += twoicons; ;
+                    content = content.Replace("#LINK1#", arraylinks[9]);
+                    content = content.Replace("#IMAGE1#", arrayimages[9]);
+                    content = content.Replace("#LINK2#", arraylinks[10]);
+                    content = content.Replace("#IMAGE2#", arrayimages[10]);
+
+                    content += twoicons; ;
+                    content = content.Replace("#LINK1#", arraylinks[11]);
+                    content = content.Replace("#IMAGE1#", arrayimages[11]);
+                    content = content.Replace("#LINK2#", arraylinks[12]);
+                    content = content.Replace("#IMAGE2#", arrayimages[12]);
+
+                    content += oneicon;
+                    content = content.Replace("#LINK1#", arraylinks[13]);
+                    content = content.Replace("#IMAGE1#", arrayimages[13]);
+                    content = content.Replace("#LINK2#", arraylinks[14]);
+                    content = content.Replace("#IMAGE2#", arrayimages[14]);
+
+                    content += oneicon;
+                    content = content.Replace("#LINK1#", arraylinks[15]);
+                    content = content.Replace("#IMAGE1#", arrayimages[15]);
+                    content = content.Replace("#LINK2#", arraylinks[16]);
+                    content = content.Replace("#IMAGE2#", arrayimages[16]);
+
+                    content += oneicon;
+                    content = content.Replace("#LINK1#", arraylinks[17]);
+                    content = content.Replace("#IMAGE1#", arrayimages[17]);
+                    content = content.Replace("#LINK2#", arraylinks[18]);
+                    content = content.Replace("#IMAGE2#", arrayimages[18]);
+
+                    content += oneicon;
+                    content = content.Replace("#LINK1#", arraylinks[19]);
+                    content = content.Replace("#IMAGE1#", arrayimages[19]);
+                    content = content.Replace("#LINK2#", arraylinks[20]);
+                    content = content.Replace("#IMAGE2#", arrayimages[20]);
+
+                    content += oneicon;
+                    content = content.Replace("#LINK3#", arraylinks[21]);
+                    content = content.Replace("#IMAGE3#", arrayimages[21]);
+                    break;
             }
 
             return content;
@@ -1478,7 +1953,7 @@ namespace MCvanderBergCalc.language.en
             if (sendmail == true)
             {
                 returncontent = mailcontent;
-                var linqStorePreview = db.sp_InsertComplimentSlip(myguid, Convert.ToInt32(Session["userid"]), previewmailcontent, txtMessage.Text, txtSubjecxt.Text, 2, txtEmail.Text);
+                var linqStorePreview = db.sp_InsertComplimentSlip(myguid, Convert.ToInt32(Session["userid"]), previewmailcontent, txtMessage.Text, txtSubjecxt.Text, 2, txtRecipientEmail.Text);
             }
             else
             {

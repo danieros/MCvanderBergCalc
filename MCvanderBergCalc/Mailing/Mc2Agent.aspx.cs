@@ -33,7 +33,7 @@ namespace MCvanderBergCalc.Mailing
         {
             mcvanderbergDataContext db = new mcvanderbergDataContext();
             DateTime value = new DateTime(2015, 1, 18);
-            var linqagent = db.sp_InsertMc2Agent(142, 2, 1, value, "info@mcvdberg.co.za", "Tiaan (M.C.) van der Berg Inc.", "MC2Agent-123", txtEnglishSubject.Text, txtCKEditor1.Text, txtAfrikaansSubject.Text, txtCKEditor2.Text);
+            var linqagent = db.sp_InsertMc2Agent(143, 2, 1, value, "info@mcvdberg.co.za", "Tiaan (M.C.) van der Berg Inc.", "MC2Agent-123", txtEnglishSubject.Text, txtCKEditor1.Text, txtAfrikaansSubject.Text, txtCKEditor2.Text);
         }
 
         protected void Button3_Click(object sender, EventArgs e)
@@ -45,7 +45,7 @@ namespace MCvanderBergCalc.Mailing
             string mailcontent = "";
 
             mcvanderbergDataContext db = new mcvanderbergDataContext();
-            var linqcontents = db.spGetMC2Agentcontent(142, 1);
+            var linqcontents = db.spGetMC2Agentcontent(143, 1);
             foreach(var linqcontent in linqcontents)
             {
                 toaddress = eMail.Text;
@@ -76,7 +76,7 @@ namespace MCvanderBergCalc.Mailing
             string mailcontent = "";
 
             mcvanderbergDataContext db = new mcvanderbergDataContext();
-            var linqcontents = db.spGetMC2Agentcontent(142, 1);
+            var linqcontents = db.spGetMC2Agentcontent(143, 1);
             foreach (var linqcontent in linqcontents)
             {
                 toaddress = eMail.Text;
