@@ -74,6 +74,8 @@ namespace MCvanderBergCalc.language.en
                     pnlPP3.Visible = spGetMemberAreaPersonalResult.PricetonParkDevelopment;
                     pnlPP4.Visible = spGetMemberAreaPersonalResult.PricetonParkDevelopment;
                     pnlPP5.Visible = spGetMemberAreaPersonalResult.PricetonParkDevelopment;
+                    pnlPP6.Visible = spGetMemberAreaPersonalResult.PricetonParkDevelopment;
+                    pnlPP7.Visible = spGetMemberAreaPersonalResult.PricetonParkDevelopment;
 
                     lblBirthName.Text = spGetMemberAreaPersonalResult.First_name;
                     lblNickName.Text = spGetMemberAreaPersonalResult.NickName;

@@ -466,27 +466,27 @@ Know start completing all the relevant fields below before proceeding with your 
 
                                                 <asp:Panel ID="pnlPP1" runat="server" CssClass="MemberAreaContentheadingsItems">
                                                     <asp:CheckBox ID="CheckBox38" runat="server" />&nbsp;
-                                              <asp:HyperLink ID="HyperLink19" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net:443/contractspecific/Princeton_Park_OTP_1.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer">&nbsp;Princeton Park 1 contract</label>
+                                              <asp:HyperLink ID="HyperLink19" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net:443/contractspecific/Princeton_Park_OTP_1.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 240px !important">&nbsp;Princeton Park 1 contract (Development 2)</label>
                                               </asp:HyperLink>
                                                 </asp:Panel>
 
                                                 <asp:Panel ID="pnlPP2" runat="server" CssClass="MemberAreaContentheadingsItems">
                                                     <asp:CheckBox ID="CheckBox39" runat="server" />&nbsp;
-                                              <asp:HyperLink ID="HyperLink20" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net:443/contractspecific/Princeton_Park_OTP_2.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer">&nbsp;Princeton Park 2 contract </label>
+                                              <asp:HyperLink ID="HyperLink20" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net:443/contractspecific/Princeton_Park_OTP_2.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 240px !important">&nbsp;Princeton Park 2 contract (Development 1)</label>
                                               </asp:HyperLink>
                                                 </asp:Panel>
 
 
                                                 <asp:Panel ID="pnlPP3" runat="server" CssClass="MemberAreaContentheadingsItems">
                                                     <asp:CheckBox ID="CheckBox40" runat="server" />&nbsp;
-                                              <asp:HyperLink ID="HyperLink21" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net:443/contractspecific/Princeton_Park_OTP_3.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer">&nbsp;Princeton Park 3 contract </label>
+                                              <asp:HyperLink ID="HyperLink21" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net:443/contractspecific/Princeton_Park_OTP_3.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 240px !important">&nbsp;Princeton Park 3 contract (Development 3)</label>
                                               </asp:HyperLink>
                                                 </asp:Panel>
 
 
                                                 <asp:Panel ID="pnlPP4" runat="server" CssClass="MemberAreaContentheadingsItems">
                                                     <asp:CheckBox ID="CheckBox41" runat="server" />&nbsp;
-                                              <asp:HyperLink ID="HyperLink22" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net:443/contractspecific/Princeton_Park_OTP_4.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer">&nbsp;Princeton Park 4 contract </label>
+                                              <asp:HyperLink ID="HyperLink22" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net:443/contractspecific/Princeton_Park_OTP_4.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 240px !important">&nbsp;Princeton Park 4 contract (Development 4)</label>
                                               </asp:HyperLink>
                                                 </asp:Panel>
 
@@ -494,6 +494,18 @@ Know start completing all the relevant fields below before proceeding with your 
                                                 <asp:Panel ID="pnlPP5" runat="server" CssClass="MemberAreaContentheadingsItems">
                                                     <asp:CheckBox ID="CheckBox42" runat="server" />&nbsp;
                                               <asp:HyperLink ID="HyperLink23" runat="server" NavigateUrl="http://www.mcvdberg.co.za/language/en/PrincetonParkVideo" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-film fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer">&nbsp;Princeton Park virtual tour</label>
+                                              </asp:HyperLink>
+                                                </asp:Panel>
+
+                                                <asp:Panel ID="pnlPP6" runat="server" CssClass="MemberAreaContentheadingsItems">
+                                                    <asp:CheckBox ID="CheckBox43" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink24" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net:443/contractspecific/Princeton_Park_OTP_4.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer">&nbsp;HOA Rules</label>
+                                              </asp:HyperLink>
+                                                </asp:Panel>
+
+                                                <asp:Panel ID="pnlPP7" runat="server" CssClass="MemberAreaContentheadingsItems">
+                                                    <asp:CheckBox ID="CheckBox44" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink25" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net:443/contractspecific/Princeton_Park_OTP_4.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer">&nbsp;Body Corporate Rules</label>
                                               </asp:HyperLink>
                                                 </asp:Panel>
 
