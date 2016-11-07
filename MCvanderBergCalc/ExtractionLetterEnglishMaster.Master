@@ -28,9 +28,9 @@
         .container{
             width: 900px !important;
         }
-        /*ol, ul {
+        ol, ul {
     list-style: inherit !important;
-}*/
+}
     </style>
 </head>
 <body>
@@ -41,7 +41,7 @@
                     <div class="container">
                         <div id="logo-area">
                             <a href="home.aspx">
-                                <img src="https://mcvdberg.blob.core.windows.net/generalimages/MC_van_der_Berg_Logo_English.png" alt="M.C. van der Berg Incorporated" id="logo" />
+                                <img src="https://mcvdberg.blob.core.windows.net/generalimages/MC_van_der_Berg_Logo_English.png" width="800" alt="M.C. van der Berg Incorporated" id="logo" />
                             </a>
                             <p id="slogan"></p>
                         </div>

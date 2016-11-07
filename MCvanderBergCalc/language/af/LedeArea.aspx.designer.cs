@@ -526,6 +526,60 @@ namespace MCvanderBergCalc.language.af {
         protected global::System.Web.UI.WebControls.HyperLink HyperLink18;
         
         /// <summary>
+        /// pnlBulletinPurchase control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlBulletinPurchase;
+        
+        /// <summary>
+        /// CheckBox45 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox CheckBox45;
+        
+        /// <summary>
+        /// HyperLink26 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink26;
+        
+        /// <summary>
+        /// pnlBulletinSeller control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlBulletinSeller;
+        
+        /// <summary>
+        /// CheckBox46 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox CheckBox46;
+        
+        /// <summary>
+        /// HyperLink27 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink27;
+        
+        /// <summary>
         /// Label3 control.
         /// </summary>
         /// <remarks>

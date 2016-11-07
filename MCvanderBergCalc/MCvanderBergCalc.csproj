@@ -1100,6 +1100,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="HtmlPage1.html" />
     <Content Include="Images\04012016FEESHEET1.png" />
     <Content Include="Images\04012016FEE SHEET2.png" />
     <Content Include="Images\ad.png" />
@@ -1333,6 +1334,7 @@
     <Content Include="Mailing\BirthdayReminder.html" />
     <Content Include="Mailing\Mc2Agent.aspx" />
     <Content Include="Mailing\PreviewMc2Agent.aspx" />
+    <Content Include="Mailing\Responses.aspx" />
     <Content Include="Mailing\SendBulkMail.aspx" />
     <Content Include="Menu1.html" />
     <Content Include="Models\mcvanderberg.dbml">
@@ -2751,6 +2753,13 @@
     </Compile>
     <Compile Include="Mailing\PreviewMc2Agent.aspx.designer.cs">
       <DependentUpon>PreviewMc2Agent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mailing\Responses.aspx.cs">
+      <DependentUpon>Responses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mailing\Responses.aspx.designer.cs">
+      <DependentUpon>Responses.aspx</DependentUpon>
     </Compile>
     <Compile Include="Mailing\SendBulkMail.aspx.cs">
       <DependentUpon>SendBulkMail.aspx</DependentUpon>

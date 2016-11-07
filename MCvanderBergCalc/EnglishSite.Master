@@ -82,6 +82,11 @@
             window.location = ("" + window.location).replace(/#[A-Za-z0-9_]*$/, '') + "#anchor5"
         }
 
+        function cat8Click() {
+            $('#divcat8_div').fadeIn('slow');
+            window.location = ("" + window.location).replace(/#[A-Za-z0-9_]*$/, '') + "#anchor5"
+        }
+
     </script>
 
     <script type="text/javascript">
@@ -127,6 +132,11 @@
                 $('#divcat5_div').fadeIn('slow');
             });
 
+            $('#divcat8').click(function () {
+                closeall();
+                $('#divcat8_div').fadeIn('slow');
+            });
+
 
             $('#divcat0hide').click(function () {
                 closeall();
@@ -162,6 +172,10 @@
                 closeall();
                 $('#divcat5_div').fadeOut('20000');
             });
+            $('#divcat8hide').click(function () {
+                closeall();
+                $('#divcat8_div').fadeOut('20000');
+            });
 
 
             function closeall() {
@@ -171,10 +185,14 @@
                 $('#divcat3_div').hide();
                 $('#divcat4_div').hide();
                 $('#divcat5_div').hide();
+                $('#divcat8_div').hide();
             };
 
         });
     </script>
+
+<script src="http://mcvanderbergtools.azurewebsites.net/ckeditor/ckeditor.js"></script>
+
 
 
     <style type='text/css'>

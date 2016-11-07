@@ -311,9 +311,9 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-sm-6" style="margin-left: 20px">
+                    <div class="col-sm-6">
                         <label style="width: 350px !important;">
-                            <asp:CheckBox ID="chkPrinceton" runat="server" />&nbsp;Priceton Park Development</label>
+                            <asp:CheckBox ID="chkPrinceton" runat="server" />&nbsp;Princeton Park Development</label>
                     </div>
                 </div>
 

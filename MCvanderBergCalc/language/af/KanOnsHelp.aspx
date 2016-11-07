@@ -15,8 +15,8 @@
 
 
 				<div class="pf-content">
-					<p>
-						<img src="http://www.mcvdbergattorneys.co.za/Data/Sites/1/media/can_we_assist.jpg" alt="" /></p>
+<%--					<p>
+						<img src="http://www.mcvdbergattorneys.co.za/Data/Sites/1/media/can_we_assist.jpg" alt="" /></p>--%>
 					<div class="frm_forms  with_frm_style frm_style_formidable-style" id="frm_form_10_container">
 						<form enctype="multipart/form-data" method="post" class="frm-show-form " id="form_y9z55m">
 							<div class="frm_form_fields ">

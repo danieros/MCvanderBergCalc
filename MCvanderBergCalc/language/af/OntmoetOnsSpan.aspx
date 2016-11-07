@@ -538,7 +538,7 @@ Januarie 2001 &#8211; Desember 2001
                         <div class='one_half'>
                             <img src="https://mcvdberg.blob.core.windows.net/generalimages/Nicole%20AlbertsWeb.jpg" alt="" width="175" height="257" />
                             <%--                                </p>--%>
-                            <h5>Nicole Rokebrand</h5>
+                            <h5>Nicole Alberts</h5>
                             <%--                        <p>--%>
                             Professionele Assistent
                             <div class="omsc-accordion">

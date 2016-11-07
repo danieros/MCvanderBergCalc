@@ -11,9 +11,9 @@
 					<h1 class="title">Can we assist?</h1>
 
 	
-	<div class="pf-content"><div class="art-postmetadataheader">
+<%--	<div class="pf-content"><div class="art-postmetadataheader">
 <h2 id="module9" class="art-postheader moduletitle"><img src="http://www.mcvdbergattorneys.co.za/Data/Sites/1/media/can_we_assist.jpg" alt="" /></h2>
-</div>
+</div>--%>
 <div class="frm_forms  with_frm_style frm_style_formidable-style" id="frm_form_10_container">
 <div class="frm_form_fields ">
 <fieldset>

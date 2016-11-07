@@ -866,7 +866,7 @@
                                             <p>Sommige van die tydraamwerke (soos die verkryging van die verbandlening) is onbekend aan ons, aangesien die die kontrakpartye in die koopkontrak daarop ooreenkom en daarom word dit gemerk as “onbekend” op die vloeidiagram.</p>
                                             <p>&nbsp;</p>
                                             <p>
-                                                <img src="http://www.mcvdbergattorneys.co.za/Data/Sites/3/media/mc-afrikaans.jpg" alt="" />
+                                                <img src="http://www.mcvdberg.co.za/Images/mc-afrikaans.png" alt="" />
                                             </p>
                                         </div>
                                     </div>

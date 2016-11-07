@@ -23,7 +23,7 @@ namespace MCvanderBergCalc.language.en
 
             string v = Request.QueryString["id"];
 
-            v = "1410";
+            v = "70";// "1410"; // "2438"; // 
 
             if (Session["userid"] != null)
             {
@@ -43,7 +43,7 @@ namespace MCvanderBergCalc.language.en
                 }
             }
 
-            
+
 
             return userid;
         }
@@ -68,14 +68,14 @@ namespace MCvanderBergCalc.language.en
                     panelCat5.Visible = spGetMemberAreaPersonalResult.Category5_Eng;
                     panelCat6.Visible = spGetMemberAreaPersonalResult.Category6_Eng;
                     panelCat7.Visible = spGetMemberAreaPersonalResult.Category7_Eng;
-
-                    pnlPP1.Visible = spGetMemberAreaPersonalResult.PricetonParkDevelopment;
-                    pnlPP2.Visible = spGetMemberAreaPersonalResult.PricetonParkDevelopment;
-                    pnlPP3.Visible = spGetMemberAreaPersonalResult.PricetonParkDevelopment;
-                    pnlPP4.Visible = spGetMemberAreaPersonalResult.PricetonParkDevelopment;
-                    pnlPP5.Visible = spGetMemberAreaPersonalResult.PricetonParkDevelopment;
-                    pnlPP6.Visible = spGetMemberAreaPersonalResult.PricetonParkDevelopment;
-                    pnlPP7.Visible = spGetMemberAreaPersonalResult.PricetonParkDevelopment;
+                    panelCat8.Visible = spGetMemberAreaPersonalResult.PricetonParkDevelopment;
+                    //pnlPP1.Visible = spGetMemberAreaPersonalResult.PricetonParkDevelopment;
+                    //pnlPP2.Visible = spGetMemberAreaPersonalResult.PricetonParkDevelopment;
+                    //pnlPP3.Visible = spGetMemberAreaPersonalResult.PricetonParkDevelopment;
+                    //pnlPP4.Visible = spGetMemberAreaPersonalResult.PricetonParkDevelopment;
+                    //pnlPP5.Visible = spGetMemberAreaPersonalResult.PricetonParkDevelopment;
+                    //pnlPP6.Visible = spGetMemberAreaPersonalResult.PricetonParkDevelopment;
+                    //pnlPP7.Visible = spGetMemberAreaPersonalResult.PricetonParkDevelopment;
 
                     lblBirthName.Text = spGetMemberAreaPersonalResult.First_name;
                     lblNickName.Text = spGetMemberAreaPersonalResult.NickName;
@@ -98,6 +98,7 @@ namespace MCvanderBergCalc.language.en
                     this.logoname = spGetMemberAreaPersonalResult.logoName;
                     this.lblName.Text = spGetMemberAreaPersonalResult.First_name;
                     this.Session["agency"] = spGetMemberAreaPersonalResult.AgencyID;
+                    this.Session["office"] = spGetMemberAreaPersonalResult.OfficeNo;
                     HttpSessionState session = this.Session;
                     int? agencyID = spGetMemberAreaPersonalResult.AgencyID;
                     session["logo"] = string.Concat(agencyID.ToString(), "_LOGO.jpg");
@@ -167,6 +168,35 @@ namespace MCvanderBergCalc.language.en
                     }
                     this.imagephoto.Visible = true;
                     bool? videosComplimentSlipEng = spGetMemberAreaPersonalResult.Videos_Compliment_Slip_Eng;
+
+                    #region Bulletins
+                    // Purchasers Bulletin
+                    HttpWebRequest httpWebRequest3 = WebRequest.Create(string.Concat("https://mcvdberg.blob.core.windows.net/bulletins/CPA_PURCHASERS_BULLETIN_ENG_", userID.ToString(), ".pdf")) as HttpWebRequest;
+                    httpWebRequest3.Method = "HEAD";
+                    try
+                    {
+                        HttpStatusCode statusCode1 = (httpWebRequest3.GetResponse() as HttpWebResponse).StatusCode;
+                        HyperLink26.NavigateUrl = string.Concat("https://mcvdberg.blob.core.windows.net/bulletins/CPA_PURCHASERS_BULLETIN_ENG_", userID.ToString(), ".pdf");
+                        pnlBulletinPurchase.Visible = true;
+                    }
+                    catch (WebException webException2)
+                    {
+                        pnlBulletinPurchase.Visible = false;
+                    }
+                    // Sellers Bulletin
+                    HttpWebRequest httpWebRequest4 = WebRequest.Create(string.Concat("https://mcvdberg.blob.core.windows.net/bulletins/CPA_SELLERS_BULLETIN_ENG_", userID.ToString(), ".pdf")) as HttpWebRequest;
+                    httpWebRequest4.Method = "HEAD";
+                    try
+                    {
+                        HttpStatusCode statusCode1 = (httpWebRequest4.GetResponse() as HttpWebResponse).StatusCode;
+                        HyperLink27.NavigateUrl = string.Concat("https://mcvdberg.blob.core.windows.net/bulletins/CPA_SELLERS_BULLETIN_ENG_", userID.ToString(), ".pdf");
+                        pnlBulletinSeller.Visible = true;
+                    }
+                    catch (WebException webException2)
+                    {
+                        pnlBulletinSeller.Visible = false;
+                    }
+                    #endregion
 
                     videosComplimentSlipEng = spGetMemberAreaPersonalResult.Guides_Compliment_Slip_Eng;
                     videosComplimentSlipEng = spGetMemberAreaPersonalResult.CostCalc_Compliment_Slip;
@@ -284,7 +314,7 @@ namespace MCvanderBergCalc.language.en
 
             if (what == 1)
             {
-                  ClientScript.RegisterStartupScript(GetType(), "Javascript", "javascript:cat2Click(); ", true);
+                ClientScript.RegisterStartupScript(GetType(), "Javascript", "javascript:cat2Click(); ", true);
             }
             else
             {
@@ -315,7 +345,7 @@ namespace MCvanderBergCalc.language.en
             content = content.Replace("#LINK3#", "http://www.mcvdberg.co.za/language/en/MCSellersGuide");
             content = content.Replace("#IMAGE3#", "https://mcvdberg.blob.core.windows.net/mailicons/MCSellersGuide.png");
 
-            mailcontent = mailcontent.Replace("#CONTENT#", content);   
+            mailcontent = mailcontent.Replace("#CONTENT#", content);
 
             string emailto = "";
             if (what == 0)
@@ -345,18 +375,18 @@ namespace MCvanderBergCalc.language.en
                 //btnIntroSeller.Visible = true;
                 emailto = txtRecipientEmail.Text; ;
                 Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>parent.jQuery.fancybox.close();</script>");
-               
+
                 SendMail mymail = new SendMail();
                 mailcontent = PopulateGeneralmail(mailcontent, true);
                 lblIntro.Visible = true;
                 lblIntro.Text = txtFirstname.Text + ", your e-mail was sent successfully to " + txtRecipientEmail.Text + ".  Thank you for continuous loyal support.  From Tiaan & Sonja";
                 mymail.SendGeneralmail(emailto, lblEmail.Text, "info@mcvdberg.co.za", txtFirstname.Text + " " + txtSurname.Text, txtSubjecxt.Text, mailcontent);
 
-              //  Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('" + txtFirstname.Text + ", your e-mail was sent successfully to " + txtRecipientEmail.Text + ".  Thank you for continuous loyal support.  From Tiaan & Sonja');</script>");
+                //  Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('" + txtFirstname.Text + ", your e-mail was sent successfully to " + txtRecipientEmail.Text + ".  Thank you for continuous loyal support.  From Tiaan & Sonja');</script>");
             }
 
 
-           
+
 
         }
 
@@ -643,7 +673,7 @@ namespace MCvanderBergCalc.language.en
 
         protected void btnContractNotBrandedClick(int what)
         {
- 
+
             if (CheckBox9.Checked == false && CheckBox5.Checked == false && CheckBox10.Checked == false && CheckBox11.Checked == false && CheckBox12.Checked == false && CheckBox13.Checked == false && CheckBox14.Checked == false && CheckBox15.Checked == false && CheckBox16.Checked == false && CheckBox17.Checked == false && CheckBox18.Checked == false && CheckBox19.Checked == false && CheckBox20.Checked == false && CheckBox21.Checked == false)
             {
                 Label5.Visible = true;
@@ -790,6 +820,205 @@ namespace MCvanderBergCalc.language.en
                     mailcontent = PopulateGeneralmail(mailcontent, true);
                     lblContractNonBranded.Visible = true;
                     lblContractNonBranded.Text = txtFirstname.Text + ", your e-mail was sent successfully to " + txtRecipientEmail.Text + ".  Thank you for continuous loyal support.  From Tiaan & Sonja";
+                    mymail.SendGeneralmail(emailto, lblEmail.Text, "info@mcvdberg.co.za", txtFirstname.Text + " " + txtSurname.Text, txtSubjecxt.Text, mailcontent);
+                }
+            }
+        }
+
+        protected void btnPrincetonParkPreviewClick(object sender, EventArgs e)
+        {
+            btnPrincetonParkClick(0);
+        }
+
+        protected void btnPrincetonParkMailClick(object sender, EventArgs e)
+        {
+            btnPrincetonParkClick(1);
+        }
+
+        protected void btnPrincetonParkClick(int what)
+        {
+
+            if (CheckBox38.Checked == false && CheckBox39.Checked == false && CheckBox40.Checked == false && CheckBox41.Checked == false && CheckBox42.Checked == false && CheckBox43.Checked == false && CheckBox44.Checked == false && CheckBox47.Checked == false && CheckBox48.Checked == false && CheckBox49.Checked == false && CheckBox57.Checked == false && CheckBox50.Checked == false && CheckBox51.Checked == false && CheckBox52.Checked == false && CheckBox53.Checked == false && CheckBox54.Checked == false && CheckBox55.Checked == false)
+            {
+                lblPrinceton.Visible = true;
+            }
+            else
+            {
+                lblPrinceton.Visible = false;
+
+                ResetLabel();
+
+                if (what == 1)
+                {
+                    ClientScript.RegisterStartupScript(GetType(), "Javascript", "javascript:cat8Click(); ", true);
+                }
+                else
+                {
+                    ClientScript.RegisterStartupScript(GetType(), "Javascript", "javascript:openFancybox8();", true);
+                    ClientScript.RegisterStartupScript(GetType(), "Javascript", "javascript:cat8Click(); ", true);
+                }
+
+                string mailcontent = "";
+                mailcontent = File.ReadAllText(Server.MapPath("~/Templates/") + "complimentslipenglish.html");
+
+                if (txtSubjecxt.Text == "")
+                {
+                    txtSubjecxt.Text = "With compliments from " + txtFirstname.Text + " " + txtSurname.Text;
+                }
+
+
+                string[] arraylinks = new string[20];
+                string[] arrayimages = new string[20];
+                int counter = 0;
+
+
+
+                if (this.CheckBox38.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net/contractspecific/Master_Contract_PPark_1_development_2_Combined.pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/PRINCETON_PARK_PROFORMA_1.png";
+                }
+                if (this.CheckBox39.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net:443/contractspecific/Princeton_Park_OTP_2.pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/PRINCETON_PARK_PROFORMA_2.png";
+                }
+                if (this.CheckBox40.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net:443/contractspecific/Princeton_Park_OTP_3.pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/PRINCETON_PARK_PROFORMA_3.png";
+                }
+                if (this.CheckBox41.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net:443/contractspecific/Princeton_Park_OTP_4.pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/PRINCETON_PARK_PROFORMA_4.png";
+                }
+                if (this.CheckBox42.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "http://www.mcvdberg.co.za/language/en/PrincetonParkVideo";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/PRINCETON_PARK_VIDEO.png";
+                }
+                if (this.CheckBox43.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "http://www.mcvdberg.co.za/language/en/PrincetonParkVideo";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/Princeton_Park_HOA.png";
+                }
+                if (this.CheckBox44.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "http://www.mcvdberg.co.za/language/en/PrincetonParkVideo";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/Princeton_Park_BCR.png";
+                }
+
+                if (this.CheckBox47.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net/contractspecific/Annexure_C_TYPE_1_05_PP_MARK_DWG_P16.pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/Annexure_C_TYPE_1_05_PP_MARK_DWG_P16.png";
+                }
+
+                if (this.CheckBox48.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net/contractspecific/Annexure_C_TYPE_2_PP_MARK_DWG__P17.pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/Annexure_C_TYPE_2_PP_MARK_DWG__P17.png";
+                }
+
+                if (this.CheckBox49.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net/contractspecific/Annexure_C_TYPE_3_05%20PP_MARK_DWG_P18.pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/Annexure_C_TYPE_3_05_PP_MARK_DWG_P18.png";
+                }
+
+                if (this.CheckBox57.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net/contractspecific/Annexure_C_TYPE_4_05_PP_MARK_DWG_P19.pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/Annexure_C_TYPE_4_05_PP_MARK_DWG_P19.png";
+                }
+
+                if (this.CheckBox50.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net/contractspecific/Annexure_C_TYPE_5-1_MvdMA_619_1_001_P.pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/Annexure_C_TYPE_5-1_MvdMA_619_1_001_P.png";
+                }
+
+                if (this.CheckBox51.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net/contractspecific/Annexure_C_TYPE_5-2_MvdMA_619_1_001_P.pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/Annexure_C_TYPE_5-2_MvdMA_619_1_001_P.png";
+                }
+
+                if (this.CheckBox52.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net/contractspecific/Annexure_C_TYPE_6-1_MvdMA_619_1_001_P.pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/Annexure_C_TYPE_6-1_MvdMA_619_1_001_P.png";
+                }
+
+                if (this.CheckBox53.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net/contractspecific/Annexure_C_TYPE_6-2_MvdMA_619_1_001_P.pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/Annexure_C_TYPE_6-2_MvdMA_619_1_001_P.png";
+                }
+
+                if (this.CheckBox54.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net/contractspecific/Annexure_D_Chantelle_Single_Storey_Units_Specifications.pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/Annexure_D_Chantelle_Single_Storey_Units_Specifications.png";
+                }
+
+                if (this.CheckBox55.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net/contractspecific/Annexure_D_Chantelle_Flat_Units_Specifications.pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/Annexure_D_Chantelle_Flat_Units_Specifications.png";
+                }
+
+
+                string content = BuildIcons(arraylinks, arrayimages, counter);
+
+                mailcontent = mailcontent.Replace("#CONTENT#", content);
+
+                string emailto = "";
+                if (what == 0)
+                {
+                    if (txtRecipientEmail.Text == "")
+                    {
+                        PincetonSendButton.Enabled = false;
+                        PincetonSendButton.Text = "You can't send as Recipient email is required";
+                        PincetonSendButton.CssClass = "button buttonNotActive";
+                    }
+                    else
+                    {
+                        PincetonSendButton.Enabled = true;
+                        PincetonSendButton.Text = "Send to " + txtRecipientEmail.Text; ;
+                        PincetonSendButton.CssClass = "button buttonActive";
+                    }
+
+                    mailcontent = PopulateGeneralmail(mailcontent, false);
+                    litPrinceton.Text = mailcontent;
+                }
+                else
+                {
+                    emailto = txtRecipientEmail.Text; ;
+                    Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>parent.jQuery.fancybox.close();</script>");
+
+                    SendMail mymail = new SendMail();
+                    mailcontent = PopulateGeneralmail(mailcontent, true);
+                    lblPrinceton.Visible = true;
+                    lblPrinceton.Text = txtFirstname.Text + ", your e-mail was sent successfully to " + txtRecipientEmail.Text + ".  Thank you for continuous loyal support.  From Tiaan & Sonja";
                     mymail.SendGeneralmail(emailto, lblEmail.Text, "info@mcvdberg.co.za", txtFirstname.Text + " " + txtSurname.Text, txtSubjecxt.Text, mailcontent);
                 }
             }
@@ -970,7 +1199,7 @@ namespace MCvanderBergCalc.language.en
         protected void btnFeesClick1(int what)
         {
 
-            if (CheckBox4.Checked == false && CheckBox5.Checked == false && CheckBox6.Checked == false && CheckBox7.Checked == false && CheckBox8.Checked == false && CheckBox1.Checked == false && CheckBox2.Checked == false && CheckBox3.Checked == false && CheckBox35.Checked == false && CheckBox36.Checked == false && CheckBox37.Checked == false && CheckBox38.Checked == false && CheckBox39.Checked == false && CheckBox40.Checked == false && CheckBox41.Checked == false && CheckBox42.Checked == false)
+            if (CheckBox4.Checked == false && CheckBox5.Checked == false && CheckBox6.Checked == false && CheckBox7.Checked == false && CheckBox8.Checked == false && CheckBox1.Checked == false && CheckBox2.Checked == false && CheckBox3.Checked == false && CheckBox35.Checked == false && CheckBox36.Checked == false && CheckBox37.Checked == false && CheckBox45.Checked == false && CheckBox46.Checked == false)
             {
                 Label3.Visible = true;
             }
@@ -1070,36 +1299,21 @@ namespace MCvanderBergCalc.language.en
                     arrayimages[counter] = "https://mcvdberg.blob.core.windows.net/mailicons/Capital_Gains_Tax.png";
 
                 }
-                if (this.CheckBox38.Checked)
+                if (this.CheckBox45.Checked)
                 {
                     counter++;
-                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net:443/contractspecific/Princeton_Park_OTP_1.pdf";
-                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/PRINCETON_PARK_PROFORMA_1.png";
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net/bulletins/CPA_PURCHASERS_BULLETIN_ENG_" + (string)this.Session["userid"] + ".pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net/mailicons/Purchases_Bulletin.png";
+
                 }
-                if (this.CheckBox39.Checked)
+                if (this.CheckBox46.Checked)
                 {
                     counter++;
-                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net:443/contractspecific/Princeton_Park_OTP_2.pdf";
-                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/PRINCETON_PARK_PROFORMA_2.png";
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net/generalpdf/CPA_SELLERS_BULLETIN_ENG_" + (string)this.Session["userid"] + ".pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net/mailicons/Sellers_Bulletin.png";
+
                 }
-                if (this.CheckBox40.Checked)
-                {
-                    counter++;
-                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net:443/contractspecific/Princeton_Park_OTP_3.pdf";
-                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/PRINCETON_PARK_PROFORMA_3.png";
-                }
-                if (this.CheckBox41.Checked)
-                {
-                    counter++;
-                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net:443/contractspecific/Princeton_Park_OTP_4.pdf";
-                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/PRINCETON_PARK_PROFORMA_4.png";
-                }
-                if (this.CheckBox42.Checked)
-                {
-                    counter++;
-                    arraylinks[counter] = "http://www.mcvdberg.co.za/language/en/PrincetonParkVideo";
-                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/PRINCETON_PARK_VIDEO.png";
-                }
+
 
 
                 string content = BuildIcons(arraylinks, arrayimages, counter);
@@ -1134,7 +1348,7 @@ namespace MCvanderBergCalc.language.en
                     mailcontent = PopulateGeneralmail(mailcontent, true);
                     lblTools.Visible = true;
                     lblTools.Text = txtFirstname.Text + ", your e-mail was sent successfully to " + txtRecipientEmail.Text + ".  Thank you for continuous loyal support.  From Tiaan & Sonja";
-                    mymail.SendGeneralmail(emailto, lblEmail.Text, "info@mcvdberg.co.za", txtFirstname.Text + " " + txtSurname.Text, txtSubjecxt.Text, mailcontent);
+                    mymail.SendGeneralmail(emailto, lblEmail.Text, "web@mcvdberg.co.za", txtFirstname.Text + " " + txtSurname.Text, txtSubjecxt.Text, mailcontent);
                 }
             }
         }
@@ -1907,7 +2121,7 @@ namespace MCvanderBergCalc.language.en
             message += "<p>" + txtMessage.Text + "</p>";
 
             mailcontent = mailcontent.Replace("#MESSSAGE#", message);
-            mailcontent = mailcontent.Replace("#CELL#", txtCell.Text);
+
 
             string url = "https://mcvdberg.blob.core.windows.net/agentlogos/" + (string)Session["logo"];
 
@@ -1947,9 +2161,42 @@ namespace MCvanderBergCalc.language.en
 
             Guid myguid = Guid.NewGuid();
             mailcontent = mailcontent.Replace("#ID#", myguid.ToString());
+
+
+            string divVisible = "<div style=\"visibility: visible; height: 20px; \">";
+            string divNotVisible = "<div style=\"visibility: hidden; height: 1px; \">";
+
+            if ((string)Session["office"] == "NA")
+            {
+                mailcontent = mailcontent.Replace("#OFFICEDIV#", divNotVisible);
+            }
+            else
+            {
+                mailcontent = mailcontent.Replace("#OFFICEDIV#", divVisible);
+                mailcontent = mailcontent.Replace("#OFFICEDIVINSIDE#", " <b>Office no:</b>  <span style=\"color: white\">" + (string)Session["office"] + "</span>");
+                mailcontent = mailcontent.Replace("#ENDDIV#", "</div>");
+            }
+
+            if (txtCell.Text == "NA")
+            {
+                mailcontent = mailcontent.Replace("#CELLDIV#", "");
+                mailcontent = mailcontent.Replace("#CELLDIVINSIDE#", "");
+                mailcontent = mailcontent.Replace("#ENDDIV#", "");
+            }
+            else
+            {
+                mailcontent = mailcontent.Replace("#CELLDIV#", divVisible);
+                mailcontent = mailcontent.Replace("#CELLDIVINSIDE#", "<b>Cell no:</b>  <span style=\"color:white\">" + txtCell.Text + "</span>");
+                mailcontent = mailcontent.Replace("#ENDDIV#", "</div>");
+            }
+
+
+
             string previewmailcontent = mailcontent;
             mailcontent = mailcontent.Replace("#HIDDEN#", "visible");
             previewmailcontent = previewmailcontent.Replace("#HIDDEN#", "hidden");
+
+           
 
             string returncontent = "";
             if (sendmail == true)

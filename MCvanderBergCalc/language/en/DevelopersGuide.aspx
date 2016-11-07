@@ -826,15 +826,9 @@
                                                 If funds are forthcoming from an investment it is imperative that these funds are secured by way of guarantees as and when requested by the conveyancer.
                                             </p>
                                             <p>
-                                                All amounts payable to our firm must be paid into our trust account which banking details will not change. The details are as follows:
+                                                All amounts payable to our firm must be paid into our trust account which banking details will not change.
                                             </p>
-                                            <p>
-                                                MC van der Berg Incorporated
-        <br />
-                                                First National Bank, Eldoraigne<br />
-                                                ACB Code: 250655<br />
-                                                Account Number: 62472555394
-                                            </p>
+
 
                                             <p>
                                                 <b>Please include a reference number on your proof of payment.</b> Our file reference number, as indicated on the initial and subsequent letters sent to you, will be the best form of reference for any payments made into our trust account. We further request that you inform the conveyancing secretary of the payment via email to enable her to identify the payment on the bank statement, and where applicable, to invest the money for your benefit.

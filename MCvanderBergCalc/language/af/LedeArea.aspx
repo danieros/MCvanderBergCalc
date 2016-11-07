@@ -340,6 +340,7 @@
                             </asp:Panel>
 
 
+                            <%--MCTools--%>
                             <asp:Panel ID="panelCat3" runat="server" Visible="True">
                                 <a name="anchor3"></a><legend>MCTools <a href="#anchor3" id="divcat3">Om te kies klik hier</a></legend>
 
@@ -481,6 +482,19 @@
                                                     <asp:HyperLink ID="HyperLink18" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net/generalpdf/Captial%20Gains%20tax%20info%20sheet%20-%2004%20Aug%202016.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer">Captial Gains Tax</label></asp:HyperLink>
 
                                                 </div>
+
+                                                  <asp:Panel ID="pnlBulletinPurchase" runat="server" CssClass="MemberAreaContentheadingsItems" Visible="false">
+                                                    <asp:CheckBox ID="CheckBox45" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink26" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net:443/contractspecific/Princeton_Park_OTP_3.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 240px !important">&nbsp;Kopersbulletin</label>
+                                              </asp:HyperLink>
+                                                </asp:Panel>
+
+                                                <asp:Panel ID="pnlBulletinSeller" runat="server" CssClass="MemberAreaContentheadingsItems" Visible="false">
+                                                    <asp:CheckBox ID="CheckBox46" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink27" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net:443/contractspecific/Princeton_Park_OTP_3.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 240px !important">&nbsp;Verkopersbulletin</label>
+                                              </asp:HyperLink>
+                                                </asp:Panel>
+
                                             </td>
                                         </tr>
                                     </table>

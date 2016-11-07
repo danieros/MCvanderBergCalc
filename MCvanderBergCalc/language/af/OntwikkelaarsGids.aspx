@@ -637,16 +637,7 @@
                                             <p><b>iv.	Belegging:</b></p>
                                             <p>Indien fondse vanuit ŉ belegging betaalbaar is, is dit noodsaaklik dat hierdie fondse versekureer word deur ŉ waarborg soos en wanneer dit versoek word deur die aktevervaardiger.</p>
 
-                                            <p>Alle bedrae betaalbaar aan ons firma moet in ons trustrekening inbetaal word, welke bankbesonderhede nie sal verander nie. Die besonderhede is as volg:</p>
-                                            <p>
-                                                MC van der Berg Ingelyf
-        <br />
-                                                Eerste Nasionale Bank Eldoraigne
-        <br />
-                                                Takkode: 250655
-        <br />
-                                                Rekeningnommer: 62472555394
-                                            </p>
+                                            <p>Alle bedrae betaalbaar aan ons firma moet in ons trustrekening inbetaal word, welke bankbesonderhede nie sal verander nie.</p>
                                             <p>
                                                 <b>Dui asseblief u verwysingsnommer op u bewys van betalings aan.</b> Ons lêer verwysingsnommer, soos aangedui op die aanvanklike en daaropvolgende briewe aan u, sal die beste vorm van verwysing wees vir enige betalings wat na ons trustrekening gemaak moet word.  Ons versoek ook verder dat u die aktetikster in kennis stel van die betaling per e-pos sodat sy die betaling kan identifiseer op ons bankstate en, indien van toepassing, kan belê tot u voordeel.
                                             </p>

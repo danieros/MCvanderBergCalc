@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/EnglishSite.Master" AutoEventWireup="true" CodeBehind="MemberArea.aspx.cs" Inherits="MCvanderBergCalc.language.en.MemberAreaNew" %>
+﻿<%@ Page Title="" Language="C#" ValidateRequest="false" MasterPageFile="~/EnglishSite.Master" AutoEventWireup="true" CodeBehind="MemberArea.aspx.cs" Inherits="MCvanderBergCalc.language.en.MemberAreaNew" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -19,6 +19,7 @@
                     ​, welcome to your personal MC-Web-page, with compliments from M.C. van der Berg Incorporated.
                 </div>
 
+                <!-- List Personal information -->
                 <table>
                     <tr>
                         <td style="width: 400px;">
@@ -55,6 +56,7 @@
 
 
                 <div class="pf-content">
+                    <!-- Update Personal information -->
                     <div>
                         <table>
                             <tr>
@@ -95,6 +97,7 @@
                     </div>
                     <br />
 
+                    <!-- View history -->
                     <div class="pf-content">
                         <div>
                             <fieldset>
@@ -155,7 +158,7 @@ Know start completing all the relevant fields below before proceeding with your 
                                     <asp:TextBox ID="txtRecipientEmail" runat="server" Width="400"></asp:TextBox>
                                 </div>
                                 <label for="pwd">Any personal message you want to include.</label><div class="div_text">
-                                    <asp:TextBox ID="txtMessage" runat="server" TextMode="MultiLine" Rows="6" Width="400"></asp:TextBox>
+                                    <asp:TextBox ID="txtMessage" runat="server" TextMode="MultiLine" Rows="6" Width="400" class="ckeditor"></asp:TextBox>
                                 </div>
                             </fieldset>
                         </div>
@@ -171,6 +174,7 @@ Know start completing all the relevant fields below before proceeding with your 
                             </fieldset>
 
 
+                            <%--Introduction packs--%>
                             <asp:Panel ID="panelCat2" runat="server" Visible="True">
 
 
@@ -342,7 +346,7 @@ Know start completing all the relevant fields below before proceeding with your 
 
                             </asp:Panel>
 
-
+                            <%--MC Tools area--%>
                             <asp:Panel ID="panelCat3" runat="server" Visible="True">
                                 <a name="anchor3"></a><legend>MCTools <a href="#anchor3" id="divcat3">To select click here</a></legend>
 
@@ -464,50 +468,19 @@ Know start completing all the relevant fields below before proceeding with your 
 
                                                 </div>
 
-                                                <asp:Panel ID="pnlPP1" runat="server" CssClass="MemberAreaContentheadingsItems">
-                                                    <asp:CheckBox ID="CheckBox38" runat="server" />&nbsp;
-                                              <asp:HyperLink ID="HyperLink19" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net:443/contractspecific/Princeton_Park_OTP_1.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 240px !important">&nbsp;Princeton Park 1 contract (Development 2)</label>
+                                                <asp:Panel ID="pnlBulletinPurchase" runat="server" CssClass="MemberAreaContentheadingsItems" Visible="false">
+                                                    <asp:CheckBox ID="CheckBox45" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink26" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net:443/contractspecific/Princeton_Park_OTP_3.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 240px !important">&nbsp;Purchasers Bulletin</label>
                                               </asp:HyperLink>
                                                 </asp:Panel>
 
-                                                <asp:Panel ID="pnlPP2" runat="server" CssClass="MemberAreaContentheadingsItems">
-                                                    <asp:CheckBox ID="CheckBox39" runat="server" />&nbsp;
-                                              <asp:HyperLink ID="HyperLink20" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net:443/contractspecific/Princeton_Park_OTP_2.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 240px !important">&nbsp;Princeton Park 2 contract (Development 1)</label>
-                                              </asp:HyperLink>
-                                                </asp:Panel>
-
-
-                                                <asp:Panel ID="pnlPP3" runat="server" CssClass="MemberAreaContentheadingsItems">
-                                                    <asp:CheckBox ID="CheckBox40" runat="server" />&nbsp;
-                                              <asp:HyperLink ID="HyperLink21" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net:443/contractspecific/Princeton_Park_OTP_3.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 240px !important">&nbsp;Princeton Park 3 contract (Development 3)</label>
+                                                <asp:Panel ID="pnlBulletinSeller" runat="server" CssClass="MemberAreaContentheadingsItems" Visible="false">
+                                                    <asp:CheckBox ID="CheckBox46" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink27" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net:443/contractspecific/Princeton_Park_OTP_3.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 240px !important">&nbsp;Sellers Bulletin</label>
                                               </asp:HyperLink>
                                                 </asp:Panel>
 
 
-                                                <asp:Panel ID="pnlPP4" runat="server" CssClass="MemberAreaContentheadingsItems">
-                                                    <asp:CheckBox ID="CheckBox41" runat="server" />&nbsp;
-                                              <asp:HyperLink ID="HyperLink22" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net:443/contractspecific/Princeton_Park_OTP_4.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 240px !important">&nbsp;Princeton Park 4 contract (Development 4)</label>
-                                              </asp:HyperLink>
-                                                </asp:Panel>
-
-
-                                                <asp:Panel ID="pnlPP5" runat="server" CssClass="MemberAreaContentheadingsItems">
-                                                    <asp:CheckBox ID="CheckBox42" runat="server" />&nbsp;
-                                              <asp:HyperLink ID="HyperLink23" runat="server" NavigateUrl="http://www.mcvdberg.co.za/language/en/PrincetonParkVideo" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-film fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer">&nbsp;Princeton Park virtual tour</label>
-                                              </asp:HyperLink>
-                                                </asp:Panel>
-
-                                                <asp:Panel ID="pnlPP6" runat="server" CssClass="MemberAreaContentheadingsItems">
-                                                    <asp:CheckBox ID="CheckBox43" runat="server" />&nbsp;
-                                              <asp:HyperLink ID="HyperLink24" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net:443/contractspecific/Princeton_Park_OTP_4.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer">&nbsp;HOA Rules</label>
-                                              </asp:HyperLink>
-                                                </asp:Panel>
-
-                                                <asp:Panel ID="pnlPP7" runat="server" CssClass="MemberAreaContentheadingsItems">
-                                                    <asp:CheckBox ID="CheckBox44" runat="server" />&nbsp;
-                                              <asp:HyperLink ID="HyperLink25" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net:443/contractspecific/Princeton_Park_OTP_4.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer">&nbsp;Body Corporate Rules</label>
-                                              </asp:HyperLink>
-                                                </asp:Panel>
 
 
 
@@ -555,6 +528,188 @@ Know start completing all the relevant fields below before proceeding with your 
 
                                 </div>
 
+
+                            </asp:Panel>
+
+                            <%--Princeton Park--%>
+                            <asp:Panel ID="panelCat8" runat="server" Visible="True">
+
+                                <a name="anchor8"></a><legend>Princeton Park <a href="#anchor5" id="divcat8">To select click here</a></legend>
+                                <div>
+                                    <ul>
+                                        <li>You may choose any of the below options by clicking on the tick box next to the document that you would like to email to your client. </li>
+                                        <li>Once you have made your selection, click on the Send button. </li>
+                                    </ul>
+                                </div>
+                                <div class="memberareablock" id="divcat8_div">
+                                    <br />
+                                    <span class="pdfdownloader">​If you have a problem viewing the contracts, please <a href="https://get.adobe.com/reader/" target="_blank">click here</a></span>
+                                    <a href="https://get.adobe.com/reader/" target="_blank">
+                                        <img src="../../Images/downloadPDF.jpg" /></a>
+                                    <br />
+                                    <br />
+
+
+                                    <div class="MemberAreaContentheadingsItems">
+
+
+                                        <table>
+                                            <tr>
+                                                <td style="vertical-align: top;">
+                                                    <asp:Panel ID="pnlPP1" runat="server" CssClass="MemberAreaContentheadingsItems">
+                                                        <asp:CheckBox ID="CheckBox38" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink19" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net/contractspecific/Master_Contract_PPark_1_development_2_Combined.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 300px !important">&nbsp;Princeton Park 2 contract (Development 1)</label>
+                                              </asp:HyperLink>
+                                                    </asp:Panel>
+
+                                                    <asp:Panel ID="pnlPP2" runat="server" CssClass="MemberAreaContentheadingsItems" Visible="false">
+                                                        <asp:CheckBox ID="CheckBox39" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink20" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net:443/contractspecific/Princeton_Park_OTP_2.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 300px !important">&nbsp;Princeton Park 2 contract (Development 1)</label>
+                                              </asp:HyperLink>
+                                                    </asp:Panel>
+
+
+                                                    <asp:Panel ID="pnlPP3" runat="server" CssClass="MemberAreaContentheadingsItems" Visible="false">
+                                                        <asp:CheckBox ID="CheckBox40" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink21" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net:443/contractspecific/Princeton_Park_OTP_3.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 300px !important">&nbsp;Princeton Park 3 contract (Development 3)</label>
+                                              </asp:HyperLink>
+                                                    </asp:Panel>
+
+
+                                                    <asp:Panel ID="pnlPP4" runat="server" CssClass="MemberAreaContentheadingsItems" Visible="false">
+                                                        <asp:CheckBox ID="CheckBox41" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink22" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net:443/contractspecific/Princeton_Park_OTP_4.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 300px !important">&nbsp;Princeton Park 4 contract (Development 4)</label>
+                                              </asp:HyperLink>
+                                                    </asp:Panel>
+
+                                                    <asp:Panel ID="pnlPPC1" runat="server" CssClass="MemberAreaContentheadingsItems" Visible="true">
+                                                        <asp:CheckBox ID="CheckBox47" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink28" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net/contractspecific/Annexure_C_TYPE_1_05_PP_MARK_DWG_P16.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 300px !important">&nbsp;Annexure C: Unit Type 1</label>
+                                              </asp:HyperLink>
+                                                    </asp:Panel>
+
+                                                    <asp:Panel ID="pnlPPC2" runat="server" CssClass="MemberAreaContentheadingsItems" Visible="true">
+                                                        <asp:CheckBox ID="CheckBox48" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink29" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net/contractspecific/Annexure_C_TYPE_2_PP_MARK_DWG__P17.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 300px !important">&nbsp;Annexure C: Unit Type 2</label>
+                                              </asp:HyperLink>
+                                                    </asp:Panel>
+
+                                                    <asp:Panel ID="pnlPPC3" runat="server" CssClass="MemberAreaContentheadingsItems" Visible="true">
+                                                        <asp:CheckBox ID="CheckBox49" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink30" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net/contractspecific/Annexure_C_TYPE_3_05%20PP_MARK_DWG_P18.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 300px !important">&nbsp;Annexure C: Unit Type 3</label>
+                                              </asp:HyperLink>
+                                                    </asp:Panel>
+
+                                                    <asp:Panel ID="pnlPPC4" runat="server" CssClass="MemberAreaContentheadingsItems" Visible="true">
+                                                        <asp:CheckBox ID="CheckBox57" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink38" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net/contractspecific/Annexure_C_TYPE_4_05_PP_MARK_DWG_P19.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 300px !important">&nbsp;Annexure C: Unit Type 4</label>
+                                              </asp:HyperLink>
+                                                    </asp:Panel>
+
+                                                    <asp:Panel ID="pnlPPC5_1" runat="server" CssClass="MemberAreaContentheadingsItems" Visible="true">
+                                                        <asp:CheckBox ID="CheckBox50" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink31" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net/contractspecific/Annexure_C_TYPE_5-1_MvdMA_619_1_001_P.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 300px !important">&nbsp;Annexure C: Unit Type 5-1</label>
+                                              </asp:HyperLink>
+                                                    </asp:Panel>
+
+                                                    <asp:Panel ID="pnlPPC5_2" runat="server" CssClass="MemberAreaContentheadingsItems" Visible="true">
+                                                        <asp:CheckBox ID="CheckBox51" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink32" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net/contractspecific/Annexure_C_TYPE_5-2_MvdMA_619_1_001_P.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 300px !important">&nbsp;Annexure C: Unit Type 5-2</label>
+                                              </asp:HyperLink>
+                                                    </asp:Panel>
+
+                                                    <asp:Panel ID="pnlPPC6_1" runat="server" CssClass="MemberAreaContentheadingsItems" Visible="true">
+                                                        <asp:CheckBox ID="CheckBox52" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink33" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net/contractspecific/Annexure_C_TYPE_6-1_MvdMA_619_1_001_P.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 300px !important">&nbsp;Annexure C: Unit Type 6-1</label>
+                                              </asp:HyperLink>
+                                                    </asp:Panel>
+
+                                                    <asp:Panel ID="pnlPPC6_2" runat="server" CssClass="MemberAreaContentheadingsItems" Visible="true">
+                                                        <asp:CheckBox ID="CheckBox53" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink34" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net/contractspecific/Annexure_C_TYPE_6-2_MvdMA_619_1_001_P.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 300px !important">&nbsp;Annexure C: Unit Type 6-2</label>
+                                              </asp:HyperLink>
+                                                    </asp:Panel>
+
+                                                    <asp:Panel ID="pnlPPSingle" runat="server" CssClass="MemberAreaContentheadingsItems" Visible="true">
+                                                        <asp:CheckBox ID="CheckBox54" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink35" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net/contractspecific/Annexure_D_Chantelle_Single_Storey_Units_Specifications.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 300px !important">&nbsp;Annexure D: Specification List – Single Story Units</label>
+                                              </asp:HyperLink>
+                                                    </asp:Panel>
+
+                                                    <asp:Panel ID="pnlPPFlat" runat="server" CssClass="MemberAreaContentheadingsItems" Visible="true">
+                                                        <asp:CheckBox ID="CheckBox55" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink36" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net/contractspecific/Annexure_D_Chantelle_Flat_Units_Specifications.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 300px !important">&nbsp;Annexure D: Specification List – Flat Units</label>
+                                              </asp:HyperLink>
+                                                    </asp:Panel>
+
+                                                </td>
+                                                <td style="vertical-align: top;">
+                                                    <asp:Panel ID="pnlPP5" runat="server" CssClass="MemberAreaContentheadingsItems">
+                                                        <asp:CheckBox ID="CheckBox42" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink23" runat="server" NavigateUrl="http://www.mcvdberg.co.za/language/en/PrincetonParkVideo" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-film fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer">&nbsp;Princeton Park virtual tour</label>
+                                              </asp:HyperLink>
+                                                    </asp:Panel>
+
+                                                    <asp:Panel ID="pnlPP6" runat="server" CssClass="MemberAreaContentheadingsItems">
+                                                        <asp:CheckBox ID="CheckBox43" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink24" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net:443/contractspecific/Princeton_Park_OTP_4.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer">&nbsp;HOA Rules</label>
+                                              </asp:HyperLink>
+                                                    </asp:Panel>
+
+                                                    <asp:Panel ID="pnlPP7" runat="server" CssClass="MemberAreaContentheadingsItems">
+                                                        <asp:CheckBox ID="CheckBox44" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink25" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net:443/contractspecific/Princeton_Park_OTP_4.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer">&nbsp;Body Corporate Rules</label>
+                                              </asp:HyperLink>
+                                                    </asp:Panel>
+                                                </td>
+                                            </tr>
+                                        </table>
+
+
+
+
+
+                                        <div class="MemberAreaContentheadingsItems" style="width: 750px; text-align: right;">
+
+                                            <asp:Label ID="Label2" runat="server" Text="You have to select at least one item" Font-Size="9px" ForeColor="Red" Visible="false"></asp:Label>
+                                            <asp:Button ID="Button1" runat="server" Text="Send" OnClick="btnPrincetonParkPreviewClick" CssClass="button button1" />
+                                            <a href="#anchor5" id="divcat8hide" class="hidelink">Hide</a>
+                                        </div>
+
+                                        <script>
+                                            function openFancybox8() {
+                                                cat8Click();
+                                                $.fancybox.helpers.overlay.open({ parent: $('body') });
+                                                $.fancybox({
+                                                    'autoSize': false,
+                                                    'width': 750,
+                                                    'height': 600,
+                                                    'overlayShow': true,
+                                                    'overlayColor': '#000',
+                                                    'href': '#contentdiv8'
+                                                });
+                                            }
+                                        </script>
+
+                                        <div style="display: none">
+                                            <div id="contentdiv8">
+                                                <div style="text-align: center;">
+                                                    See below to preview the mail that your client will receive. If you are happy click on <b>send</b> or contact our web support team: email <a href="mailto: web@mcvdberg.co.za">web@mcvdberg.co.za</a> or contact no 012 660 6109 to assist you. 
+                                                            <br />
+                                                    <br />
+                                                    <asp:Button ID="PincetonSendButton" runat="server" Text="Send to client" ForeColor="Black" OnClick="btnPrincetonParkMailClick" UseSubmitBehavior="false" />
+                                                    <br />
+                                                    <br />
+                                                </div>
+                                                <asp:Literal ID="litPrinceton" runat="server"></asp:Literal>
+                                            </div>
+                                        </div>
+
+                                        <asp:Label ID="lblPrinceton" runat="server" Text="Label" Visible="False" Font-Size="11px" ForeColor="Red" Font-Names="Verdana"></asp:Label>
+
+
+                                    </div>
+                                </div>
 
                             </asp:Panel>
 

@@ -933,14 +933,15 @@
 
                                     <div class="content_block" id="custom_post_widget-400">
                                         <div class="pf-content">
-                                            <h5><a href="http://gpdemo.co.za/mcconcept/wp-content/uploads/2015/04/mc-flowchart.png">
-                                                <img class="alignnone size-large wp-image-4564" src="http://gpdemo.co.za/mcconcept/wp-content/uploads/2015/04/mc-flowchart-988x1024.png" alt="Click here to download a flowchart of the transfer process." width="988" height="1024" /></a></h5>
+
 
                                             <p>The normal turnaround time for a transfer is approximately 6 to 8 weeks from receipt of the bond instruction by the bond attorney.</p>
 
                                             <p>Week 1 therefore begins on receipt of the bond instruction by the bond attorney.</p>
 
                                             <p>Some of the time frames (for instance the time allowed for bond approval) are unknown to us because they are negotiated between the parties in the deed of sale; this shown as ‘unknown’ on the flowchart.</p>
+                                                                                        <h5><a href="https://mcvdberg.blob.core.windows.net/generalimages/mc-flowchart.png">
+                                                <img class="alignnone size-large wp-image-4564" src="https://mcvdberg.blob.core.windows.net/generalimages/mc-flowchart.png" width="988" height="1024" /></a></h5>
                                         </div>
                                     </div>
 

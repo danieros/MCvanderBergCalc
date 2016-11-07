@@ -519,7 +519,7 @@ January 2001 &#8211; December 2001
                         <div class='one_half'>
                             <img src="https://mcvdberg.blob.core.windows.net/generalimages/Nicole%20AlbertsWeb.jpg" alt="" width="175" height="257" />
 
-                            <h5>Nicole Rokebrand</h5>
+                            <h5>Nicole Alberts</h5>
 
                             Professional Assistant<div class="omsc-accordion">
                                 <div class="omsc-toggle">

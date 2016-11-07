@@ -398,55 +398,6 @@
     <Parameter Name="status" Type="System.String" DbType="VarChar(200)" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.sp_ExportAll" Method="sp_ExportAll">
-    <ElementType Name="sp_ExportAllResult">
-      <Column Name="DateEdited" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="UserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Title" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
-      <Column Name="FirstName" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
-      <Column Name="NickName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
-      <Column Name="LastName" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
-      <Column Name="EmailPrimary" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
-      <Column Name="[Cell Phone]" Member="Cell_Phone" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
-      <Column Name="OfficeNo" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
-      <Column Name="BirthdayApplicable" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="myDOB" Type="System.String" DbType="NVarChar(61)" CanBeNull="true" />
-      <Column Name="PersonPhoto" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
-      <Column Name="Agency" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
-      <Column Name="Role" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
-      <Column Name="Language" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
-      <Column Name="Typist" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
-      <Column Name="Loyal_Indicator" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
-      <Column Name="Contract_Branded_Afr" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="Contract_Branded_Eng" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="Contract_Editable_Branded_Afr" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="Contract_Editable_Branded_Eng" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="Contract_Not_branded_Afr" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="Contract_Not_branded_Eng" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="Contract_Editable_Not_Branded_Afr" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="Contract_Editable_Not_Branded_Eng" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="Videos_Compliment_Slip_Afr" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="Videos_Compliment_Slip_Eng" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="Guides_Compliment_Slip_Afr" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="Guides_Compliment_Slip_Eng" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="CostCalc_Compliment_Slip" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="TrainingGroup1" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
-      <Column Name="TrainingGroup2" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
-      <Column Name="TrainingGroup3" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
-      <Column Name="TrainingGroup4" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
-      <Column Name="TrainingGroup5" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
-      <Column Name="Diet" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
-      <Column Name="Work_Address_City" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
-      <Column Name="Relations" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
-      <Column Name="ACTIVE" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="MonthlyUnsubscribe" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="MC2AgentUnsubscribe" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="CustomMailsUnsubscribe" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="logoName" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
-      <Column Name="AfrikaansVoorblad" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
-      <Column Name="EnglishVoorblad" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
-    </ElementType>
-  </Function>
   <Function Name="dbo.GetExtractionData" Method="GetExtractionData">
     <Parameter Name="id" Type="System.String" DbType="VarChar(20)" />
     <ElementType Name="GetExtractionDataResult">
@@ -830,6 +781,63 @@
       <Column Name="FFC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="WebsiteAddress" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
       <Column Name="PricetonParkDevelopment" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_ExportAll" Method="sp_ExportAll">
+    <ElementType Name="sp_ExportAllResult">
+      <Column Name="DateEdited" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
+      <Column Name="FirstName" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
+      <Column Name="NickName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
+      <Column Name="EmailPrimary" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
+      <Column Name="[Cell Phone]" Member="Cell_Phone" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
+      <Column Name="OfficeNo" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
+      <Column Name="BirthdayApplicable" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="myDOB" Type="System.String" DbType="NVarChar(61)" CanBeNull="true" />
+      <Column Name="PersonPhoto" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="FirstTimeUserStatus" Type="System.String" DbType="VarChar(28)" CanBeNull="true" />
+      <Column Name="Agency" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
+      <Column Name="Role" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
+      <Column Name="Language" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
+      <Column Name="Typist" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
+      <Column Name="Loyal_Indicator" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
+      <Column Name="Category2_Eng" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Category2_Afr" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Category3_Eng" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Category3_Afr" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Category4_Eng" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Category4_Afr" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Category5_Eng" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Category5_Afr" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Category6_Eng" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Category6_Afr" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Category7_Eng" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Category7_Afr" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PricetonParkDevelopment" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TrainingGroup1" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
+      <Column Name="TrainingGroup2" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
+      <Column Name="TrainingGroup3" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
+      <Column Name="TrainingGroup4" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
+      <Column Name="TrainingGroup5" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
+      <Column Name="Diet" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
+      <Column Name="Work_Address_City" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
+      <Column Name="Relations" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
+      <Column Name="ACTIVE" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MonthlyUnsubscribe" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MC2AgentUnsubscribe" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CustomMailsUnsubscribe" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="logoName" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="AfrikaansVoorblad" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="EnglishVoorblad" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_GetAgentFromComplimentSlip" Method="sp_GetAgentFromComplimentSlip">
+    <Parameter Name="uniqueid" Type="System.Guid" DbType="UniqueIdentifier" />
+    <ElementType Name="sp_GetAgentFromComplimentSlipResult">
+      <Column Name="First_Name" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
+      <Column Name="Last_Name" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
     </ElementType>
   </Function>
 </Database>
