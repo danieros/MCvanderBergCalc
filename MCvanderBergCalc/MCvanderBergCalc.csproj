@@ -1326,6 +1326,7 @@
     <Content Include="language\en\Login.aspx" />
     <Content Include="language\en\MemberArea.aspx" />
     <Content Include="language\en\MemberAreaHistory.aspx" />
+    <Content Include="language\en\MenlynMainCostcalculator.aspx" />
     <Content Include="language\en\PreviewComplimentSlip.aspx" />
     <Content Include="language\en\PrincetonParkVideo.aspx" />
     <Content Include="language\en\RateUs.aspx" />
@@ -2704,6 +2705,13 @@
     </Compile>
     <Compile Include="language\en\MemberAreaHistory.aspx.designer.cs">
       <DependentUpon>MemberAreaHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="language\en\MenlynMainCostcalculator.aspx.cs">
+      <DependentUpon>MenlynMainCostcalculator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="language\en\MenlynMainCostcalculator.aspx.designer.cs">
+      <DependentUpon>MenlynMainCostcalculator.aspx</DependentUpon>
     </Compile>
     <Compile Include="language\en\OurServices.aspx.cs">
       <DependentUpon>OurServices.aspx</DependentUpon>

@@ -301,6 +301,15 @@ namespace MCvanderBergCalc.CRM {
         protected global::System.Web.UI.WebControls.CheckBox chkPrinceton;
         
         /// <summary>
+        /// chkMenlynMain control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chkMenlynMain;
+        
+        /// <summary>
         /// chkCat4Afr control.
         /// </summary>
         /// <remarks>

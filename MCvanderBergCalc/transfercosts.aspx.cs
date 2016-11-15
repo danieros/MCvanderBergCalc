@@ -22,10 +22,46 @@ namespace MCvanderBergCalc
 
         protected void Page_Load(object sender, EventArgs e)
         {
+
+
             if (!IsPostBack)
             {
                 resetall();
                 lblError.Visible = false;
+
+                int userid = 0;
+                string v = Request.QueryString["id"];
+                if (v != null)
+                {
+                    userid = Convert.ToInt32(v);
+                }
+
+                if (userid > 0)
+                {
+                    Session["calctype"] = 1;
+                    Image1.Visible = false;
+                    LitTransfer.Text = "Transfer Fee (incl. 35% reduction)";
+                    LitBond.Text = "Bond Registration Fee (incl. 35% reduction)";
+                    LitMainExclusions.Text = "If the purchaser also purchases an exclusive use (parking/s, staff room or store room), an additional professional fee of R 975 plus VAT (R 136,50) plus R 290 deeds office levy will be charged for the notarial session.";
+                    LitTransferFeeTooltip.Text = "title=\"<strong>The Transfer Fee </strong>is our professional fee for registering the property into the purchaser`s name.Transfer fees are recommended by the Law Society.This fee is calculated in accordance to your purchase price.We have granted a reduction in our fees on the Trilogy Collection project.\">";
+                    LitFicaFeeTooltip.Text = "title=\"<strong> FICA Fee </strong>is a fee charged by us to comply with the FICA(Financial Intelligence Centre Act) and is endorsed by the Law Society. This fee is charged per entity and per person/trustee/director (spouses are regarded as one person) that has to be Fica’d\">";
+                    LitPostageTooltip.Text = "title=\"<strong> Postages and Petties </strong >is a once off fee charged by us for all telephone calls, emails, printing, photocopies, costs for submission of transfer duty exemption, deed searches, vendor software and errands run by our supporting staff.This is an estimated amount which is endorsed by the Law Society\">";
+                    LitBondRegistrationTooltip.Text = "title=\"The<strong> Registration Fee </strong>is our professional fee for registering the bond on behalf of the purchaser in favour of the bank.The bond fees are recommended by the Law Society. This fee is calculated in accordance to your bond amount.We have granted a reduction in our fees on the Trilogy Collection project of 35%.\">";
+                    LitBondPostageTooltip.Text = "title=\"<strong> Postages and Petties</strong> is a once off fee charged by us for all telephone calls, emails, printing, photocopies, costs for deed searches, vendor software and errands run by our supporting staff.This is an estimated amount which is endorsed by the Law Society.\">";
+                }
+                else
+                {
+                    Session["calctype"] = 0;
+                    Image1.Visible = false;
+                    LitTransfer.Text = "Transfer Fee ";
+                    LitBond.Text = "Bond Registration Fee";
+                    LitMainExclusions.Text = "";
+                    LitTransferFeeTooltip.Text = "title=\"<strong>The Transfer Fee </strong>is our professional fee for registering the property into the purchaser`s name.Transfer fees are recommended by the Law Society.This fee is calculated in accordance to your purchase price.\">";
+                    LitFicaFeeTooltip.Text = "title=\"<strong> FICA Fee </strong>is a fee charged by us to comply with the FICA(Financial Intelligence Centre Act) and is endorsed by the Law Society.\">";
+                    LitPostageTooltip.Text = "title=\"<strong> Postages and Petties </strong >is a once off fee charged by us for all telephone calls, emails, printing, photocopies and errands run by our supporting staff.This is an estimated amount which is endorsed by the Law Society\">";
+                    LitBondRegistrationTooltip.Text = "title=\"The<strong> Registration Fee </strong>is our professional fee for registering the bond on behalf of the purchaser in favour of the bank.The bond fees are recommended by the Law Society.\">";
+                    LitBondPostageTooltip.Text = "title=\"<strong> Postages and Petties</strong> is a once off fee charged by us for all telephone calls, emails, printing, photocopies and errands run by our supporting staff.This is an estimated amount which is endorsed by the Law Society.\">";
+                }
             }
         }
 
@@ -103,9 +139,9 @@ namespace MCvanderBergCalc
                 Session["Tvendor"] = calculateVendorSoftwarePackageFee(PurchasePrice);
                 //Cache.Insert("Tvendor", calculateVendorSoftwarePackageFee(PurchasePrice));
 
-                lblFicaFee.Text = calculateFICAfee(PurchasePrice).ToString("#,##0.00", CultureInfo.InvariantCulture);
-                transfercosts += calculateFICAfee(PurchasePrice);
-                Session["Tfica"] = calculateFICAfee(PurchasePrice);
+                lblFicaFee.Text = calculateFICAfeeTransfer(PurchasePrice).ToString("#,##0.00", CultureInfo.InvariantCulture);
+                transfercosts += calculateFICAfeeTransfer(PurchasePrice);
+                Session["Tfica"] = calculateFICAfeeTransfer(PurchasePrice);
                 // Cache.Insert("Tfica", calculateFICAfee(PurchasePrice));
 
                 lblPostagePetties.Text = calculatePostagePetties(PurchasePrice).ToString("#,##0.00", CultureInfo.InvariantCulture);
@@ -145,9 +181,9 @@ namespace MCvanderBergCalc
                 Session["Bvat"] = calculateVatOnRegistrationFee(bondRegistrationFee);
                 // Cache.Insert("Bvat", calculateVatOnRegistrationFee(bondRegistrationFee));
 
-                lblBankAdminFee.Text = calculateFICAfee(BondAmount).ToString("#,##0.00", CultureInfo.InvariantCulture);
-                bondcosts += calculateFICAfee(BondAmount);
-                Session["BdeedsSearch"] = calculateFICAfee(BondAmount);
+                lblBankAdminFee.Text = calculateFICAfeeBond(BondAmount).ToString("#,##0.00", CultureInfo.InvariantCulture);
+                bondcosts += calculateFICAfeeBond(BondAmount);
+                Session["BdeedsSearch"] = calculateFICAfeeBond(BondAmount);
                 // Cache.Insert("BdeedsSearch", calculateFICAfee(BondAmount));
 
                 lblVendorSoftwarePakageBond.Text = calculateVendorSoftwarePakageBond(BondAmount).ToString("#,##0.00", CultureInfo.InvariantCulture);
@@ -155,9 +191,9 @@ namespace MCvanderBergCalc
                 Session["Bvendor"] = calculateVendorSoftwarePakageBond(BondAmount);
                 //Cache.Insert("Bvendor", calculateVendorSoftwarePakageBond(BondAmount));
 
-                lblDeedsOfficeSearchBond.Text = calculateDeedsOfficeSearch(BondAmount).ToString("#,##0.00", CultureInfo.InvariantCulture);
-                bondcosts += calculateDeedsOfficeSearch(BondAmount);
-                Session["Bbankadmin"] = calculateDeedsOfficeSearch(BondAmount);
+                lblDeedsOfficeSearchBond.Text = calculateDeedsOfficeSearchFee(BondAmount).ToString("#,##0.00", CultureInfo.InvariantCulture);
+                bondcosts += calculateDeedsOfficeSearchFee(BondAmount);
+                Session["Bbankadmin"] = calculateDeedsOfficeSearchFee(BondAmount);
                 //Cache.Insert("Bbankadmin", calculateDeedsOfficeSearch(BondAmount));
 
                 lblPostPettiesBond.Text = calculatePostPettiesBond(BondAmount).ToString("#,##0.00", CultureInfo.InvariantCulture);
@@ -186,7 +222,17 @@ namespace MCvanderBergCalc
             if (BondAmount == 0)
             { fee = 0.00; }
             else
-            { fee = 969.00; }
+            {
+                if (Convert.ToInt32(Session["calctype"]) == 0)
+                {
+                    fee = 969.00;
+                }
+                else
+                {
+                    fee = 570.00;
+                }
+
+            }
             return fee;
         }
 
@@ -196,7 +242,17 @@ namespace MCvanderBergCalc
             if (BondAmount == 0)
             { fee = 0.00; }
             else
-            { fee = 114.00; }
+            {
+                if (Convert.ToInt32(Session["calctype"]) == 0)
+                {
+                    fee = 114.00;
+                }
+                else
+                {
+                    fee = 0.00;
+                }
+            }
+
             return fee;
         }
 
@@ -206,7 +262,16 @@ namespace MCvanderBergCalc
             if (BondAmount == 0)
             { fee = 0.00; }
             else
-            { fee = 342.00; }
+            {
+                if (Convert.ToInt32(Session["calctype"]) == 0)
+                {
+                    fee = 342.00;
+                }
+                else
+                {
+                    fee = 990.00;
+                }
+            }
             return fee;
         }
 
@@ -226,7 +291,16 @@ namespace MCvanderBergCalc
             if (BondAmount == 0)
             { fee = 0.00; }
             else
-            { fee = 342.00; }
+            {
+                if (Convert.ToInt32(Session["calctype"]) == 0)
+                {
+                    fee = 342.00;
+                }
+                else
+                {
+                    fee = 0.00;
+                }
+            }
             return fee;
         }
 
@@ -236,7 +310,16 @@ namespace MCvanderBergCalc
             if (BondAmount == 0)
             { fee = 0.00; }
             else
-            { fee = 399.00; }
+            {
+                if (Convert.ToInt32(Session["calctype"]) == 0)
+                {
+                    fee = 399.00;
+                }
+                else
+                {
+                    fee = 0.00;
+                }
+            }
             return fee;
         }
 
@@ -246,18 +329,56 @@ namespace MCvanderBergCalc
             if (BondAmount == 0)
             { fee = 0.00; }
             else
-            { fee = 114.00; }
+            {
+                if (Convert.ToInt32(Session["calctype"]) == 0)
+                {
+                    fee = 114.00;
+                }
+                else
+                {
+                    fee = 250.80;
+                }
+
+            }
             return fee;
 
         }
 
-        private Double calculateFICAfee(double purchasePrice)
+        private Double calculateFICAfeeTransfer(double purchasePrice)
         {
             double fee = 0.00;
             if (purchasePrice == 0)
             { fee = 0.00; }
             else
-            { fee = 570.00; }
+            {
+                if (Convert.ToInt32(Session["calctype"]) == 0)
+                {
+                    fee = 570.00;
+                }
+                else
+                {
+                    fee = 570.00;
+                }
+            }
+            return fee;
+        }
+
+        private Double calculateFICAfeeBond(double purchasePrice)
+        {
+            double fee = 0.00;
+            if (purchasePrice == 0)
+            { fee = 0.00; }
+            else
+            {
+                if (Convert.ToInt32(Session["calctype"]) == 0)
+                {
+                    fee = 570.00;
+                }
+                else
+                {
+                    fee = 0.00;
+                }
+            }
             return fee;
         }
 
@@ -267,12 +388,24 @@ namespace MCvanderBergCalc
             if (purchasePrice == 0)
             { fee = 0.00; }
             else
-            { fee = 969.00; }
+            {
+                if (Convert.ToInt32(Session["calctype"]) == 0)
+                {
+                    fee = 969.00;
+                }
+                else
+                {
+                    fee = 570.00;
+                }
+
+
+            }
             return fee;
         }
 
         private Double calculateTransferDeedsFeeBond(Double bondPrice)
         {
+
             if (bondPrice > 0 && bondPrice <= 150000)
                 return 340;
             if (bondPrice > 150000 && bondPrice <= 300000)
@@ -301,6 +434,7 @@ namespace MCvanderBergCalc
                 return 3850;
             if (bondPrice > 30000000)
                 return 5500;
+
 
             return 0;
         }
@@ -341,18 +475,28 @@ namespace MCvanderBergCalc
 
         private Double calculateTransferDuty(Double purchasePrice)
         {
-            if (purchasePrice > 0 && purchasePrice <= 750000)
-                return 0;
-            if (purchasePrice > 750000 && purchasePrice <= 1250000)
-                return (purchasePrice - 750000.00) * 0.03;
-            if (purchasePrice > 1250000 && purchasePrice <= 1750000)
-                return 15000.00 + ((purchasePrice - 1250000.00) * 0.06);
-            if (purchasePrice > 1750000 && purchasePrice <= 2250000)
-                return 45000.00 + ((purchasePrice - 1750000.00) * 0.08);
-            if (purchasePrice > 2250000 && purchasePrice <= 10000000)
-                return 85000 + ((purchasePrice - 2250000) * 0.11);
-            if (purchasePrice > 10000000)
-                return 937500 + ((purchasePrice - 10000000) * 0.13);
+
+            if (Convert.ToInt32(Session["calctype"]) == 0)
+            {
+                if (purchasePrice > 0 && purchasePrice <= 750000)
+                    return 0;
+                if (purchasePrice > 750000 && purchasePrice <= 1250000)
+                    return (purchasePrice - 750000.00) * 0.03;
+                if (purchasePrice > 1250000 && purchasePrice <= 1750000)
+                    return 15000.00 + ((purchasePrice - 1250000.00) * 0.06);
+                if (purchasePrice > 1750000 && purchasePrice <= 2250000)
+                    return 45000.00 + ((purchasePrice - 1750000.00) * 0.08);
+                if (purchasePrice > 2250000 && purchasePrice <= 10000000)
+                    return 85000 + ((purchasePrice - 2250000) * 0.11);
+                if (purchasePrice > 10000000)
+                    return 937500 + ((purchasePrice - 10000000) * 0.13);
+            }
+            else
+            {
+                return 0.00;
+            }
+
+
 
             return 0;
         }
@@ -526,8 +670,13 @@ namespace MCvanderBergCalc
             {
                 num = 0;
             }
+
+            if (Convert.ToInt32(Session["calctype"]) > 0)
+            {
+                num = num * 0.65;
+            }
             return num;
-          
+
         }
 
 
@@ -554,7 +703,7 @@ namespace MCvanderBergCalc
             thread.Join();
 
 
-        //    doc.Save("Sample.pdf", Response, HttpReadType.Open);
+            //    doc.Save("Sample.pdf", Response, HttpReadType.Open);
         }
 
         #region Helpher Methods
@@ -579,10 +728,10 @@ namespace MCvanderBergCalc
             //Locating the logo on the right corner of the Drawing Surface
             PointF imageLocation = new PointF(doc.PageSettings.Width - imageSize.Width - 20, 5);
 
-      //      PdfImage img = new PdfBitmap(ResolveApplicationDataPath("logo.png"));
+            //      PdfImage img = new PdfBitmap(ResolveApplicationDataPath("logo.png"));
 
             //Draw the image in the Header.
-      //      header.Graphics.DrawImage(img, imageLocation, imageSize);
+            //      header.Graphics.DrawImage(img, imageLocation, imageSize);
 
             PdfSolidBrush brush = new PdfSolidBrush(activeColor);
 
@@ -677,7 +826,7 @@ namespace MCvanderBergCalc
             return string.Format("{0}\\{1}", dataPath, fileName);
         }
 
-        # endregion
+        #endregion
 
 
         private void ConvertHtmlToPdf()
@@ -706,11 +855,11 @@ namespace MCvanderBergCalc
 
             //if (!chkTag.Checked)
             //{
-                page = doc.Pages.Add();
+            page = doc.Pages.Add();
 
-                pageSize = page.GetClientSize();
+            pageSize = page.GetClientSize();
 
-                width = convertor.ConvertToPixels(page.GetClientSize().Width, PdfGraphicsUnit.Point);
+            width = convertor.ConvertToPixels(page.GetClientSize().Width, PdfGraphicsUnit.Point);
             //}
             //else
             //{
@@ -719,10 +868,10 @@ namespace MCvanderBergCalc
             //}
 
             //Adding Header
-           // this.AddHeader(doc, "Syncfusion Essential PDF", " ");
+            // this.AddHeader(doc, "Syncfusion Essential PDF", " ");
 
             //Adding Footer
-           // this.AddFooter(doc, "@Copyright 2016");
+            // this.AddFooter(doc, "@Copyright 2016");
 
             //using (HtmlToPdfConverter html = new HtmlToPdfConverter())
             //{
@@ -741,63 +890,63 @@ namespace MCvanderBergCalc
             HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
             string htmlText = @"<html><body>Hello World!!!</body></html>";
 
-                string baseUrl = "";
+            string baseUrl = "";
 
-                //Convert HTML to PDF document
+            //Convert HTML to PDF document
 
-                PdfDocument document = htmlConverter.Convert(htmlText, baseUrl);
+            PdfDocument document = htmlConverter.Convert(htmlText, baseUrl);
 
 
-                //if (result != null)
-                //    {
-                //        PdfMetafile mf = new PdfMetafile(result.RenderedImage as System.Drawing.Imaging.Metafile);
-                //        mf.Quality = 100;
-
-                //        PdfMetafileLayoutFormat format = new PdfMetafileLayoutFormat();
-                //        format.Break = PdfLayoutBreakType.FitPage;
-                //        format.Layout = PdfLayoutType.Paginate;
-                //        doc.PageSettings.Height = result.RenderedImage.Size.Height;
-                //        format.SplitTextLines = false;
-                //        format.SplitImages = false;
-
-                //        result.Render(page, format);
-                //    }
-                //    else
-                //        Response.Write("Warning ! Please check the HTML link");
-
-               // doc.Save("Sample.pdf", Response, HttpReadType.Open);
-
-            }
-            //else if (this.RadioButtonList1.Items[1].Selected)
-            //{
-            //    using (System.Drawing.Image img = html.ConvertToImage(this.TextBox1.Text, ImageType.Bitmap, (int)width, -1, AspectRatio.KeepWidth))
+            //if (result != null)
             //    {
-            //        if (img != null)
-            //        {
-            //            PdfImage image = new PdfBitmap(img);
-            //            PdfLayoutFormat format = new PdfLayoutFormat();
-            //            format.Break = PdfLayoutBreakType.FitPage;
-            //            format.Layout = PdfLayoutType.Paginate;
-            //            if (img.Size.Width > pageSize.Width)
-            //            {
-            //                //Bitmap
-            //                image.Draw(page, new RectangleF(0, 0, pageSize.Width, pageSize.Height), format);
-            //            }
-            //            else
-            //            {
-            //                //Bitmap
-            //                image.Draw(page, new RectangleF(0, 0, img.Width, img.Height), format);
-            //            }
-            //        }
-            //        else
-            //            Response.Write("Warning ! Please check the HTML link");
+            //        PdfMetafile mf = new PdfMetafile(result.RenderedImage as System.Drawing.Imaging.Metafile);
+            //        mf.Quality = 100;
+
+            //        PdfMetafileLayoutFormat format = new PdfMetafileLayoutFormat();
+            //        format.Break = PdfLayoutBreakType.FitPage;
+            //        format.Layout = PdfLayoutType.Paginate;
+            //        doc.PageSettings.Height = result.RenderedImage.Size.Height;
+            //        format.SplitTextLines = false;
+            //        format.SplitImages = false;
+
+            //        result.Render(page, format);
             //    }
-            //}
-            //else if (chkTag.Checked)
-            //{
-            //    // Convert to Tagged PDF.
-            //    html.ConvertToTaggedPDF(doc, TextBox1.Text);
-            //}
+            //    else
+            //        Response.Write("Warning ! Please check the HTML link");
+
+            // doc.Save("Sample.pdf", Response, HttpReadType.Open);
+
+        }
+        //else if (this.RadioButtonList1.Items[1].Selected)
+        //{
+        //    using (System.Drawing.Image img = html.ConvertToImage(this.TextBox1.Text, ImageType.Bitmap, (int)width, -1, AspectRatio.KeepWidth))
+        //    {
+        //        if (img != null)
+        //        {
+        //            PdfImage image = new PdfBitmap(img);
+        //            PdfLayoutFormat format = new PdfLayoutFormat();
+        //            format.Break = PdfLayoutBreakType.FitPage;
+        //            format.Layout = PdfLayoutType.Paginate;
+        //            if (img.Size.Width > pageSize.Width)
+        //            {
+        //                //Bitmap
+        //                image.Draw(page, new RectangleF(0, 0, pageSize.Width, pageSize.Height), format);
+        //            }
+        //            else
+        //            {
+        //                //Bitmap
+        //                image.Draw(page, new RectangleF(0, 0, img.Width, img.Height), format);
+        //            }
+        //        }
+        //        else
+        //            Response.Write("Warning ! Please check the HTML link");
+        //    }
+        //}
+        //else if (chkTag.Checked)
+        //{
+        //    // Convert to Tagged PDF.
+        //    html.ConvertToTaggedPDF(doc, TextBox1.Text);
+        //}
         //}
 
 

@@ -23,7 +23,7 @@ namespace MCvanderBergCalc.language.en
 
             string v = Request.QueryString["id"];
 
-            v = "70";// "1410"; // "2438"; // 
+            v = "1410";// "1410"; // "2438"; // 
 
             if (Session["userid"] != null)
             {
@@ -69,6 +69,7 @@ namespace MCvanderBergCalc.language.en
                     panelCat6.Visible = spGetMemberAreaPersonalResult.Category6_Eng;
                     panelCat7.Visible = spGetMemberAreaPersonalResult.Category7_Eng;
                     panelCat8.Visible = spGetMemberAreaPersonalResult.PricetonParkDevelopment;
+                    panelCat9.Visible = spGetMemberAreaPersonalResult.MenlynMaine;
                     //pnlPP1.Visible = spGetMemberAreaPersonalResult.PricetonParkDevelopment;
                     //pnlPP2.Visible = spGetMemberAreaPersonalResult.PricetonParkDevelopment;
                     //pnlPP3.Visible = spGetMemberAreaPersonalResult.PricetonParkDevelopment;
@@ -820,6 +821,302 @@ namespace MCvanderBergCalc.language.en
                     mailcontent = PopulateGeneralmail(mailcontent, true);
                     lblContractNonBranded.Visible = true;
                     lblContractNonBranded.Text = txtFirstname.Text + ", your e-mail was sent successfully to " + txtRecipientEmail.Text + ".  Thank you for continuous loyal support.  From Tiaan & Sonja";
+                    mymail.SendGeneralmail(emailto, lblEmail.Text, "info@mcvdberg.co.za", txtFirstname.Text + " " + txtSurname.Text, txtSubjecxt.Text, mailcontent);
+                }
+            }
+        }
+
+        protected void btnMenlynMainPreviewClick(object sender, EventArgs e)
+        {
+            btnMenlynMainClick(0);
+        }
+
+        protected void btnMenlynMainParkMailClick(object sender, EventArgs e)
+        {
+            btnMenlynMainClick(1);
+        }
+
+        protected void btnMenlynMainClick(int what)
+        {
+
+            if (CheckBox56.Checked == false && CheckBox58.Checked == false && CheckBox59.Checked == false && CheckBox60.Checked == false && CheckBox61.Checked == false && CheckBox62.Checked == false && CheckBox63.Checked == false && CheckBox64.Checked == false && CheckBox65.Checked == false && CheckBox66.Checked == false && CheckBox67.Checked == false && CheckBox68.Checked == false && CheckBox69.Checked == false && CheckBox70.Checked == false && CheckBox74.Checked == false && CheckBox75.Checked == false && CheckBox76.Checked == false && CheckBox77.Checked == false && CheckBox78.Checked == false && CheckBox79.Checked == false && CheckBox80.Checked == false && CheckBox81.Checked == false && CheckBox82.Checked == false && CheckBox83.Checked == false && CheckBox84.Checked == false && CheckBox85.Checked == false && CheckBox86.Checked == false && CheckBox87.Checked == false && CheckBox88.Checked == false && CheckBox89.Checked == false && CheckBox71.Checked == false && CheckBox72.Checked == false && CheckBox73.Checked == false && CheckBox90.Checked == false)
+            {
+                lblMenlynMain.Visible = true;
+            }
+            else
+            {
+                lblMenlynMain.Visible = false;
+
+                ResetLabel();
+
+                if (what == 1)
+                {
+                    ClientScript.RegisterStartupScript(GetType(), "Javascript", "javascript:cat9Click(); ", true);
+                }
+                else
+                {
+                    ClientScript.RegisterStartupScript(GetType(), "Javascript", "javascript:openFancybox9();", true);
+                    ClientScript.RegisterStartupScript(GetType(), "Javascript", "javascript:cat9Click(); ", true);
+                }
+
+                string mailcontent = "";
+                mailcontent = File.ReadAllText(Server.MapPath("~/Templates/") + "complimentslipenglish.html");
+
+                if (txtSubjecxt.Text == "")
+                {
+                    txtSubjecxt.Text = "With compliments from " + txtFirstname.Text + " " + txtSurname.Text;
+                }
+
+
+                string[] arraylinks = new string[20];
+                string[] arrayimages = new string[20];
+                int counter = 0;
+
+
+
+                if (this.CheckBox56.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net/menlynmaine/OTP_Kent_Gush_Properties.pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/Proforma_Agreement_KentGush.png";
+                }
+                if (this.CheckBox58.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net/menlynmaine/OTP_Pam_Golding_Properties.pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/Proforma_Agreement_PamGolding.png";
+                }
+                if (this.CheckBox59.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net/menlynmaine/OTP_Menlyn_Maine.pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/Proforma_Agreement_MenlynMaine.png";
+                }
+                if (this.CheckBox60.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net/menlynmaine/Annexure_B_Unit_A_Layout_Plan.pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/AnnexureB_UnitA.png";
+                }
+                if (this.CheckBox61.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net/menlynmaine/Annexure_B_Unit_B_Layout_Plan.pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/AnnexureB_UnitB.png";
+                }
+                if (this.CheckBox62.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net/menlynmaine/Annexure_B_Unit_B1_Layout_Plan.pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/AnnexureB_UnitB1.png";
+                }
+                if (this.CheckBox63.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net/menlynmaine/Annexure_B_Unit_B2_Layout_Plan.pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/AnnexureB_UnitB2.png";
+                }
+                if (this.CheckBox64.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net/menlynmaine/Annexure_B_Unit_B3_Layout_Plan.pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/AnnexureB_UnitB3.png";
+                }
+                if (this.CheckBox65.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net/menlynmaine/Annexure_B_Unit_C_Layout_Plan.pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/AnnexureB_UnitC.png";
+                }
+                if (this.CheckBox66.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net/menlynmaine/Annexure_B_Unit_D_and_E_Layout_Plan.pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/AnnexureB_UnitD_and_E.png";
+                }
+                if (this.CheckBox67.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net/menlynmaine/Annexure_B_Unit_F_Layout_Plan.pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/AnnexureB_UnitF.png";
+                }
+                if (this.CheckBox68.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net/menlynmaine/Annexure_B_Unit_G_Layout_Plan.pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/AnnexureB_UnitG.png";
+                }
+                if (this.CheckBox69.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net/menlynmaine/Annexure_B_Unit_G1_Layout_Plan.pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/AnnexureB_UnitG1.png";
+                }
+                if (this.CheckBox70.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net/menlynmaine/Annexure_B_Unit_H_Layout_Plan.pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/AnnexureB_UnitH.png";
+                }
+                if (this.CheckBox74.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net/menlynmaine/Annexure_B_Unit_H1_Layout_Plan.pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/AnnexureB_UnitH1.png";
+                }
+                if (this.CheckBox75.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net/menlynmaine/Annexure_B_Unit_K_Floors_1-2_Layout_Plan.pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/AnnexureB_UnitK_Floor1-2.png";
+                }
+                if (this.CheckBox76.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net/menlynmaine/Annexure_B_Unit_K_Ground_Layout_Plan.pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/AnnexureB_UnitK_Ground";
+                }
+                if (this.CheckBox77.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net/menlynmaine/Annexure_B_Unit_K_Penthouse_Layout_Plan.pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/AnnexureB_UnitK_Penthouse.png";
+                }
+                if (this.CheckBox78.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net/menlynmaine/Annexure_B_Unit_L_Floors_1-2_Layout_Plan.pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/AnnexureB_UnitL_Floor1-2.png";
+                }
+                if (this.CheckBox79.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net/menlynmaine/Annexure_B_Unit_L_Ground_Layout_Plan.pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/AnnexureB_UnitL_Ground.png";
+                }
+                if (this.CheckBox80.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net/menlynmaine/Annexure_B_Unit_L_Penthouse_Layout_Plan.pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/AnnexureB_UnitL_Penthouse.png";
+                }
+                if (this.CheckBox81.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net/menlynmaine/Annexure_B_Unit_M_Floors_1-2_Layout_Plan.pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/AnnexureB_UnitM_Floor1-2.png";
+                }
+                if (this.CheckBox82.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net/menlynmaine/Annexure_B_Unit_M_Ground_Layout_Plan.pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/AnnexureB_UnitM_Ground.png";
+                }
+                if (this.CheckBox83.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net/menlynmaine/Annexure_B_Unit_M_Penthouse_Layout_Plan.pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/AnnexureB_UnitM_Penthouse.png";
+                }
+                //Annexure C
+                if (this.CheckBox84.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net:443/menlynmaine/A4%20BW%20general%20plans_Annex%20C_LAUNCH%20EDITION_16.11.08.pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/AnnexureC_FloorPlanofUnits.png";
+                }
+                //Annexure D
+                if (this.CheckBox85.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net:443/menlynmaine/A4%20Basement%20%20plans_Annex%20D_LAUNCH%20EDITION_16.11.08.pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/AnnexureD_FloorPlanGeneral.png";
+                }
+                if (this.CheckBox86.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net/menlynmaine/Annexure_E_Specifications_APARTMENTS.Pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/AnnexureB_UnitK_Floor1-2.png";
+                }
+                if (this.CheckBox87.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net:443/menlynmaine/A4%20Basement%20%20plans_Annex%20D_LAUNCH%20EDITION_16.11.08.pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/AnnexureB_UnitK_Floor1-2.png";
+                }
+                if (this.CheckBox88.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net/menlynmaine/Annexure_F_Finishes_selection_and_optional_extras.pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/AnnexureB_UnitK_Floor1-2.png";
+                }
+                if (this.CheckBox89.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net/menlynmaine/Annexure_G_Resolution.pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/AnnexureB_UnitK_Floor1-2.png";
+                }
+                if (this.CheckBox75.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net/menlynmaine/Annexure_B_Unit_K_Floors_1-2_Layout_Plan.pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/AnnexureB_UnitK_Floor1-2.png";
+                }
+                //Body corporate
+                if (this.CheckBox71.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net/menlynmaine/Price%20list.pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/Trilogy_BodyCorporateRules.png";
+                }
+                //PriceList
+                if (this.CheckBox72.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net/menlynmaine/Price%20list.pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/Trilogy_PriceList.png";
+                }
+                //DevelopersGuide
+                if (this.CheckBox91.Checked)
+                {
+                    counter++;
+                    arraylinks[counter] = "https://mcvdberg.blob.core.windows.net:443/menlynmaine/MCDevelopmentGuidePPwithfrontpagevs4.pdf";
+                    arrayimages[counter] = "https://mcvdberg.blob.core.windows.net:443/mailicons/Trilogy_DevelopersGuide.png";
+                }
+
+
+                string content = BuildIcons(arraylinks, arrayimages, counter);
+
+                mailcontent = mailcontent.Replace("#CONTENT#", content);
+
+                string emailto = "";
+                if (what == 0)
+                {
+                    if (txtRecipientEmail.Text == "")
+                    {
+                        MenlyMainSendbutton.Enabled = false;
+                        MenlyMainSendbutton.Text = "You can't send as Recipient email is required";
+                        MenlyMainSendbutton.CssClass = "button buttonNotActive";
+                    }
+                    else
+                    {
+                        MenlyMainSendbutton.Enabled = true;
+                        MenlyMainSendbutton.Text = "Send to " + txtRecipientEmail.Text; ;
+                        MenlyMainSendbutton.CssClass = "button buttonActive";
+                    }
+
+                    mailcontent = PopulateGeneralmail(mailcontent, false);
+                    litMenlynMain.Text = mailcontent;
+                }
+                else
+                {
+                    emailto = txtRecipientEmail.Text; ;
+                    Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>parent.jQuery.fancybox.close();</script>");
+
+                    SendMail mymail = new SendMail();
+                    mailcontent = PopulateGeneralmail(mailcontent, true);
+                    lblMenlynMain.Visible = true;
+                    lblMenlynMain.Text = txtFirstname.Text + ", your e-mail was sent successfully to " + txtRecipientEmail.Text + ".  Thank you for continuous loyal support.  From Tiaan & Sonja";
                     mymail.SendGeneralmail(emailto, lblEmail.Text, "info@mcvdberg.co.za", txtFirstname.Text + " " + txtSurname.Text, txtSubjecxt.Text, mailcontent);
                 }
             }

@@ -22,6 +22,15 @@ namespace MCvanderBergCalc {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
+        /// Image1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image Image1;
+        
+        /// <summary>
         /// lblError control.
         /// </summary>
         /// <remarks>
@@ -67,6 +76,24 @@ namespace MCvanderBergCalc {
         protected global::System.Web.UI.WebControls.Button Button2;
         
         /// <summary>
+        /// LitTransferFeeTooltip control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal LitTransferFeeTooltip;
+        
+        /// <summary>
+        /// LitTransfer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal LitTransfer;
+        
+        /// <summary>
         /// lblTransferFee control.
         /// </summary>
         /// <remarks>
@@ -103,6 +130,15 @@ namespace MCvanderBergCalc {
         protected global::System.Web.UI.WebControls.Label lblVendorSoftwarePackageFee;
         
         /// <summary>
+        /// LitFicaFeeTooltip control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal LitFicaFeeTooltip;
+        
+        /// <summary>
         /// lblFicaFee control.
         /// </summary>
         /// <remarks>
@@ -110,6 +146,15 @@ namespace MCvanderBergCalc {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblFicaFee;
+        
+        /// <summary>
+        /// LitPostageTooltip control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal LitPostageTooltip;
         
         /// <summary>
         /// lblPostagePetties control.
@@ -157,6 +202,33 @@ namespace MCvanderBergCalc {
         protected global::System.Web.UI.WebControls.Label lblTotalTransferCost;
         
         /// <summary>
+        /// LitMainExclusions control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal LitMainExclusions;
+        
+        /// <summary>
+        /// LitBondRegistrationTooltip control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal LitBondRegistrationTooltip;
+        
+        /// <summary>
+        /// LitBond control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal LitBond;
+        
+        /// <summary>
         /// lblBondRegistrationFee control.
         /// </summary>
         /// <remarks>
@@ -200,6 +272,15 @@ namespace MCvanderBergCalc {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblDeedsOfficeSearchBond;
+        
+        /// <summary>
+        /// LitBondPostageTooltip control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal LitBondPostageTooltip;
         
         /// <summary>
         /// lblPostPettiesBond control.

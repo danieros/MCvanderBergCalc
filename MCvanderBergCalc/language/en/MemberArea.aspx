@@ -713,6 +713,303 @@ Know start completing all the relevant fields below before proceeding with your 
 
                             </asp:Panel>
 
+                            <%--Menlyn Main--%>
+                            <asp:Panel ID="panelCat9" runat="server" Visible="True">
+
+                                <a name="anchor9"></a><legend>Trilogy Collection – Menlyn Maine <a href="#anchor9" id="divcat9">To select click here</a></legend>
+                                <div>
+                                    <ul>
+                                        <li>You may choose any of the below options by clicking on the tick box next to the document that you would like to email to your client. </li>
+                                        <li>Once you have made your selection, click on the Send button. </li>
+                                    </ul>
+                                </div>
+                                <div class="memberareablock" id="divcat9_div">
+                                    <br />
+                                    <span class="pdfdownloader">​If you have a problem viewing the contracts, please <a href="https://get.adobe.com/reader/" target="_blank">click here</a></span>
+                                    <a href="https://get.adobe.com/reader/" target="_blank">
+                                        <img src="../../Images/downloadPDF.jpg" /></a>
+                                    <br />
+                                    <br />
+
+
+                                    <div class="MemberAreaContentheadingsItems">
+
+
+                                        <table>
+                                            <tr>
+                                                <td style="vertical-align: top;">
+                                                    <%-- Master contract Kent Gush Properties --%>
+                                                    <asp:Panel ID="Panel2" runat="server" CssClass="MemberAreaContentheadingsItems">
+                                                        <asp:CheckBox ID="CheckBox56" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink37" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net/menlynmaine/OTP_Kent_Gush_Properties.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 400px !important">&nbsp;Master Contract (including Annexure A) – Kent Gush Properties</label>
+                                              </asp:HyperLink>
+                                                    </asp:Panel>
+                                                    <%-- Master contract Pam Golding Properties --%>
+                                                    <asp:Panel ID="Panel3" runat="server" CssClass="MemberAreaContentheadingsItems" Visible="true">
+                                                        <asp:CheckBox ID="CheckBox58" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink39" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net/menlynmaine/OTP_Pam_Golding_Properties.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 400px !important">&nbsp;Master Contract (including Annexure A) – Pam Golding Properties</label>
+                                              </asp:HyperLink>
+                                                    </asp:Panel>
+                                                    <%-- Master contract Menlyn_Maine Properties --%>
+                                                    <asp:Panel ID="Panel4" runat="server" CssClass="MemberAreaContentheadingsItems" Visible="true">
+                                                        <asp:CheckBox ID="CheckBox59" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink40" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net/menlynmaine/OTP_Menlyn_Maine.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 400px !important">&nbsp;Master Contract (including Annexure A) – Menlyn_Maine</label>
+                                              </asp:HyperLink>
+                                                    </asp:Panel>
+
+                                                    <asp:Panel ID="Panel5" runat="server" CssClass="MemberAreaContentheadingsItems" Visible="true">
+                                                        <asp:CheckBox ID="CheckBox60" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink41" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net/menlynmaine/Annexure_B_Unit_A_Layout_Plan.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 400px !important">&nbsp;Annexure B – Unit A – Layout Plan</label>
+                                              </asp:HyperLink>
+                                                    </asp:Panel>
+
+                                                    <asp:Panel ID="Panel6" runat="server" CssClass="MemberAreaContentheadingsItems" Visible="true">
+                                                        <asp:CheckBox ID="CheckBox61" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink42" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net/menlynmaine/Annexure_B_Unit_B_Layout_Plan.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 400px !important">&nbsp;Annexure B – Unit B – Layout Plan</label>
+                                              </asp:HyperLink>
+                                                    </asp:Panel>
+
+                                                    <asp:Panel ID="Panel7" runat="server" CssClass="MemberAreaContentheadingsItems" Visible="true">
+                                                        <asp:CheckBox ID="CheckBox62" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink43" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net/menlynmaine/Annexure_B_Unit_B1_Layout_Plan.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 400px !important">&nbsp;Annexure B – Unit B1 – Layout Plan</label>
+                                              </asp:HyperLink>
+                                                    </asp:Panel>
+
+                                                    <asp:Panel ID="Panel8" runat="server" CssClass="MemberAreaContentheadingsItems" Visible="true">
+                                                        <asp:CheckBox ID="CheckBox63" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink44" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net/menlynmaine/Annexure_B_Unit_B2_Layout_Plan.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 400px !important">&nbsp;Annexure B – Unit B2 – Layout Plan</label>
+                                              </asp:HyperLink>
+                                                    </asp:Panel>
+
+                                                    <asp:Panel ID="Panel9" runat="server" CssClass="MemberAreaContentheadingsItems" Visible="true">
+                                                        <asp:CheckBox ID="CheckBox64" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink45" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net/menlynmaine/Annexure_B_Unit_B3_Layout_Plan.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 400px !important">&nbsp;Annexure B – Unit B3 – Layout Plan</label>
+                                              </asp:HyperLink>
+                                                    </asp:Panel>
+
+                                                    <asp:Panel ID="Panel10" runat="server" CssClass="MemberAreaContentheadingsItems" Visible="true">
+                                                        <asp:CheckBox ID="CheckBox65" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink46" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net/menlynmaine/Annexure_B_Unit_C_Layout_Plan.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 400px !important">&nbsp;Annexure B – Unit C – Layout Plan</label>
+                                              </asp:HyperLink>
+                                                    </asp:Panel>
+
+                                                    <asp:Panel ID="Panel11" runat="server" CssClass="MemberAreaContentheadingsItems" Visible="true">
+                                                        <asp:CheckBox ID="CheckBox66" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink47" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net/menlynmaine/Annexure_B_Unit_D_and_E_Layout_Plan.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 400px !important">&nbsp;Annexure B – Unit D and E – Layout Plan</label>
+                                              </asp:HyperLink>
+                                                    </asp:Panel>
+
+                                                    <asp:Panel ID="Panel12" runat="server" CssClass="MemberAreaContentheadingsItems" Visible="true">
+                                                        <asp:CheckBox ID="CheckBox67" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink48" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net/menlynmaine/Annexure_B_Unit_F_Layout_Plan.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 400px !important">&nbsp;Annexure B – Unit F – Layout Plan</label>
+                                              </asp:HyperLink>
+                                                    </asp:Panel>
+
+                                                    <asp:Panel ID="Panel13" runat="server" CssClass="MemberAreaContentheadingsItems" Visible="true">
+                                                        <asp:CheckBox ID="CheckBox68" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink49" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net/menlynmaine/Annexure_B_Unit_G_Layout_Plan.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 400px !important">&nbsp;Annexure B – Unit G – Layout Plan</label>
+                                              </asp:HyperLink>
+                                                    </asp:Panel>
+
+                                                    <asp:Panel ID="Panel14" runat="server" CssClass="MemberAreaContentheadingsItems" Visible="true">
+                                                        <asp:CheckBox ID="CheckBox69" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink50" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net/menlynmaine/Annexure_B_Unit_G1_Layout_Plan.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 400px !important">&nbsp;Annexure B – Unit G1 – Layout Plan</label>
+                                              </asp:HyperLink>
+                                                    </asp:Panel>
+
+                                                    <asp:Panel ID="Panel15" runat="server" CssClass="MemberAreaContentheadingsItems" Visible="true">
+                                                        <asp:CheckBox ID="CheckBox70" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink51" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net/menlynmaine/Annexure_B_Unit_H_Layout_Plan.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 400px !important">&nbsp;Annexure B – Unit H – Layout Plan</label>
+                                              </asp:HyperLink>
+                                                    </asp:Panel>
+
+                                                    <asp:Panel ID="Panel1" runat="server" CssClass="MemberAreaContentheadingsItems" Visible="true">
+                                                        <asp:CheckBox ID="CheckBox74" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink55" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net/menlynmaine/Annexure_B_Unit_H1_Layout_Plan.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 400px !important">&nbsp;Annexure B – Unit H1 – Layout Plan</label>
+                                              </asp:HyperLink>
+                                                    </asp:Panel>
+
+                                                    <asp:Panel ID="Panel19" runat="server" CssClass="MemberAreaContentheadingsItems" Visible="true">
+                                                        <asp:CheckBox ID="CheckBox75" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink56" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net/menlynmaine/Annexure_B_Unit_K_Floors_1-2_Layout_Plan.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 400px !important">&nbsp;Annexure B – Unit K (Floors 1 – 2) – Layout Plan</label>
+                                              </asp:HyperLink>
+                                                    </asp:Panel>
+
+                                                    <asp:Panel ID="Panel20" runat="server" CssClass="MemberAreaContentheadingsItems" Visible="true">
+                                                        <asp:CheckBox ID="CheckBox76" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink57" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net/menlynmaine/Annexure_B_Unit_K_Ground_Layout_Plan.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 400px !important">&nbsp;Annexure B – Unit K (Ground) – Layout Plan</label>
+                                              </asp:HyperLink>
+                                                    </asp:Panel>
+
+                                                    <asp:Panel ID="Panel21" runat="server" CssClass="MemberAreaContentheadingsItems" Visible="true">
+                                                        <asp:CheckBox ID="CheckBox77" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink58" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net/menlynmaine/Annexure_B_Unit_K_Penthouse_Layout_Plan.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 400px !important">&nbsp;Annexure B – Unit K (Penthouse) – Layout Plan</label>
+                                              </asp:HyperLink>
+                                                    </asp:Panel>
+
+                                                    <asp:Panel ID="Panel22" runat="server" CssClass="MemberAreaContentheadingsItems" Visible="true">
+                                                        <asp:CheckBox ID="CheckBox78" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink59" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net/menlynmaine/Annexure_B_Unit_L_Floors_1-2_Layout_Plan.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 400px !important">&nbsp;Annexure B – Unit L (Floors 1-2) – Layout Plan</label>
+                                              </asp:HyperLink>
+                                                    </asp:Panel>
+
+                                                    <asp:Panel ID="Panel23" runat="server" CssClass="MemberAreaContentheadingsItems" Visible="true">
+                                                        <asp:CheckBox ID="CheckBox79" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink60" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net/menlynmaine/Annexure_B_Unit_L_Ground_Layout_Plan.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 400px !important">&nbsp;Annexure B – Unit L (Ground) – Layout Plan</label>
+                                              </asp:HyperLink>
+                                                    </asp:Panel>
+
+                                                    <asp:Panel ID="Panel24" runat="server" CssClass="MemberAreaContentheadingsItems" Visible="true">
+                                                        <asp:CheckBox ID="CheckBox80" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink61" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net/menlynmaine/Annexure_B_Unit_L_Penthouse_Layout_Plan.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 400px !important">&nbsp;Annexure B – Unit L (Penthouse) – Layout Plan</label>
+                                              </asp:HyperLink>
+                                                    </asp:Panel>
+
+                                                    <asp:Panel ID="Panel25" runat="server" CssClass="MemberAreaContentheadingsItems" Visible="true">
+                                                        <asp:CheckBox ID="CheckBox81" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink62" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net/menlynmaine/Annexure_B_Unit_M_Floors_1-2_Layout_Plan.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 400px !important">&nbsp;Annexure B – Unit M (Floors 1-2) – Layout Plan</label>
+                                              </asp:HyperLink>
+                                                    </asp:Panel>
+
+                                                    <asp:Panel ID="Panel26" runat="server" CssClass="MemberAreaContentheadingsItems" Visible="true">
+                                                        <asp:CheckBox ID="CheckBox82" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink63" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net/menlynmaine/Annexure_B_Unit_M_Ground_Layout_Plan.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 400px !important">&nbsp;Annexure B – Unit M (Ground) – Layout Plan</label>
+                                              </asp:HyperLink>
+                                                    </asp:Panel>
+
+                                                    <asp:Panel ID="Panel27" runat="server" CssClass="MemberAreaContentheadingsItems" Visible="true">
+                                                        <asp:CheckBox ID="CheckBox83" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink64" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net/menlynmaine/Annexure_B_Unit_M_Penthouse_Layout_Plan.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 400px !important">&nbsp;Annexure B – Unit M (Penthouse) – Layout Plan</label>
+                                              </asp:HyperLink>
+                                                    </asp:Panel>
+
+                                                    <%-- Annexure C--%>
+                                                    <asp:Panel ID="Panel28" runat="server" CssClass="MemberAreaContentheadingsItems" Visible="true">
+                                                        <asp:CheckBox ID="CheckBox84" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink65" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net:443/menlynmaine/A4%20BW%20general%20plans_Annex%20C_LAUNCH%20EDITION_16.11.08.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 400px !important">&nbsp;Annexure C – Floor Plan of Unit</label>
+                                              </asp:HyperLink>
+                                                    </asp:Panel>
+
+                                                    <%-- Annexure D--%>
+                                                    <asp:Panel ID="Panel29" runat="server" CssClass="MemberAreaContentheadingsItems" Visible="true">
+                                                        <asp:CheckBox ID="CheckBox85" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink66" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net:443/menlynmaine/A4%20Basement%20%20plans_Annex%20D_LAUNCH%20EDITION_16.11.08.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 400px !important">&nbsp;Annexure D – Floor plan of parking, staff and or store room (if applicable)</label>
+                                              </asp:HyperLink>
+                                                    </asp:Panel>
+
+                                                    <%-- Annexure E Apartments--%>
+                                                    <asp:Panel ID="Panel30" runat="server" CssClass="MemberAreaContentheadingsItems" Visible="true">
+                                                        <asp:CheckBox ID="CheckBox86" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink67" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net/menlynmaine/Annexure_E_Specifications_APARTMENTS.Pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 400px !important">&nbsp;Annexure E – Specifications (Apartments)</label>
+                                              </asp:HyperLink>
+                                                    </asp:Panel>
+
+                                                    <asp:Panel ID="Panel32" runat="server" CssClass="MemberAreaContentheadingsItems" Visible="true">
+                                                        <asp:CheckBox ID="CheckBox87" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink68" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net/menlynmaine/Annexure_E_Specifications_LUXURY.Pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 400px !important">&nbsp;Annexure E – Specifications (Luxury)</label>
+                                              </asp:HyperLink>
+                                                    </asp:Panel>
+
+                                                    <asp:Panel ID="Panel33" runat="server" CssClass="MemberAreaContentheadingsItems" Visible="true">
+                                                        <asp:CheckBox ID="CheckBox88" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink69" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net/menlynmaine/Annexure_F_Finishes_selection_and_optional_extras.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 350px !important">&nbsp;Annexure F – Finishes Selection and Option Extras</label>
+                                              </asp:HyperLink>
+                                                    </asp:Panel>
+
+                                                    <%-- Annexure G Apartments--%>
+                                                    <asp:Panel ID="Panel34" runat="server" CssClass="MemberAreaContentheadingsItems" Visible="true">
+                                                        <asp:CheckBox ID="CheckBox89" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink70" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net/menlynmaine/Annexure_G_Resolution.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer; width: 350px !important">&nbsp; Annexure G – Resolution</label>
+                                              </asp:HyperLink>
+                                                    </asp:Panel>
+
+                                                </td>
+                                                <td style="vertical-align: top;">
+
+                                                    <%-- Body Corporate --%>
+                                                    <asp:Panel ID="Panel16" runat="server" CssClass="MemberAreaContentheadingsItems">
+                                                        <asp:CheckBox ID="CheckBox71" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink52" runat="server" NavigateUrl="http://www.mcvdberg.co.za/language/en/PrincetonParkVideo" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer">&nbsp;Body Corporate Rules</label>
+                                              </asp:HyperLink>
+                                                    </asp:Panel>
+
+                                                    <asp:Panel ID="Panel17" runat="server" CssClass="MemberAreaContentheadingsItems">
+                                                        <asp:CheckBox ID="CheckBox72" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink53" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net/menlynmaine/Price%20list.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer">&nbsp;Price List</label>
+                                              </asp:HyperLink>
+                                                    </asp:Panel>
+
+                                                    <asp:Panel ID="Panel18" runat="server" CssClass="MemberAreaContentheadingsItems">
+                                                        <asp:CheckBox ID="CheckBox73" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink54" runat="server" NavigateUrl="http://www.mcvdberg.co.za/language/en/MenlynMainCostcalculator.aspx" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-calculator fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer">&nbsp;Cost Calculator</label>
+                                              </asp:HyperLink>
+                                                    </asp:Panel>
+
+                                                    <asp:Panel ID="Panel31" runat="server" CssClass="MemberAreaContentheadingsItems">
+                                                        <asp:CheckBox ID="CheckBox90" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink71" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net:443/contractspecific/Princeton_Park_OTP_4.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer">&nbsp;Images – Trilogy Collection</label>
+                                              </asp:HyperLink>
+                                                    </asp:Panel>
+
+                                                    <%-- Developers Guide--%>
+                                                    <asp:Panel ID="Panel35" runat="server" CssClass="MemberAreaContentheadingsItems">
+                                                        <asp:CheckBox ID="CheckBox91" runat="server" />&nbsp;
+                                              <asp:HyperLink ID="HyperLink72" runat="server" NavigateUrl="https://mcvdberg.blob.core.windows.net:443/menlynmaine/MCDevelopmentGuidePPwithfrontpagevs4.pdf" Target="_blank" Font-Size="Larger">&nbsp;&nbsp;<i class="fa fa-print fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<label class="MemberAreaContentheadingsItemsSingle" style="cursor:pointer">&nbsp;Developers Guide</label>
+                                              </asp:HyperLink>
+                                                    </asp:Panel>
+
+                                                </td>
+                                            </tr>
+                                        </table>
+
+
+
+
+
+                                        <div class="MemberAreaContentheadingsItems" style="width: 750px; text-align: right;">
+
+                                            <asp:Label ID="Label4" runat="server" Text="You have to select at least one item" Font-Size="9px" ForeColor="Red" Visible="false"></asp:Label>
+                                            <asp:Button ID="Button2" runat="server" Text="Send" OnClick="btnMenlynMainPreviewClick" CssClass="button button1" />
+                                            <a href="#anchor5" id="divcat9hide" class="hidelink">Hide</a>
+                                        </div>
+
+                                        <script>
+                                            function openFancybox9() {
+                                                cat9Click();
+                                                $.fancybox.helpers.overlay.open({ parent: $('body') });
+                                                $.fancybox({
+                                                    'autoSize': false,
+                                                    'width': 750,
+                                                    'height': 600,
+                                                    'overlayShow': true,
+                                                    'overlayColor': '#000',
+                                                    'href': '#contentdiv9'
+                                                });
+                                            }
+                                        </script>
+
+                                        <div style="display: none">
+                                            <div id="contentdiv9">
+                                                <div style="text-align: center;">
+                                                    See below to preview the mail that your client will receive. If you are happy click on <b>send</b> or contact our web support team: email <a href="mailto: web@mcvdberg.co.za">web@mcvdberg.co.za</a> or contact no 012 660 6109 to assist you. 
+                                                            <br />
+                                                    <br />
+                                                    <asp:Button ID="MenlyMainSendbutton" runat="server" Text="Send to client" ForeColor="Black" OnClick="btnMenlynMainParkMailClick" UseSubmitBehavior="false" />
+                                                    <br />
+                                                    <br />
+                                                </div>
+                                                <asp:Literal ID="litMenlynMain" runat="server"></asp:Literal>
+                                            </div>
+                                        </div>
+
+                                        <asp:Label ID="lblMenlynMain" runat="server" Text="Label" Visible="False" Font-Size="11px" ForeColor="Red" Font-Names="Verdana"></asp:Label>
+
+
+                                    </div>
+                                </div>
+
+                            </asp:Panel>
+
 
                             <asp:Panel ID="panelCat5" runat="server" Visible="True">
 

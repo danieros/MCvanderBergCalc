@@ -86,6 +86,10 @@
             $('#divcat8_div').fadeIn('slow');
             window.location = ("" + window.location).replace(/#[A-Za-z0-9_]*$/, '') + "#anchor5"
         }
+        function cat9Click() {
+            $('#divcat9_div').fadeIn('slow');
+            window.location = ("" + window.location).replace(/#[A-Za-z0-9_]*$/, '') + "#anchor9"
+        }
 
     </script>
 
@@ -137,6 +141,11 @@
                 $('#divcat8_div').fadeIn('slow');
             });
 
+            $('#divcat9').click(function () {
+                closeall();
+                $('#divcat9_div').fadeIn('slow');
+            });
+
 
             $('#divcat0hide').click(function () {
                 closeall();
@@ -176,6 +185,10 @@
                 closeall();
                 $('#divcat8_div').fadeOut('20000');
             });
+            $('#divcat9hide').click(function () {
+                closeall();
+                $('#divcat9_div').fadeOut('20000');
+            });
 
 
             function closeall() {
@@ -186,6 +199,7 @@
                 $('#divcat4_div').hide();
                 $('#divcat5_div').hide();
                 $('#divcat8_div').hide();
+                $('#divcat9_div').hide();
             };
 
         });

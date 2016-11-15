@@ -320,6 +320,13 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <label style="width: 350px !important;">
+                            <asp:CheckBox ID="chkMenlynMain" runat="server" />&nbsp;Menlyn Main</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label style="width: 350px !important;">
                             <asp:CheckBox ID="chkCat4Afr" runat="server" />&nbsp;Contract Branded Afrikaans (Cat 4)</label>
                     </div>
                 </div>

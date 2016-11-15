@@ -217,6 +217,8 @@
                                                                 <div id="ctl00_mainContent_ctl00_pnlCRM" class="modulecontent">
 
 
+                                                                    <asp:Image ID="Image1" runat="server" ImageUrl="https://mcvdberg.blob.core.windows.net:443/generalimages/LogoforTrinityCalculator.png" Width="800px" />
+
                                                                     <script type="text/javascript">
                                                                         var specialKeys = new Array();
                                                                         specialKeys.push(8); //Backspace
@@ -272,7 +274,7 @@
                                                                     </script>
 
 
-                                                                    <div style="width: 940px; height: auto; margin-left: auto; margin-right: auto; margin-top: 20px">
+                                                                    <div style="height: auto; margin-left: auto; margin-right: auto; margin-top: 20px">
                                                                         <div class="calcSectionHeader" style="width: 100% !important">Transfer & Bond Costs Calculator</div>
                                                                     </div>
                                                                     <div style="width: 770px; height: auto; margin-left: auto; margin-right: auto" class="calcContainer">
@@ -310,19 +312,22 @@
                                                                             <input type="hidden" name="ctl00$mainContent$ctl00$hidPurchasePrice" id="ctl00_mainContent_ctl00_hidPurchasePrice" value="0" />
                                                                             <input type="hidden" name="ctl00$mainContent$ctl00$hidBondAmount" id="ctl00_mainContent_ctl00_hidBondAmount" value="0" />
                                                                         </div>
-                                                                        <div id="printablediv" style="width: 100%; height: 530px">
+                                                                        <div id="printablediv" style="width: 100%; height: 560px">
                                                                             <div style="float: left; width: 50%;" class="calcContent">
-                                                                                <div style="margin: 3px; padding: 10px; border: 1px solid #cccccc; background-color: #eeeeee; border-radius: 5px; height: 490px">
+                                                                                <div style="margin: 3px; padding: 15px 10px 10px 5px; border: 1px solid #cccccc; background-color: #eeeeee; border-radius: 5px; height: 520px">
                                                                                     <div style="text-align: right; position: relative; top: -10px"><a id="ctl00_mainContent_ctl00_hlPurchasersGuide" class="guideLink" href="http://www.mcvdberg.co.za/purchasersguide.html" target="_blank">View Purchasers Guide</a></div>
                                                                                     <div class="calcSectionHeader"><span id="ctl00_mainContent_ctl00_lblTransferCostsLabel">Transfer Costs</span></div>
 
                                                                                     <div style="width: 100%; color: #666666; font-weight: bold; padding-top: 10px"><i><span id="ctl00_mainContent_ctl00_lblFeesLabel">Fees</span></i></div>
-                                                                                    <div class="calcSectionTitle" style="float: left; margin-top: 0px"><span id="ctl00_mainContent_ctl00_lblTransferFeeLabel" title="&lt;strong>The Transfer Fee &lt;/strong>is our professional fee for registering the property into the purchaser`s name. Transfer fees are recommended by the Law Society. This fee is calculated in accordance to your purchase price.">Transfer Fee</span> <sup title='Excluding VAT'><span>Excl VAT</span></sup></div>
+                                                                                    <div class="calcSectionTitle" style="float: left; margin-top: 0px">
+                                                                                        
+                                                                                        <span id="ctl00_mainContent_ctl00_lblTransferFeeLabel" <asp:Literal ID="LitTransferFeeTooltip" runat="server"></asp:Literal><asp:Literal ID="LitTransfer" runat="server"></asp:Literal></span> <sup title='Excluding VAT'><span>Excl VAT</span></sup></div>
                                                                                     <div style="margin-top: 0px" class="calcSectionValue">
                                                                                         R
                                                 <span id="ctl00_mainContent_ctl00_lblFee" class="calcSectionValue">
                                                     <asp:Label ID="lblTransferFee" runat="server" Text="0.00"></asp:Label></span>
                                                                                     </div>
+
 
                                                                                     <div style="float: left" class="calcSectionTitle" title=""><span id="ctl00_mainContent_ctl00_lblVatOnFeeLabel" title="&lt;strong>VAT (Value Added Tax)&lt;/strong> is a tax charged as we are registered as VAT vendors. Purchasers that are registered for VAT can claim the VAT on these amounts back from SARS.">VAT on Transfer Fee</span></div>
                                                                                     <div style="" class="calcSectionValue">
@@ -345,14 +350,14 @@
                                                     <asp:Label ID="lblVendorSoftwarePackageFee" runat="server" Text="Label"></asp:Label></span>
                                                                                     </div>
 
-                                                                                    <div style="float: left" class="calcSectionTitle" title=""><span id="ctl00_mainContent_ctl00_lblFicaFeeLabel" title="&lt;strong>FICA Fee &lt;/strong>is a fee charged by us to comply with the FICA (Financial Intelligence Centre Act) and is endorsed by the Law Society">FICA Fee</span> <sup title='Including VAT'><span>Incl VAT</span></sup></div>
+                                                                                    <div style="float: left" class="calcSectionTitle" title=""><span id="ctl00_mainContent_ctl00_lblFicaFeeLabel" <asp:Literal ID="LitFicaFeeTooltip" runat="server"></asp:Literal>FICA Fee</span> <sup title='Including VAT'><span>Incl VAT</span></sup></div>
                                                                                     <div style="" class="calcSectionValue">
                                                                                         R
                                                 <span id="ctl00_mainContent_ctl00_lblFica" class="calcSectionValue">
                                                     <asp:Label ID="lblFicaFee" runat="server" Text="Label"></asp:Label></span>
                                                                                     </div>
 
-                                                                                    <div style="float: left" class="calcSectionTitle" title=""><span id="ctl00_mainContent_ctl00_lblPostagePettiesLabel" title="&lt;strong>Postages and Petties &lt;/strong>is a once off fee charged by us for all telephone calls, emails, printing, photocopies and errands run by our supporting staff. This is an estimated amount which is endorsed by the Law Society">Postage & Petties</span> <sup title='Including VAT'><span>Incl VAT</span></sup></div>
+                                                                                    <div style="float: left" class="calcSectionTitle" title=""><span id="ctl00_mainContent_ctl00_lblPostagePettiesLabel" <asp:Literal ID="LitPostageTooltip" runat="server"></asp:Literal>Postage & Petties</span> <sup title='Including VAT'><span>Incl VAT</span></sup></div>
                                                                                     <div style="" class="calcSectionValue">
                                                                                         R
                                                 <span id="ctl00_mainContent_ctl00_lblTransferPostagePetties" class="calcSectionValue">
@@ -384,7 +389,7 @@
                                                                                     </div>
 
                                                                                     <div style="clear: both"></div>
-                                                                                    <div style="border-top: 1px solid #999999; margin-left: 270px; margin-right: 15px"></div>
+                                                                                    <div style="border-top: 1px solid #999999; margin-left: 270px; margin-right: 0px"></div>
                                                                                     <div style="clear: both"></div>
 
                                                                                     <div style="float: left; font-size: 0.8em; margin-top: 20px; font-weight: bold" class="calcSectionTitle"><span id="ctl00_mainContent_ctl00_lblTotalTransferCostLabel">Total Transfer Cost</span></div>
@@ -403,6 +408,12 @@
                                                                                             <br />
 
                                                                                             <span id="ctl00_mainContent_ctl00_lblTCExcluded3">This is an estimate – amounts may vary to accommodate specific transactions.</span><br />
+                                                                                           
+                                                                                            
+                                                                                            
+                                                                                            
+                                                                                            <br />
+                                                                                            <span id="ctl00_mainContent_ctl00_lblTCExcluded4"><asp:Literal ID="LitMainExclusions" runat="server"></asp:Literal></span><br />
                                                                                         </div>
                                                                                     </div>
 
@@ -411,12 +422,12 @@
                                                                                 </div>
                                                                             </div>
                                                                             <div style="float: left; width: 50%;" class="calcContent">
-                                                                                <div style="margin: 3px; padding: 10px; border: 1px solid #cccccc; background-color: #eeeeee; border-radius: 5px; height: 490px">
+                                                                                <div style="margin: 3px; padding: 15px 10px 10px 5px; border: 1px solid #cccccc; background-color: #eeeeee; border-radius: 5px; height: 520px">
                                                                                     <div style="text-align: right; position: relative; top: -10px"><a id="ctl00_mainContent_ctl00_hlBondGuide" class="guideLink" href="http://www.mcvdberg.co.za/bondguide.html" target="_blank">View Bond Guide</a></div>
                                                                                     <div class="calcSectionHeader"><span id="ctl00_mainContent_ctl00_lblBondCostsLabel">Bond Costs</span></div>
 
                                                                                     <div style="width: 100%; color: #666666; font-weight: bold; padding-top: 10px"><i><span id="ctl00_mainContent_ctl00_lblFeesLabelBond">Fees</span></i></div>
-                                                                                    <div class="calcSectionTitle" style="float: left; margin-top: 0px" title=""><span id="ctl00_mainContent_ctl00_lblBondRegistrationFeeLabel" title="The &lt;strong>Registration Fee &lt;/strong>is our professional fee for registering the bond on behalf of the purchaser in favour of the bank. The bond fees are recommended by the Law Society. This fee is calculated in accordance to your bond amount.">Bond Registration Fee</span> <sup title='Excluding VAT'><span>Excl VAT</span></sup></div>
+                                                                                    <div class="calcSectionTitle" style="float: left; margin-top: 0px" title=""><span id="ctl00_mainContent_ctl00_lblBondRegistrationFeeLabel" <asp:Literal ID="LitBondRegistrationTooltip" runat="server"></asp:Literal><asp:Literal ID="LitBond" runat="server"></asp:Literal></span> <sup title='Excluding VAT'><span>Excl VAT</span></sup></div>
                                                                                     <div class="calcSectionValue" style="margin-top: 0px">
                                                                                         R
                                                 <span id="ctl00_mainContent_ctl00_lblBondRegFee" class="calcSectionValue">
@@ -451,7 +462,7 @@
                                                     <asp:Label ID="lblDeedsOfficeSearchBond" runat="server" Text="Label"></asp:Label></span>
                                                                                     </div>
 
-                                                                                    <div style="float: left" class="calcSectionTitle" title=""><span id="ctl00_mainContent_ctl00_lblPostagesPettiesLabelBond" title="&lt;strong>Postages and Petties&lt;/strong> is a once off fee charged by us for all telephone calls, emails, printing, photocopies and errands run by our supporting staff. This is an estimated amount which is endorsed by the Law Society.">Postage & Petties</span> <sup title='Including VAT'><span>Incl VAT</span></sup></div>
+                                                                                    <div style="float: left" class="calcSectionTitle" title=""><span id="ctl00_mainContent_ctl00_lblPostagesPettiesLabelBond" <asp:Literal ID="LitBondPostageTooltip" runat="server"></asp:Literal>Postage & Petties</span> <sup title='Including VAT'><span>Incl VAT</span></sup></div>
                                                                                     <div style="" class="calcSectionValue">
                                                                                         R
                                                     <span id="ctl00_mainContent_ctl00_lblBondPostagePetties" class="calcSectionValue">
@@ -468,7 +479,7 @@
                                                                                     </div>
 
                                                                                     <div style="clear: both"></div>
-                                                                                    <div style="border-top: 1px solid #999999; margin-left: 270px; margin-right: 15px"></div>
+                                                                                    <div style="border-top: 1px solid #999999; margin-left: 270px; margin-right: 0px"></div>
                                                                                     <div style="clear: both"></div>
 
                                                                                     <div style="float: left; font-size: 0.8em; margin-top: 20px; font-weight: bold" class="calcSectionTitle"><span id="ctl00_mainContent_ctl00_lblTotalBondCostLabel">Total Bond Cost</span></div>

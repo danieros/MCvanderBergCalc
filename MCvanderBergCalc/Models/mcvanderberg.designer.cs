@@ -90,12 +90,12 @@ namespace MCvanderBergCalc.Models
     partial void InsertWorkAddressCity(WorkAddressCity instance);
     partial void UpdateWorkAddressCity(WorkAddressCity instance);
     partial void DeleteWorkAddressCity(WorkAddressCity instance);
-    partial void InsertUser(User instance);
-    partial void UpdateUser(User instance);
-    partial void DeleteUser(User instance);
     partial void InsertAgency(Agency instance);
     partial void UpdateAgency(Agency instance);
     partial void DeleteAgency(Agency instance);
+    partial void InsertUser(User instance);
+    partial void UpdateUser(User instance);
+    partial void DeleteUser(User instance);
     #endregion
 		
 		public mcvanderbergDataContext() : 
@@ -288,19 +288,19 @@ namespace MCvanderBergCalc.Models
 			}
 		}
 		
-		public System.Data.Linq.Table<User> Users
-		{
-			get
-			{
-				return this.GetTable<User>();
-			}
-		}
-		
 		public System.Data.Linq.Table<Agency> Agencies
 		{
 			get
 			{
 				return this.GetTable<Agency>();
+			}
+		}
+		
+		public System.Data.Linq.Table<User> Users
+		{
+			get
+			{
+				return this.GetTable<User>();
 			}
 		}
 		
@@ -479,62 +479,25 @@ namespace MCvanderBergCalc.Models
 			return ((ISingleResult<sp_ComplimentarySlipHistoryResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_InsertUserInfo")]
-		public int sp_InsertUserInfo(
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(500)")] string firstname, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(500)")] string lastname, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(500)")] string cellphone, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(500)")] string email, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(500)")] string officenumber, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> dietid, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> workcityid, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> agencyid, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> roleid, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> relationshipid, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> loyaltyid, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> titleid, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> languageid, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> typistid, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="CRM_FullAccess", DbType="Bit")] System.Nullable<bool> cRM_FullAccess, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="CRM_ViewAcccessOnly", DbType="Bit")] System.Nullable<bool> cRM_ViewAcccessOnly, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Category2_Afr", DbType="Bit")] System.Nullable<bool> category2_Afr, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Category2_Eng", DbType="Bit")] System.Nullable<bool> category2_Eng, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Category3_Afr", DbType="Bit")] System.Nullable<bool> category3_Afr, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Category3_Eng", DbType="Bit")] System.Nullable<bool> category3_Eng, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Category4_Afr", DbType="Bit")] System.Nullable<bool> category4_Afr, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Category4_Eng", DbType="Bit")] System.Nullable<bool> category4_Eng, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Category5_Afr", DbType="Bit")] System.Nullable<bool> category5_Afr, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Category5_Eng", DbType="Bit")] System.Nullable<bool> category5_Eng, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Category6_Eng", DbType="Bit")] System.Nullable<bool> category6_Eng, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Category6_Afr", DbType="Bit")] System.Nullable<bool> category6_Afr, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Category7_Eng", DbType="Bit")] System.Nullable<bool> category7_Eng, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Category7_Afr", DbType="Bit")] System.Nullable<bool> category7_Afr, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="TrainingGroup1ID", DbType="Int")] System.Nullable<int> trainingGroup1ID, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="TrainingGroup2ID", DbType="Int")] System.Nullable<int> trainingGroup2ID, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="TrainingGroup3ID", DbType="Int")] System.Nullable<int> trainingGroup3ID, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="TrainingGroup4ID", DbType="Int")] System.Nullable<int> trainingGroup4ID, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="TrainingGroup5ID", DbType="Int")] System.Nullable<int> trainingGroup5ID, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="MonthlyUnsubscribe", DbType="Bit")] System.Nullable<bool> monthlyUnsubscribe, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="MC2AgentUnsubscribe", DbType="Bit")] System.Nullable<bool> mC2AgentUnsubscribe, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="CustomMailsUnsubscribe", DbType="Bit")] System.Nullable<bool> customMailsUnsubscribe, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> dayDOB, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> monthDOB, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> bondTypistID, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Bit")] System.Nullable<bool> active, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Username", DbType="VarChar(200)")] string username, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Password", DbType="VarChar(200)")] string password, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(500)")] string logoName, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="AfrikaansVoorblad", DbType="VarChar(500)")] string afrikaansVoorblad, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="EnglishVoorblad", DbType="VarChar(500)")] string englishVoorblad, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(200)")] string nickname, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="BirthdayApplicable", DbType="Bit")] System.Nullable<bool> birthdayApplicable, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="FirstTimeUserMail", DbType="Int")] System.Nullable<int> firstTimeUserMail, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="FFC", DbType="VarChar(200)")] string fFC, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(200)")] string website, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Priceton", DbType="Bit")] System.Nullable<bool> priceton)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_ExportAll")]
+		public ISingleResult<sp_ExportAllResult> sp_ExportAll()
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), firstname, lastname, cellphone, email, officenumber, dietid, workcityid, agencyid, roleid, relationshipid, loyaltyid, titleid, languageid, typistid, cRM_FullAccess, cRM_ViewAcccessOnly, category2_Afr, category2_Eng, category3_Afr, category3_Eng, category4_Afr, category4_Eng, category5_Afr, category5_Eng, category6_Eng, category6_Afr, category7_Eng, category7_Afr, trainingGroup1ID, trainingGroup2ID, trainingGroup3ID, trainingGroup4ID, trainingGroup5ID, monthlyUnsubscribe, mC2AgentUnsubscribe, customMailsUnsubscribe, dayDOB, monthDOB, bondTypistID, active, username, password, logoName, afrikaansVoorblad, englishVoorblad, nickname, birthdayApplicable, firstTimeUserMail, fFC, website, priceton);
-			return ((int)(result.ReturnValue));
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<sp_ExportAllResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_GetAgentFromComplimentSlip")]
+		public ISingleResult<sp_GetAgentFromComplimentSlipResult> sp_GetAgentFromComplimentSlip([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="UniqueIdentifier")] System.Nullable<System.Guid> uniqueid)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), uniqueid);
+			return ((ISingleResult<sp_GetAgentFromComplimentSlipResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_GetUserInfo")]
+		public ISingleResult<sp_GetUserInfoResult> sp_GetUserInfo([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> userid)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), userid);
+			return ((ISingleResult<sp_GetUserInfoResult>)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_UpdateUserInfo")]
@@ -590,17 +553,70 @@ namespace MCvanderBergCalc.Models
 					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="FirstTimeUserMail", DbType="Int")] System.Nullable<int> firstTimeUserMail, 
 					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="FFC", DbType="VarChar(200)")] string fFC, 
 					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(200)")] string website, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Priceton", DbType="Bit")] System.Nullable<bool> priceton)
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Priceton", DbType="Bit")] System.Nullable<bool> priceton, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="MenlynMain", DbType="Bit")] System.Nullable<bool> menlynMain)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), userid, firstname, lastname, cellphone, email, officenumber, dietid, workcityid, agencyid, roleid, relationshipid, loyaltyid, titleid, languageid, typistid, cRM_FullAccess, cRM_ViewAcccessOnly, category2_Afr, category2_Eng, category3_Afr, category3_Eng, category4_Afr, category4_Eng, category5_Afr, category5_Eng, category6_Eng, category6_Afr, category7_Eng, category7_Afr, trainingGroup1ID, trainingGroup2ID, trainingGroup3ID, trainingGroup4ID, trainingGroup5ID, monthlyUnsubscribe, mC2AgentUnsubscribe, customMailsUnsubscribe, dayDOB, monthDOB, bondTypistID, active, username, password, logoName, afrikaansVoorblad, englishVoorblad, nickname, birthdayApplicable, firstTimeUserMail, fFC, website, priceton);
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), userid, firstname, lastname, cellphone, email, officenumber, dietid, workcityid, agencyid, roleid, relationshipid, loyaltyid, titleid, languageid, typistid, cRM_FullAccess, cRM_ViewAcccessOnly, category2_Afr, category2_Eng, category3_Afr, category3_Eng, category4_Afr, category4_Eng, category5_Afr, category5_Eng, category6_Eng, category6_Afr, category7_Eng, category7_Afr, trainingGroup1ID, trainingGroup2ID, trainingGroup3ID, trainingGroup4ID, trainingGroup5ID, monthlyUnsubscribe, mC2AgentUnsubscribe, customMailsUnsubscribe, dayDOB, monthDOB, bondTypistID, active, username, password, logoName, afrikaansVoorblad, englishVoorblad, nickname, birthdayApplicable, firstTimeUserMail, fFC, website, priceton, menlynMain);
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_GetUserInfo")]
-		public ISingleResult<sp_GetUserInfoResult> sp_GetUserInfo([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> userid)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_InsertUserInfo")]
+		public int sp_InsertUserInfo(
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(500)")] string firstname, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(500)")] string lastname, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(500)")] string cellphone, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(500)")] string email, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(500)")] string officenumber, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> dietid, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> workcityid, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> agencyid, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> roleid, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> relationshipid, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> loyaltyid, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> titleid, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> languageid, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> typistid, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="CRM_FullAccess", DbType="Bit")] System.Nullable<bool> cRM_FullAccess, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="CRM_ViewAcccessOnly", DbType="Bit")] System.Nullable<bool> cRM_ViewAcccessOnly, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Category2_Afr", DbType="Bit")] System.Nullable<bool> category2_Afr, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Category2_Eng", DbType="Bit")] System.Nullable<bool> category2_Eng, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Category3_Afr", DbType="Bit")] System.Nullable<bool> category3_Afr, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Category3_Eng", DbType="Bit")] System.Nullable<bool> category3_Eng, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Category4_Afr", DbType="Bit")] System.Nullable<bool> category4_Afr, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Category4_Eng", DbType="Bit")] System.Nullable<bool> category4_Eng, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Category5_Afr", DbType="Bit")] System.Nullable<bool> category5_Afr, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Category5_Eng", DbType="Bit")] System.Nullable<bool> category5_Eng, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Category6_Eng", DbType="Bit")] System.Nullable<bool> category6_Eng, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Category6_Afr", DbType="Bit")] System.Nullable<bool> category6_Afr, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Category7_Eng", DbType="Bit")] System.Nullable<bool> category7_Eng, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Category7_Afr", DbType="Bit")] System.Nullable<bool> category7_Afr, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="TrainingGroup1ID", DbType="Int")] System.Nullable<int> trainingGroup1ID, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="TrainingGroup2ID", DbType="Int")] System.Nullable<int> trainingGroup2ID, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="TrainingGroup3ID", DbType="Int")] System.Nullable<int> trainingGroup3ID, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="TrainingGroup4ID", DbType="Int")] System.Nullable<int> trainingGroup4ID, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="TrainingGroup5ID", DbType="Int")] System.Nullable<int> trainingGroup5ID, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="MonthlyUnsubscribe", DbType="Bit")] System.Nullable<bool> monthlyUnsubscribe, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="MC2AgentUnsubscribe", DbType="Bit")] System.Nullable<bool> mC2AgentUnsubscribe, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="CustomMailsUnsubscribe", DbType="Bit")] System.Nullable<bool> customMailsUnsubscribe, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> dayDOB, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> monthDOB, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> bondTypistID, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Bit")] System.Nullable<bool> active, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Username", DbType="VarChar(200)")] string username, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Password", DbType="VarChar(200)")] string password, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(500)")] string logoName, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="AfrikaansVoorblad", DbType="VarChar(500)")] string afrikaansVoorblad, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="EnglishVoorblad", DbType="VarChar(500)")] string englishVoorblad, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(200)")] string nickname, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="BirthdayApplicable", DbType="Bit")] System.Nullable<bool> birthdayApplicable, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="FirstTimeUserMail", DbType="Int")] System.Nullable<int> firstTimeUserMail, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="FFC", DbType="VarChar(200)")] string fFC, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(200)")] string website, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Priceton", DbType="Bit")] System.Nullable<bool> priceton, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="MenlynMain", DbType="Bit")] System.Nullable<bool> menlynMain)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), userid);
-			return ((ISingleResult<sp_GetUserInfoResult>)(result.ReturnValue));
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), firstname, lastname, cellphone, email, officenumber, dietid, workcityid, agencyid, roleid, relationshipid, loyaltyid, titleid, languageid, typistid, cRM_FullAccess, cRM_ViewAcccessOnly, category2_Afr, category2_Eng, category3_Afr, category3_Eng, category4_Afr, category4_Eng, category5_Afr, category5_Eng, category6_Eng, category6_Afr, category7_Eng, category7_Afr, trainingGroup1ID, trainingGroup2ID, trainingGroup3ID, trainingGroup4ID, trainingGroup5ID, monthlyUnsubscribe, mC2AgentUnsubscribe, customMailsUnsubscribe, dayDOB, monthDOB, bondTypistID, active, username, password, logoName, afrikaansVoorblad, englishVoorblad, nickname, birthdayApplicable, firstTimeUserMail, fFC, website, priceton, menlynMain);
+			return ((int)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_GetMemberAreaPersonal")]
@@ -608,20 +624,6 @@ namespace MCvanderBergCalc.Models
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), userid);
 			return ((ISingleResult<sp_GetMemberAreaPersonalResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_ExportAll")]
-		public ISingleResult<sp_ExportAllResult> sp_ExportAll()
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
-			return ((ISingleResult<sp_ExportAllResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_GetAgentFromComplimentSlip")]
-		public ISingleResult<sp_GetAgentFromComplimentSlipResult> sp_GetAgentFromComplimentSlip([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="UniqueIdentifier")] System.Nullable<System.Guid> uniqueid)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), uniqueid);
-			return ((ISingleResult<sp_GetAgentFromComplimentSlipResult>)(result.ReturnValue));
 		}
 	}
 	
@@ -2729,6 +2731,116 @@ namespace MCvanderBergCalc.Models
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Agencies")]
+	public partial class Agency : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _AgencyID;
+		
+		private string _Agency1;
+		
+		private string _AgencyFCC;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnAgencyIDChanging(int value);
+    partial void OnAgencyIDChanged();
+    partial void OnAgency1Changing(string value);
+    partial void OnAgency1Changed();
+    partial void OnAgencyFCCChanging(string value);
+    partial void OnAgencyFCCChanged();
+    #endregion
+		
+		public Agency()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AgencyID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int AgencyID
+		{
+			get
+			{
+				return this._AgencyID;
+			}
+			set
+			{
+				if ((this._AgencyID != value))
+				{
+					this.OnAgencyIDChanging(value);
+					this.SendPropertyChanging();
+					this._AgencyID = value;
+					this.SendPropertyChanged("AgencyID");
+					this.OnAgencyIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="Agency", Storage="_Agency1", DbType="VarChar(512)")]
+		public string Agency1
+		{
+			get
+			{
+				return this._Agency1;
+			}
+			set
+			{
+				if ((this._Agency1 != value))
+				{
+					this.OnAgency1Changing(value);
+					this.SendPropertyChanging();
+					this._Agency1 = value;
+					this.SendPropertyChanged("Agency1");
+					this.OnAgency1Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AgencyFCC", DbType="VarChar(200)")]
+		public string AgencyFCC
+		{
+			get
+			{
+				return this._AgencyFCC;
+			}
+			set
+			{
+				if ((this._AgencyFCC != value))
+				{
+					this.OnAgencyFCCChanging(value);
+					this.SendPropertyChanging();
+					this._AgencyFCC = value;
+					this.SendPropertyChanged("AgencyFCC");
+					this.OnAgencyFCCChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Users")]
 	public partial class User : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -2833,6 +2945,40 @@ namespace MCvanderBergCalc.Models
 		
 		private bool _BirthdayApplicable;
 		
+		private int _SendFirstTimeUser;
+		
+		private bool _Category2_Afr;
+		
+		private bool _Category2_Eng;
+		
+		private bool _Category3_Afr;
+		
+		private bool _Category3_Eng;
+		
+		private bool _Category4_Afr;
+		
+		private bool _Category4_Eng;
+		
+		private bool _Category5_Afr;
+		
+		private bool _Category5_Eng;
+		
+		private bool _Category6_Eng;
+		
+		private bool _Category6_Afr;
+		
+		private bool _Category7_Eng;
+		
+		private bool _Category7_Afr;
+		
+		private string _FFC;
+		
+		private string _WebsiteAddress;
+		
+		private bool _PricetonParkDevelopment;
+		
+		private bool _MenlynMaine;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -2935,6 +3081,40 @@ namespace MCvanderBergCalc.Models
     partial void OnNickNameChanged();
     partial void OnBirthdayApplicableChanging(bool value);
     partial void OnBirthdayApplicableChanged();
+    partial void OnSendFirstTimeUserChanging(int value);
+    partial void OnSendFirstTimeUserChanged();
+    partial void OnCategory2_AfrChanging(bool value);
+    partial void OnCategory2_AfrChanged();
+    partial void OnCategory2_EngChanging(bool value);
+    partial void OnCategory2_EngChanged();
+    partial void OnCategory3_AfrChanging(bool value);
+    partial void OnCategory3_AfrChanged();
+    partial void OnCategory3_EngChanging(bool value);
+    partial void OnCategory3_EngChanged();
+    partial void OnCategory4_AfrChanging(bool value);
+    partial void OnCategory4_AfrChanged();
+    partial void OnCategory4_EngChanging(bool value);
+    partial void OnCategory4_EngChanged();
+    partial void OnCategory5_AfrChanging(bool value);
+    partial void OnCategory5_AfrChanged();
+    partial void OnCategory5_EngChanging(bool value);
+    partial void OnCategory5_EngChanged();
+    partial void OnCategory6_EngChanging(bool value);
+    partial void OnCategory6_EngChanged();
+    partial void OnCategory6_AfrChanging(bool value);
+    partial void OnCategory6_AfrChanged();
+    partial void OnCategory7_EngChanging(bool value);
+    partial void OnCategory7_EngChanged();
+    partial void OnCategory7_AfrChanging(bool value);
+    partial void OnCategory7_AfrChanged();
+    partial void OnFFCChanging(string value);
+    partial void OnFFCChanged();
+    partial void OnWebsiteAddressChanging(string value);
+    partial void OnWebsiteAddressChanged();
+    partial void OnPricetonParkDevelopmentChanging(bool value);
+    partial void OnPricetonParkDevelopmentChanged();
+    partial void OnMenlynMaineChanging(bool value);
+    partial void OnMenlynMaineChanged();
     #endregion
 		
 		public User()
@@ -3922,112 +4102,342 @@ namespace MCvanderBergCalc.Models
 			}
 		}
 		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Agencies")]
-	public partial class Agency : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _AgencyID;
-		
-		private string _Agency1;
-		
-		private string _AgencyFCC;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnAgencyIDChanging(int value);
-    partial void OnAgencyIDChanged();
-    partial void OnAgency1Changing(string value);
-    partial void OnAgency1Changed();
-    partial void OnAgencyFCCChanging(string value);
-    partial void OnAgencyFCCChanged();
-    #endregion
-		
-		public Agency()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AgencyID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int AgencyID
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SendFirstTimeUser", DbType="Int NOT NULL")]
+		public int SendFirstTimeUser
 		{
 			get
 			{
-				return this._AgencyID;
+				return this._SendFirstTimeUser;
 			}
 			set
 			{
-				if ((this._AgencyID != value))
+				if ((this._SendFirstTimeUser != value))
 				{
-					this.OnAgencyIDChanging(value);
+					this.OnSendFirstTimeUserChanging(value);
 					this.SendPropertyChanging();
-					this._AgencyID = value;
-					this.SendPropertyChanged("AgencyID");
-					this.OnAgencyIDChanged();
+					this._SendFirstTimeUser = value;
+					this.SendPropertyChanged("SendFirstTimeUser");
+					this.OnSendFirstTimeUserChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="Agency", Storage="_Agency1", DbType="VarChar(512)")]
-		public string Agency1
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Category2_Afr", DbType="Bit NOT NULL")]
+		public bool Category2_Afr
 		{
 			get
 			{
-				return this._Agency1;
+				return this._Category2_Afr;
 			}
 			set
 			{
-				if ((this._Agency1 != value))
+				if ((this._Category2_Afr != value))
 				{
-					this.OnAgency1Changing(value);
+					this.OnCategory2_AfrChanging(value);
 					this.SendPropertyChanging();
-					this._Agency1 = value;
-					this.SendPropertyChanged("Agency1");
-					this.OnAgency1Changed();
+					this._Category2_Afr = value;
+					this.SendPropertyChanged("Category2_Afr");
+					this.OnCategory2_AfrChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AgencyFCC", DbType="VarChar(200)")]
-		public string AgencyFCC
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Category2_Eng", DbType="Bit NOT NULL")]
+		public bool Category2_Eng
 		{
 			get
 			{
-				return this._AgencyFCC;
+				return this._Category2_Eng;
 			}
 			set
 			{
-				if ((this._AgencyFCC != value))
+				if ((this._Category2_Eng != value))
 				{
-					this.OnAgencyFCCChanging(value);
+					this.OnCategory2_EngChanging(value);
 					this.SendPropertyChanging();
-					this._AgencyFCC = value;
-					this.SendPropertyChanged("AgencyFCC");
-					this.OnAgencyFCCChanged();
+					this._Category2_Eng = value;
+					this.SendPropertyChanged("Category2_Eng");
+					this.OnCategory2_EngChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Category3_Afr", DbType="Bit NOT NULL")]
+		public bool Category3_Afr
+		{
+			get
+			{
+				return this._Category3_Afr;
+			}
+			set
+			{
+				if ((this._Category3_Afr != value))
+				{
+					this.OnCategory3_AfrChanging(value);
+					this.SendPropertyChanging();
+					this._Category3_Afr = value;
+					this.SendPropertyChanged("Category3_Afr");
+					this.OnCategory3_AfrChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Category3_Eng", DbType="Bit NOT NULL")]
+		public bool Category3_Eng
+		{
+			get
+			{
+				return this._Category3_Eng;
+			}
+			set
+			{
+				if ((this._Category3_Eng != value))
+				{
+					this.OnCategory3_EngChanging(value);
+					this.SendPropertyChanging();
+					this._Category3_Eng = value;
+					this.SendPropertyChanged("Category3_Eng");
+					this.OnCategory3_EngChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Category4_Afr", DbType="Bit NOT NULL")]
+		public bool Category4_Afr
+		{
+			get
+			{
+				return this._Category4_Afr;
+			}
+			set
+			{
+				if ((this._Category4_Afr != value))
+				{
+					this.OnCategory4_AfrChanging(value);
+					this.SendPropertyChanging();
+					this._Category4_Afr = value;
+					this.SendPropertyChanged("Category4_Afr");
+					this.OnCategory4_AfrChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Category4_Eng", DbType="Bit NOT NULL")]
+		public bool Category4_Eng
+		{
+			get
+			{
+				return this._Category4_Eng;
+			}
+			set
+			{
+				if ((this._Category4_Eng != value))
+				{
+					this.OnCategory4_EngChanging(value);
+					this.SendPropertyChanging();
+					this._Category4_Eng = value;
+					this.SendPropertyChanged("Category4_Eng");
+					this.OnCategory4_EngChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Category5_Afr", DbType="Bit NOT NULL")]
+		public bool Category5_Afr
+		{
+			get
+			{
+				return this._Category5_Afr;
+			}
+			set
+			{
+				if ((this._Category5_Afr != value))
+				{
+					this.OnCategory5_AfrChanging(value);
+					this.SendPropertyChanging();
+					this._Category5_Afr = value;
+					this.SendPropertyChanged("Category5_Afr");
+					this.OnCategory5_AfrChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Category5_Eng", DbType="Bit NOT NULL")]
+		public bool Category5_Eng
+		{
+			get
+			{
+				return this._Category5_Eng;
+			}
+			set
+			{
+				if ((this._Category5_Eng != value))
+				{
+					this.OnCategory5_EngChanging(value);
+					this.SendPropertyChanging();
+					this._Category5_Eng = value;
+					this.SendPropertyChanged("Category5_Eng");
+					this.OnCategory5_EngChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Category6_Eng", DbType="Bit NOT NULL")]
+		public bool Category6_Eng
+		{
+			get
+			{
+				return this._Category6_Eng;
+			}
+			set
+			{
+				if ((this._Category6_Eng != value))
+				{
+					this.OnCategory6_EngChanging(value);
+					this.SendPropertyChanging();
+					this._Category6_Eng = value;
+					this.SendPropertyChanged("Category6_Eng");
+					this.OnCategory6_EngChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Category6_Afr", DbType="Bit NOT NULL")]
+		public bool Category6_Afr
+		{
+			get
+			{
+				return this._Category6_Afr;
+			}
+			set
+			{
+				if ((this._Category6_Afr != value))
+				{
+					this.OnCategory6_AfrChanging(value);
+					this.SendPropertyChanging();
+					this._Category6_Afr = value;
+					this.SendPropertyChanged("Category6_Afr");
+					this.OnCategory6_AfrChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Category7_Eng", DbType="Bit NOT NULL")]
+		public bool Category7_Eng
+		{
+			get
+			{
+				return this._Category7_Eng;
+			}
+			set
+			{
+				if ((this._Category7_Eng != value))
+				{
+					this.OnCategory7_EngChanging(value);
+					this.SendPropertyChanging();
+					this._Category7_Eng = value;
+					this.SendPropertyChanged("Category7_Eng");
+					this.OnCategory7_EngChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Category7_Afr", DbType="Bit NOT NULL")]
+		public bool Category7_Afr
+		{
+			get
+			{
+				return this._Category7_Afr;
+			}
+			set
+			{
+				if ((this._Category7_Afr != value))
+				{
+					this.OnCategory7_AfrChanging(value);
+					this.SendPropertyChanging();
+					this._Category7_Afr = value;
+					this.SendPropertyChanged("Category7_Afr");
+					this.OnCategory7_AfrChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FFC", DbType="VarChar(50)")]
+		public string FFC
+		{
+			get
+			{
+				return this._FFC;
+			}
+			set
+			{
+				if ((this._FFC != value))
+				{
+					this.OnFFCChanging(value);
+					this.SendPropertyChanging();
+					this._FFC = value;
+					this.SendPropertyChanged("FFC");
+					this.OnFFCChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_WebsiteAddress", DbType="VarChar(200)")]
+		public string WebsiteAddress
+		{
+			get
+			{
+				return this._WebsiteAddress;
+			}
+			set
+			{
+				if ((this._WebsiteAddress != value))
+				{
+					this.OnWebsiteAddressChanging(value);
+					this.SendPropertyChanging();
+					this._WebsiteAddress = value;
+					this.SendPropertyChanged("WebsiteAddress");
+					this.OnWebsiteAddressChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PricetonParkDevelopment", DbType="Bit NOT NULL")]
+		public bool PricetonParkDevelopment
+		{
+			get
+			{
+				return this._PricetonParkDevelopment;
+			}
+			set
+			{
+				if ((this._PricetonParkDevelopment != value))
+				{
+					this.OnPricetonParkDevelopmentChanging(value);
+					this.SendPropertyChanging();
+					this._PricetonParkDevelopment = value;
+					this.SendPropertyChanged("PricetonParkDevelopment");
+					this.OnPricetonParkDevelopmentChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MenlynMaine", DbType="Bit NOT NULL")]
+		public bool MenlynMaine
+		{
+			get
+			{
+				return this._MenlynMaine;
+			}
+			set
+			{
+				if ((this._MenlynMaine != value))
+				{
+					this.OnMenlynMaineChanging(value);
+					this.SendPropertyChanging();
+					this._MenlynMaine = value;
+					this.SendPropertyChanged("MenlynMaine");
+					this.OnMenlynMaineChanged();
 				}
 			}
 		}
@@ -7773,6 +8183,886 @@ namespace MCvanderBergCalc.Models
 		}
 	}
 	
+	public partial class sp_ExportAllResult
+	{
+		
+		private System.Nullable<System.DateTime> _DateEdited;
+		
+		private System.Nullable<int> _UserID;
+		
+		private string _Title;
+		
+		private string _FirstName;
+		
+		private string _NickName;
+		
+		private string _LastName;
+		
+		private string _EmailPrimary;
+		
+		private string _Cell_Phone;
+		
+		private string _OfficeNo;
+		
+		private System.Nullable<bool> _BirthdayApplicable;
+		
+		private string _myDOB;
+		
+		private string _PersonPhoto;
+		
+		private string _FirstTimeUserStatus;
+		
+		private string _Agency;
+		
+		private string _Role;
+		
+		private string _Language;
+		
+		private string _Typist;
+		
+		private string _Loyal_Indicator;
+		
+		private System.Nullable<bool> _Category2_Eng;
+		
+		private System.Nullable<bool> _Category2_Afr;
+		
+		private System.Nullable<bool> _Category3_Eng;
+		
+		private System.Nullable<bool> _Category3_Afr;
+		
+		private System.Nullable<bool> _Category4_Eng;
+		
+		private System.Nullable<bool> _Category4_Afr;
+		
+		private System.Nullable<bool> _Category5_Eng;
+		
+		private System.Nullable<bool> _Category5_Afr;
+		
+		private System.Nullable<bool> _Category6_Eng;
+		
+		private System.Nullable<bool> _Category6_Afr;
+		
+		private System.Nullable<bool> _Category7_Eng;
+		
+		private System.Nullable<bool> _Category7_Afr;
+		
+		private System.Nullable<bool> _PricetonParkDevelopment;
+		
+		private string _TrainingGroup1;
+		
+		private string _TrainingGroup2;
+		
+		private string _TrainingGroup3;
+		
+		private string _TrainingGroup4;
+		
+		private string _TrainingGroup5;
+		
+		private string _Diet;
+		
+		private string _Work_Address_City;
+		
+		private string _Relations;
+		
+		private System.Nullable<bool> _ACTIVE;
+		
+		private System.Nullable<bool> _MonthlyUnsubscribe;
+		
+		private System.Nullable<bool> _MC2AgentUnsubscribe;
+		
+		private System.Nullable<bool> _CustomMailsUnsubscribe;
+		
+		private string _logoName;
+		
+		private string _AfrikaansVoorblad;
+		
+		private string _EnglishVoorblad;
+		
+		public sp_ExportAllResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DateEdited", DbType="DateTime")]
+		public System.Nullable<System.DateTime> DateEdited
+		{
+			get
+			{
+				return this._DateEdited;
+			}
+			set
+			{
+				if ((this._DateEdited != value))
+				{
+					this._DateEdited = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserID", DbType="Int")]
+		public System.Nullable<int> UserID
+		{
+			get
+			{
+				return this._UserID;
+			}
+			set
+			{
+				if ((this._UserID != value))
+				{
+					this._UserID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Title", DbType="VarChar(512)")]
+		public string Title
+		{
+			get
+			{
+				return this._Title;
+			}
+			set
+			{
+				if ((this._Title != value))
+				{
+					this._Title = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FirstName", DbType="VarChar(512)")]
+		public string FirstName
+		{
+			get
+			{
+				return this._FirstName;
+			}
+			set
+			{
+				if ((this._FirstName != value))
+				{
+					this._FirstName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NickName", DbType="VarChar(200)")]
+		public string NickName
+		{
+			get
+			{
+				return this._NickName;
+			}
+			set
+			{
+				if ((this._NickName != value))
+				{
+					this._NickName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastName", DbType="VarChar(512)")]
+		public string LastName
+		{
+			get
+			{
+				return this._LastName;
+			}
+			set
+			{
+				if ((this._LastName != value))
+				{
+					this._LastName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EmailPrimary", DbType="VarChar(512)")]
+		public string EmailPrimary
+		{
+			get
+			{
+				return this._EmailPrimary;
+			}
+			set
+			{
+				if ((this._EmailPrimary != value))
+				{
+					this._EmailPrimary = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Cell Phone]", Storage="_Cell_Phone", DbType="VarChar(512)")]
+		public string Cell_Phone
+		{
+			get
+			{
+				return this._Cell_Phone;
+			}
+			set
+			{
+				if ((this._Cell_Phone != value))
+				{
+					this._Cell_Phone = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OfficeNo", DbType="VarChar(512)")]
+		public string OfficeNo
+		{
+			get
+			{
+				return this._OfficeNo;
+			}
+			set
+			{
+				if ((this._OfficeNo != value))
+				{
+					this._OfficeNo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BirthdayApplicable", DbType="Bit")]
+		public System.Nullable<bool> BirthdayApplicable
+		{
+			get
+			{
+				return this._BirthdayApplicable;
+			}
+			set
+			{
+				if ((this._BirthdayApplicable != value))
+				{
+					this._BirthdayApplicable = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_myDOB", DbType="NVarChar(61)")]
+		public string myDOB
+		{
+			get
+			{
+				return this._myDOB;
+			}
+			set
+			{
+				if ((this._myDOB != value))
+				{
+					this._myDOB = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PersonPhoto", DbType="VarChar(300)")]
+		public string PersonPhoto
+		{
+			get
+			{
+				return this._PersonPhoto;
+			}
+			set
+			{
+				if ((this._PersonPhoto != value))
+				{
+					this._PersonPhoto = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FirstTimeUserStatus", DbType="VarChar(28)")]
+		public string FirstTimeUserStatus
+		{
+			get
+			{
+				return this._FirstTimeUserStatus;
+			}
+			set
+			{
+				if ((this._FirstTimeUserStatus != value))
+				{
+					this._FirstTimeUserStatus = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Agency", DbType="VarChar(512)")]
+		public string Agency
+		{
+			get
+			{
+				return this._Agency;
+			}
+			set
+			{
+				if ((this._Agency != value))
+				{
+					this._Agency = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Role", DbType="VarChar(512)")]
+		public string Role
+		{
+			get
+			{
+				return this._Role;
+			}
+			set
+			{
+				if ((this._Role != value))
+				{
+					this._Role = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Language", DbType="VarChar(512)")]
+		public string Language
+		{
+			get
+			{
+				return this._Language;
+			}
+			set
+			{
+				if ((this._Language != value))
+				{
+					this._Language = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Typist", DbType="VarChar(512)")]
+		public string Typist
+		{
+			get
+			{
+				return this._Typist;
+			}
+			set
+			{
+				if ((this._Typist != value))
+				{
+					this._Typist = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Loyal_Indicator", DbType="VarChar(512)")]
+		public string Loyal_Indicator
+		{
+			get
+			{
+				return this._Loyal_Indicator;
+			}
+			set
+			{
+				if ((this._Loyal_Indicator != value))
+				{
+					this._Loyal_Indicator = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Category2_Eng", DbType="Bit")]
+		public System.Nullable<bool> Category2_Eng
+		{
+			get
+			{
+				return this._Category2_Eng;
+			}
+			set
+			{
+				if ((this._Category2_Eng != value))
+				{
+					this._Category2_Eng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Category2_Afr", DbType="Bit")]
+		public System.Nullable<bool> Category2_Afr
+		{
+			get
+			{
+				return this._Category2_Afr;
+			}
+			set
+			{
+				if ((this._Category2_Afr != value))
+				{
+					this._Category2_Afr = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Category3_Eng", DbType="Bit")]
+		public System.Nullable<bool> Category3_Eng
+		{
+			get
+			{
+				return this._Category3_Eng;
+			}
+			set
+			{
+				if ((this._Category3_Eng != value))
+				{
+					this._Category3_Eng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Category3_Afr", DbType="Bit")]
+		public System.Nullable<bool> Category3_Afr
+		{
+			get
+			{
+				return this._Category3_Afr;
+			}
+			set
+			{
+				if ((this._Category3_Afr != value))
+				{
+					this._Category3_Afr = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Category4_Eng", DbType="Bit")]
+		public System.Nullable<bool> Category4_Eng
+		{
+			get
+			{
+				return this._Category4_Eng;
+			}
+			set
+			{
+				if ((this._Category4_Eng != value))
+				{
+					this._Category4_Eng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Category4_Afr", DbType="Bit")]
+		public System.Nullable<bool> Category4_Afr
+		{
+			get
+			{
+				return this._Category4_Afr;
+			}
+			set
+			{
+				if ((this._Category4_Afr != value))
+				{
+					this._Category4_Afr = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Category5_Eng", DbType="Bit")]
+		public System.Nullable<bool> Category5_Eng
+		{
+			get
+			{
+				return this._Category5_Eng;
+			}
+			set
+			{
+				if ((this._Category5_Eng != value))
+				{
+					this._Category5_Eng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Category5_Afr", DbType="Bit")]
+		public System.Nullable<bool> Category5_Afr
+		{
+			get
+			{
+				return this._Category5_Afr;
+			}
+			set
+			{
+				if ((this._Category5_Afr != value))
+				{
+					this._Category5_Afr = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Category6_Eng", DbType="Bit")]
+		public System.Nullable<bool> Category6_Eng
+		{
+			get
+			{
+				return this._Category6_Eng;
+			}
+			set
+			{
+				if ((this._Category6_Eng != value))
+				{
+					this._Category6_Eng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Category6_Afr", DbType="Bit")]
+		public System.Nullable<bool> Category6_Afr
+		{
+			get
+			{
+				return this._Category6_Afr;
+			}
+			set
+			{
+				if ((this._Category6_Afr != value))
+				{
+					this._Category6_Afr = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Category7_Eng", DbType="Bit")]
+		public System.Nullable<bool> Category7_Eng
+		{
+			get
+			{
+				return this._Category7_Eng;
+			}
+			set
+			{
+				if ((this._Category7_Eng != value))
+				{
+					this._Category7_Eng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Category7_Afr", DbType="Bit")]
+		public System.Nullable<bool> Category7_Afr
+		{
+			get
+			{
+				return this._Category7_Afr;
+			}
+			set
+			{
+				if ((this._Category7_Afr != value))
+				{
+					this._Category7_Afr = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PricetonParkDevelopment", DbType="Bit")]
+		public System.Nullable<bool> PricetonParkDevelopment
+		{
+			get
+			{
+				return this._PricetonParkDevelopment;
+			}
+			set
+			{
+				if ((this._PricetonParkDevelopment != value))
+				{
+					this._PricetonParkDevelopment = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TrainingGroup1", DbType="VarChar(512)")]
+		public string TrainingGroup1
+		{
+			get
+			{
+				return this._TrainingGroup1;
+			}
+			set
+			{
+				if ((this._TrainingGroup1 != value))
+				{
+					this._TrainingGroup1 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TrainingGroup2", DbType="VarChar(512)")]
+		public string TrainingGroup2
+		{
+			get
+			{
+				return this._TrainingGroup2;
+			}
+			set
+			{
+				if ((this._TrainingGroup2 != value))
+				{
+					this._TrainingGroup2 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TrainingGroup3", DbType="VarChar(512)")]
+		public string TrainingGroup3
+		{
+			get
+			{
+				return this._TrainingGroup3;
+			}
+			set
+			{
+				if ((this._TrainingGroup3 != value))
+				{
+					this._TrainingGroup3 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TrainingGroup4", DbType="VarChar(512)")]
+		public string TrainingGroup4
+		{
+			get
+			{
+				return this._TrainingGroup4;
+			}
+			set
+			{
+				if ((this._TrainingGroup4 != value))
+				{
+					this._TrainingGroup4 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TrainingGroup5", DbType="VarChar(512)")]
+		public string TrainingGroup5
+		{
+			get
+			{
+				return this._TrainingGroup5;
+			}
+			set
+			{
+				if ((this._TrainingGroup5 != value))
+				{
+					this._TrainingGroup5 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Diet", DbType="VarChar(512)")]
+		public string Diet
+		{
+			get
+			{
+				return this._Diet;
+			}
+			set
+			{
+				if ((this._Diet != value))
+				{
+					this._Diet = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Work_Address_City", DbType="VarChar(512)")]
+		public string Work_Address_City
+		{
+			get
+			{
+				return this._Work_Address_City;
+			}
+			set
+			{
+				if ((this._Work_Address_City != value))
+				{
+					this._Work_Address_City = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Relations", DbType="VarChar(512)")]
+		public string Relations
+		{
+			get
+			{
+				return this._Relations;
+			}
+			set
+			{
+				if ((this._Relations != value))
+				{
+					this._Relations = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ACTIVE", DbType="Bit")]
+		public System.Nullable<bool> ACTIVE
+		{
+			get
+			{
+				return this._ACTIVE;
+			}
+			set
+			{
+				if ((this._ACTIVE != value))
+				{
+					this._ACTIVE = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MonthlyUnsubscribe", DbType="Bit")]
+		public System.Nullable<bool> MonthlyUnsubscribe
+		{
+			get
+			{
+				return this._MonthlyUnsubscribe;
+			}
+			set
+			{
+				if ((this._MonthlyUnsubscribe != value))
+				{
+					this._MonthlyUnsubscribe = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MC2AgentUnsubscribe", DbType="Bit")]
+		public System.Nullable<bool> MC2AgentUnsubscribe
+		{
+			get
+			{
+				return this._MC2AgentUnsubscribe;
+			}
+			set
+			{
+				if ((this._MC2AgentUnsubscribe != value))
+				{
+					this._MC2AgentUnsubscribe = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CustomMailsUnsubscribe", DbType="Bit")]
+		public System.Nullable<bool> CustomMailsUnsubscribe
+		{
+			get
+			{
+				return this._CustomMailsUnsubscribe;
+			}
+			set
+			{
+				if ((this._CustomMailsUnsubscribe != value))
+				{
+					this._CustomMailsUnsubscribe = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_logoName", DbType="VarChar(500)")]
+		public string logoName
+		{
+			get
+			{
+				return this._logoName;
+			}
+			set
+			{
+				if ((this._logoName != value))
+				{
+					this._logoName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AfrikaansVoorblad", DbType="VarChar(1000)")]
+		public string AfrikaansVoorblad
+		{
+			get
+			{
+				return this._AfrikaansVoorblad;
+			}
+			set
+			{
+				if ((this._AfrikaansVoorblad != value))
+				{
+					this._AfrikaansVoorblad = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EnglishVoorblad", DbType="VarChar(1000)")]
+		public string EnglishVoorblad
+		{
+			get
+			{
+				return this._EnglishVoorblad;
+			}
+			set
+			{
+				if ((this._EnglishVoorblad != value))
+				{
+					this._EnglishVoorblad = value;
+				}
+			}
+		}
+	}
+	
+	public partial class sp_GetAgentFromComplimentSlipResult
+	{
+		
+		private string _First_Name;
+		
+		private string _Last_Name;
+		
+		public sp_GetAgentFromComplimentSlipResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_First_Name", DbType="VarChar(512)")]
+		public string First_Name
+		{
+			get
+			{
+				return this._First_Name;
+			}
+			set
+			{
+				if ((this._First_Name != value))
+				{
+					this._First_Name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Last_Name", DbType="VarChar(512)")]
+		public string Last_Name
+		{
+			get
+			{
+				return this._Last_Name;
+			}
+			set
+			{
+				if ((this._Last_Name != value))
+				{
+					this._Last_Name = value;
+				}
+			}
+		}
+	}
+	
 	public partial class sp_GetUserInfoResult
 	{
 		
@@ -7905,6 +9195,8 @@ namespace MCvanderBergCalc.Models
 		private string _WebsiteAddress;
 		
 		private bool _PricetonParkDevelopment;
+		
+		private bool _MenlynMaine;
 		
 		public sp_GetUserInfoResult()
 		{
@@ -8949,6 +10241,22 @@ namespace MCvanderBergCalc.Models
 				}
 			}
 		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MenlynMaine", DbType="Bit NOT NULL")]
+		public bool MenlynMaine
+		{
+			get
+			{
+				return this._MenlynMaine;
+			}
+			set
+			{
+				if ((this._MenlynMaine != value))
+				{
+					this._MenlynMaine = value;
+				}
+			}
+		}
 	}
 	
 	public partial class sp_GetMemberAreaPersonalResult
@@ -9083,6 +10391,8 @@ namespace MCvanderBergCalc.Models
 		private string _WebsiteAddress;
 		
 		private bool _PricetonParkDevelopment;
+		
+		private bool _MenlynMaine;
 		
 		public sp_GetMemberAreaPersonalResult()
 		{
@@ -10127,883 +11437,19 @@ namespace MCvanderBergCalc.Models
 				}
 			}
 		}
-	}
-	
-	public partial class sp_ExportAllResult
-	{
 		
-		private System.Nullable<System.DateTime> _DateEdited;
-		
-		private System.Nullable<int> _UserID;
-		
-		private string _Title;
-		
-		private string _FirstName;
-		
-		private string _NickName;
-		
-		private string _LastName;
-		
-		private string _EmailPrimary;
-		
-		private string _Cell_Phone;
-		
-		private string _OfficeNo;
-		
-		private System.Nullable<bool> _BirthdayApplicable;
-		
-		private string _myDOB;
-		
-		private string _PersonPhoto;
-		
-		private string _FirstTimeUserStatus;
-		
-		private string _Agency;
-		
-		private string _Role;
-		
-		private string _Language;
-		
-		private string _Typist;
-		
-		private string _Loyal_Indicator;
-		
-		private System.Nullable<bool> _Category2_Eng;
-		
-		private System.Nullable<bool> _Category2_Afr;
-		
-		private System.Nullable<bool> _Category3_Eng;
-		
-		private System.Nullable<bool> _Category3_Afr;
-		
-		private System.Nullable<bool> _Category4_Eng;
-		
-		private System.Nullable<bool> _Category4_Afr;
-		
-		private System.Nullable<bool> _Category5_Eng;
-		
-		private System.Nullable<bool> _Category5_Afr;
-		
-		private System.Nullable<bool> _Category6_Eng;
-		
-		private System.Nullable<bool> _Category6_Afr;
-		
-		private System.Nullable<bool> _Category7_Eng;
-		
-		private System.Nullable<bool> _Category7_Afr;
-		
-		private System.Nullable<bool> _PricetonParkDevelopment;
-		
-		private string _TrainingGroup1;
-		
-		private string _TrainingGroup2;
-		
-		private string _TrainingGroup3;
-		
-		private string _TrainingGroup4;
-		
-		private string _TrainingGroup5;
-		
-		private string _Diet;
-		
-		private string _Work_Address_City;
-		
-		private string _Relations;
-		
-		private System.Nullable<bool> _ACTIVE;
-		
-		private System.Nullable<bool> _MonthlyUnsubscribe;
-		
-		private System.Nullable<bool> _MC2AgentUnsubscribe;
-		
-		private System.Nullable<bool> _CustomMailsUnsubscribe;
-		
-		private string _logoName;
-		
-		private string _AfrikaansVoorblad;
-		
-		private string _EnglishVoorblad;
-		
-		public sp_ExportAllResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DateEdited", DbType="DateTime")]
-		public System.Nullable<System.DateTime> DateEdited
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MenlynMaine", DbType="Bit NOT NULL")]
+		public bool MenlynMaine
 		{
 			get
 			{
-				return this._DateEdited;
+				return this._MenlynMaine;
 			}
 			set
 			{
-				if ((this._DateEdited != value))
+				if ((this._MenlynMaine != value))
 				{
-					this._DateEdited = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserID", DbType="Int")]
-		public System.Nullable<int> UserID
-		{
-			get
-			{
-				return this._UserID;
-			}
-			set
-			{
-				if ((this._UserID != value))
-				{
-					this._UserID = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Title", DbType="VarChar(512)")]
-		public string Title
-		{
-			get
-			{
-				return this._Title;
-			}
-			set
-			{
-				if ((this._Title != value))
-				{
-					this._Title = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FirstName", DbType="VarChar(512)")]
-		public string FirstName
-		{
-			get
-			{
-				return this._FirstName;
-			}
-			set
-			{
-				if ((this._FirstName != value))
-				{
-					this._FirstName = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NickName", DbType="VarChar(200)")]
-		public string NickName
-		{
-			get
-			{
-				return this._NickName;
-			}
-			set
-			{
-				if ((this._NickName != value))
-				{
-					this._NickName = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastName", DbType="VarChar(512)")]
-		public string LastName
-		{
-			get
-			{
-				return this._LastName;
-			}
-			set
-			{
-				if ((this._LastName != value))
-				{
-					this._LastName = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EmailPrimary", DbType="VarChar(512)")]
-		public string EmailPrimary
-		{
-			get
-			{
-				return this._EmailPrimary;
-			}
-			set
-			{
-				if ((this._EmailPrimary != value))
-				{
-					this._EmailPrimary = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Cell Phone]", Storage="_Cell_Phone", DbType="VarChar(512)")]
-		public string Cell_Phone
-		{
-			get
-			{
-				return this._Cell_Phone;
-			}
-			set
-			{
-				if ((this._Cell_Phone != value))
-				{
-					this._Cell_Phone = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OfficeNo", DbType="VarChar(512)")]
-		public string OfficeNo
-		{
-			get
-			{
-				return this._OfficeNo;
-			}
-			set
-			{
-				if ((this._OfficeNo != value))
-				{
-					this._OfficeNo = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BirthdayApplicable", DbType="Bit")]
-		public System.Nullable<bool> BirthdayApplicable
-		{
-			get
-			{
-				return this._BirthdayApplicable;
-			}
-			set
-			{
-				if ((this._BirthdayApplicable != value))
-				{
-					this._BirthdayApplicable = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_myDOB", DbType="NVarChar(61)")]
-		public string myDOB
-		{
-			get
-			{
-				return this._myDOB;
-			}
-			set
-			{
-				if ((this._myDOB != value))
-				{
-					this._myDOB = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PersonPhoto", DbType="VarChar(300)")]
-		public string PersonPhoto
-		{
-			get
-			{
-				return this._PersonPhoto;
-			}
-			set
-			{
-				if ((this._PersonPhoto != value))
-				{
-					this._PersonPhoto = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FirstTimeUserStatus", DbType="VarChar(28)")]
-		public string FirstTimeUserStatus
-		{
-			get
-			{
-				return this._FirstTimeUserStatus;
-			}
-			set
-			{
-				if ((this._FirstTimeUserStatus != value))
-				{
-					this._FirstTimeUserStatus = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Agency", DbType="VarChar(512)")]
-		public string Agency
-		{
-			get
-			{
-				return this._Agency;
-			}
-			set
-			{
-				if ((this._Agency != value))
-				{
-					this._Agency = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Role", DbType="VarChar(512)")]
-		public string Role
-		{
-			get
-			{
-				return this._Role;
-			}
-			set
-			{
-				if ((this._Role != value))
-				{
-					this._Role = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Language", DbType="VarChar(512)")]
-		public string Language
-		{
-			get
-			{
-				return this._Language;
-			}
-			set
-			{
-				if ((this._Language != value))
-				{
-					this._Language = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Typist", DbType="VarChar(512)")]
-		public string Typist
-		{
-			get
-			{
-				return this._Typist;
-			}
-			set
-			{
-				if ((this._Typist != value))
-				{
-					this._Typist = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Loyal_Indicator", DbType="VarChar(512)")]
-		public string Loyal_Indicator
-		{
-			get
-			{
-				return this._Loyal_Indicator;
-			}
-			set
-			{
-				if ((this._Loyal_Indicator != value))
-				{
-					this._Loyal_Indicator = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Category2_Eng", DbType="Bit")]
-		public System.Nullable<bool> Category2_Eng
-		{
-			get
-			{
-				return this._Category2_Eng;
-			}
-			set
-			{
-				if ((this._Category2_Eng != value))
-				{
-					this._Category2_Eng = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Category2_Afr", DbType="Bit")]
-		public System.Nullable<bool> Category2_Afr
-		{
-			get
-			{
-				return this._Category2_Afr;
-			}
-			set
-			{
-				if ((this._Category2_Afr != value))
-				{
-					this._Category2_Afr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Category3_Eng", DbType="Bit")]
-		public System.Nullable<bool> Category3_Eng
-		{
-			get
-			{
-				return this._Category3_Eng;
-			}
-			set
-			{
-				if ((this._Category3_Eng != value))
-				{
-					this._Category3_Eng = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Category3_Afr", DbType="Bit")]
-		public System.Nullable<bool> Category3_Afr
-		{
-			get
-			{
-				return this._Category3_Afr;
-			}
-			set
-			{
-				if ((this._Category3_Afr != value))
-				{
-					this._Category3_Afr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Category4_Eng", DbType="Bit")]
-		public System.Nullable<bool> Category4_Eng
-		{
-			get
-			{
-				return this._Category4_Eng;
-			}
-			set
-			{
-				if ((this._Category4_Eng != value))
-				{
-					this._Category4_Eng = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Category4_Afr", DbType="Bit")]
-		public System.Nullable<bool> Category4_Afr
-		{
-			get
-			{
-				return this._Category4_Afr;
-			}
-			set
-			{
-				if ((this._Category4_Afr != value))
-				{
-					this._Category4_Afr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Category5_Eng", DbType="Bit")]
-		public System.Nullable<bool> Category5_Eng
-		{
-			get
-			{
-				return this._Category5_Eng;
-			}
-			set
-			{
-				if ((this._Category5_Eng != value))
-				{
-					this._Category5_Eng = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Category5_Afr", DbType="Bit")]
-		public System.Nullable<bool> Category5_Afr
-		{
-			get
-			{
-				return this._Category5_Afr;
-			}
-			set
-			{
-				if ((this._Category5_Afr != value))
-				{
-					this._Category5_Afr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Category6_Eng", DbType="Bit")]
-		public System.Nullable<bool> Category6_Eng
-		{
-			get
-			{
-				return this._Category6_Eng;
-			}
-			set
-			{
-				if ((this._Category6_Eng != value))
-				{
-					this._Category6_Eng = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Category6_Afr", DbType="Bit")]
-		public System.Nullable<bool> Category6_Afr
-		{
-			get
-			{
-				return this._Category6_Afr;
-			}
-			set
-			{
-				if ((this._Category6_Afr != value))
-				{
-					this._Category6_Afr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Category7_Eng", DbType="Bit")]
-		public System.Nullable<bool> Category7_Eng
-		{
-			get
-			{
-				return this._Category7_Eng;
-			}
-			set
-			{
-				if ((this._Category7_Eng != value))
-				{
-					this._Category7_Eng = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Category7_Afr", DbType="Bit")]
-		public System.Nullable<bool> Category7_Afr
-		{
-			get
-			{
-				return this._Category7_Afr;
-			}
-			set
-			{
-				if ((this._Category7_Afr != value))
-				{
-					this._Category7_Afr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PricetonParkDevelopment", DbType="Bit")]
-		public System.Nullable<bool> PricetonParkDevelopment
-		{
-			get
-			{
-				return this._PricetonParkDevelopment;
-			}
-			set
-			{
-				if ((this._PricetonParkDevelopment != value))
-				{
-					this._PricetonParkDevelopment = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TrainingGroup1", DbType="VarChar(512)")]
-		public string TrainingGroup1
-		{
-			get
-			{
-				return this._TrainingGroup1;
-			}
-			set
-			{
-				if ((this._TrainingGroup1 != value))
-				{
-					this._TrainingGroup1 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TrainingGroup2", DbType="VarChar(512)")]
-		public string TrainingGroup2
-		{
-			get
-			{
-				return this._TrainingGroup2;
-			}
-			set
-			{
-				if ((this._TrainingGroup2 != value))
-				{
-					this._TrainingGroup2 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TrainingGroup3", DbType="VarChar(512)")]
-		public string TrainingGroup3
-		{
-			get
-			{
-				return this._TrainingGroup3;
-			}
-			set
-			{
-				if ((this._TrainingGroup3 != value))
-				{
-					this._TrainingGroup3 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TrainingGroup4", DbType="VarChar(512)")]
-		public string TrainingGroup4
-		{
-			get
-			{
-				return this._TrainingGroup4;
-			}
-			set
-			{
-				if ((this._TrainingGroup4 != value))
-				{
-					this._TrainingGroup4 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TrainingGroup5", DbType="VarChar(512)")]
-		public string TrainingGroup5
-		{
-			get
-			{
-				return this._TrainingGroup5;
-			}
-			set
-			{
-				if ((this._TrainingGroup5 != value))
-				{
-					this._TrainingGroup5 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Diet", DbType="VarChar(512)")]
-		public string Diet
-		{
-			get
-			{
-				return this._Diet;
-			}
-			set
-			{
-				if ((this._Diet != value))
-				{
-					this._Diet = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Work_Address_City", DbType="VarChar(512)")]
-		public string Work_Address_City
-		{
-			get
-			{
-				return this._Work_Address_City;
-			}
-			set
-			{
-				if ((this._Work_Address_City != value))
-				{
-					this._Work_Address_City = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Relations", DbType="VarChar(512)")]
-		public string Relations
-		{
-			get
-			{
-				return this._Relations;
-			}
-			set
-			{
-				if ((this._Relations != value))
-				{
-					this._Relations = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ACTIVE", DbType="Bit")]
-		public System.Nullable<bool> ACTIVE
-		{
-			get
-			{
-				return this._ACTIVE;
-			}
-			set
-			{
-				if ((this._ACTIVE != value))
-				{
-					this._ACTIVE = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MonthlyUnsubscribe", DbType="Bit")]
-		public System.Nullable<bool> MonthlyUnsubscribe
-		{
-			get
-			{
-				return this._MonthlyUnsubscribe;
-			}
-			set
-			{
-				if ((this._MonthlyUnsubscribe != value))
-				{
-					this._MonthlyUnsubscribe = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MC2AgentUnsubscribe", DbType="Bit")]
-		public System.Nullable<bool> MC2AgentUnsubscribe
-		{
-			get
-			{
-				return this._MC2AgentUnsubscribe;
-			}
-			set
-			{
-				if ((this._MC2AgentUnsubscribe != value))
-				{
-					this._MC2AgentUnsubscribe = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CustomMailsUnsubscribe", DbType="Bit")]
-		public System.Nullable<bool> CustomMailsUnsubscribe
-		{
-			get
-			{
-				return this._CustomMailsUnsubscribe;
-			}
-			set
-			{
-				if ((this._CustomMailsUnsubscribe != value))
-				{
-					this._CustomMailsUnsubscribe = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_logoName", DbType="VarChar(500)")]
-		public string logoName
-		{
-			get
-			{
-				return this._logoName;
-			}
-			set
-			{
-				if ((this._logoName != value))
-				{
-					this._logoName = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AfrikaansVoorblad", DbType="VarChar(1000)")]
-		public string AfrikaansVoorblad
-		{
-			get
-			{
-				return this._AfrikaansVoorblad;
-			}
-			set
-			{
-				if ((this._AfrikaansVoorblad != value))
-				{
-					this._AfrikaansVoorblad = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EnglishVoorblad", DbType="VarChar(1000)")]
-		public string EnglishVoorblad
-		{
-			get
-			{
-				return this._EnglishVoorblad;
-			}
-			set
-			{
-				if ((this._EnglishVoorblad != value))
-				{
-					this._EnglishVoorblad = value;
-				}
-			}
-		}
-	}
-	
-	public partial class sp_GetAgentFromComplimentSlipResult
-	{
-		
-		private string _First_Name;
-		
-		private string _Last_Name;
-		
-		public sp_GetAgentFromComplimentSlipResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_First_Name", DbType="VarChar(512)")]
-		public string First_Name
-		{
-			get
-			{
-				return this._First_Name;
-			}
-			set
-			{
-				if ((this._First_Name != value))
-				{
-					this._First_Name = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Last_Name", DbType="VarChar(512)")]
-		public string Last_Name
-		{
-			get
-			{
-				return this._Last_Name;
-			}
-			set
-			{
-				if ((this._Last_Name != value))
-				{
-					this._Last_Name = value;
+					this._MenlynMaine = value;
 				}
 			}
 		}
